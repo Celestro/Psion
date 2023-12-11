@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="7" build="405"/>
+    <region id="DefaultValues">
+        <node id="root">
+            <children>
+                <node id="DefaultValue">
+                    <attribute id="Add" type="LSString" value="ARM_Psion_Padded"/>
+                    <attribute id="Level" type="int32" value="1"/>
+                    <attribute id="SelectorId" type="LSString" value="PsionArmor"/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="5b6477b1-2ed7-4d1f-914a-71ca2cb750bb"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="0" revision="0" build="51" />
+	<region id="ScriptBank">
+		<node id="ScriptBank">
+			<children>
+				<node id="Resource">
+					<attribute id="ID" type="FixedString" value="695d6c33-2cd9-4ebb-a86d-1141adadb73c" />
+					<attribute id="Localized" type="bool" value="False" />
+					<attribute id="Name" type="LSString" value="Psion" />
+					<attribute id="SourceFile" type="LSWString" value="Public/Psion/Scripts/Game/Psion.gameScript" />
+					<attribute id="_OriginalFileVersion_" type="int32" value="1073741866" />
+					<children>
+						<node id="Parameters" />
+					</children>
+				</node>
+			</children>
+		</node>
+	</region>
+</save>
