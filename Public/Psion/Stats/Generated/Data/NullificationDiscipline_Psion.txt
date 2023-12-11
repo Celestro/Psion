@@ -1,0 +1,42 @@
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+<!------------ Nullification Discipline Passive Feature  ----------->
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+
+
+
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+<!-------------- Nullification Discipline Power  ----------------->
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+
+
+
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+<!------------ Nullification Discipline Passives  ---------------->
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+
+new entry "Nullification_Desc"
+type "PassiveData"
+data "DisplayName" "DEF9712DD6B5F14914AD156E5F8341937E474"
+data "Description" "0F954CD98EBCDF69361ACBA5120A4A311801D"
+data "Properties" "IsHidden"
+
+new entry "Nullification"
+type "PassiveData"
+data "DisplayName" "DEF9712DD6B5F14914AD156E5F8341937E474"
+data "Description" "0F954CD98EBCDF69361ACBA5120A4A311801D"
+data "Boosts" "UnlockSpell(Target_DisruptiveTouch);UnlockSpell(Target_Denial);IF(Nullification1stSpells() and not HasStatus('NULLIFICATION_SPELLS',context.Source)):UnlockSpell(Target_ProtectionFromEvilAndGood_Psionic)"
+data "StatsFunctors" "IF(not HasStatus('NULLIFICATION_MODIFIERS_PROC',context.Source)):ApplyStatus(NULLIFICATION_MODIFIERS_PROC,100,-1);IF(not HasStatus('NULLIFICATION_SPELLS',context.Source)):ApplyStatus(NULLIFICATION_SPELLS,100,-1)"
+data "StatsFunctorContext" "OnCreate"
+
+new entry "Denial_Modifier"
+type "PassiveData"
+data "DisplayName" "EFA936799171A5E6715CC96A044E9928EF6C8"
+data "Description" "C14400665F4DDF2FDDABB7D5728F4FB5A50A0"
+data "Icon" "PassiveFeature_Psion_PowerModifiers"
+data "EnabledConditions" "HasActionResource('PsiPoint', 1, 0, false, false, context.Source) or HasActionResource('PsiPointMastery', 1, 0, false, false, context.Source)"
+data "EnabledContext" "OnCastResolved;OnShortRest;OnLongRest"
+data "Properties" "IsToggled;ToggledDefaultAddToHotbar;MetaMagic"
+data "ToggleOnFunctors" "ApplyStatus(DENIAL_REMOVAL,100,0);ApplyStatus(DENIAL_PSIPOINTS,100,-1)"
+data "ToggleOffFunctors" "RemoveStatus(DENIAL_PSIPOINTS)"
+data "ToggleOffContext" "OnShortRest;OnLongRest"
+data "ToggleGroup" "Metamagic"

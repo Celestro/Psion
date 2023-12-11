@@ -1,0 +1,263 @@
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+<!------------------ Multiple Discipline Spells  ----------------->
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+
+new entry "Target_InvestLife"
+type "SpellData"
+data "SpellType" "Target"
+data "Level" "3"
+data "SpellProperties" "ApplyStatus(SELF,LIFE_TRANSFERENCE_TECHNICAL,100,0);ApplyStatus(LIFE_TRANSFERENCE,100,0)"
+data "TargetRadius" "1.5"
+data "TargetConditions" "Character()"
+data "Icon" "Action_Psion_InvestLife"
+data "DisplayName" "490C68382E209576506777609D5EFF05E0DB6"
+data "Description" "5B85B01F8459C66A94CB43E018856E78A1974"
+data "CastTextEvent" "Cast"
+data "CastSound" "Spell_Cast_Healing_HealingWord_L1to3"
+data "TargetSound" "Spell_Impact_Healing_HealingWord_L1to3"
+data "CycleConditions" "Ally() and not Dead()"
+data "UseCosts" "ActionPoint:1"
+data "SpellAnimation" "414bbf02-2918-4f01-83fb-1ddc7a588d88(SPL_Arcane_Healing_01_Prepare),,;,,;ab7b6aac-b3c9-4918-8f17-f777a94dcb5e(SPL_Somatic_Target_01_Cast),,;57211a11-ed0b-46d7-9369-81df25a85df6(SPL_Somatic_Target_01_Recover),,;0c5dcc83-fa78-41da-b6a5-440b5ea30936(SPL_Arcane_Healing_01_Loop),,;,,;bea988a0-2ec5-40d8-a67e-ffbd7454bc53(SPL_Arcane_Healing_01_Cancel),,;bcc3b0d9-f04f-4448-aab0-e0ad641167cc(SPL_Somatic_Self_01_Cast),,;bf924cc6-8b39-4c3b-b1c0-eda264cf6150(SPL_Somatic_Self_01_Recover),,"
+data "VerbalIntent" "Healing"
+data "SpellFlags" "RangeIgnoreVerticalThreshold;IsMelee;IsSpell;HasSomaticComponent"
+data "MemoryCost" "1"
+data "PrepareEffect" "52fa8be8-bf21-4610-9881-7bacfea008bd"
+data "CastEffect" "7a73fa11-81e8-44bc-8653-a0d0ebbecf4b"
+data "TargetEffect" "70319a43-6342-4996-811d-dd50df8b3fa1"
+
+new entry "Projectile_PropelledBound"
+type "SpellData"
+data "SpellType" "Projectile"
+using "Projectile_Jump"
+data "TargetRadius" "9"
+data "AddRangeFromAbility" "Intelligence,1"
+data "Icon" "Action_Psion_PropelledBound"
+data "DisplayName" "BA5C96D0A68EBD902A7DE32C5E1E59F6AB4F8"
+data "Description" "6A3FED9C040DDABEC4A8BE8159B93D48D70EA"
+data "ExtraDescription" "27E229946C147362CAE71B224D72D93CA8F83"
+data "SpellActionType" "27E229946C147362CAE71B224D72D93CA8F83"
+data "UseCosts" "Movement:Distance"
+data "PrepareEffect" "c512042e-a04f-4a02-af7a-16f30e11ed95"
+data "CastEffect" "ff0a1840-bcda-4802-88cd-99be08ee34df"
+
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+<!------------------ Psionic Synthesis Spells  ------------------->
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+
+new entry "Target_PhysicalTelekinesis"
+type "SpellData"
+data "SpellType" "Target"
+data "ContainerSpells" "Target_PhysicalTelekinesis_Advantage;Target_PhysicalTelekinesis_Disadvantage;Target_PhysicalTelekinesis_Movement"
+data "TargetConditions" "Character()"
+data "Icon" "Spell_Abjuration_BladeWard"
+data "DisplayName" "33A87162973F5FF24D0F8A5FA7502C5F33B5C"
+data "Description" "FAE15B42D136EA6D317B01338549322D339C5"
+data "PreviewCursor" "Cast"
+data "CastSelfAnimation" "efbf3ee5-7340-4b29-8ab5-113b004a8e7b(SPL_Somatic_Self_Touch_01_Cast)"
+data "CastTextEvent" "Cast"
+data "CastSound" "Spell_Cast_Buff_Resistance_L1to3"
+data "VocalComponentSound" "Vocal_Component_ResistanceGeneric"
+data "TargetSound" "Spell_Impact_Buff_Resistance_L1to3"
+data "UseCosts" "ActionPoint:1"
+data "SpellAnimation" "03496c4a-49e0-4132-b585-3e5ecd1ad8e5(SPL_Arcane_Buff_01_Prepare),,;,,;e37d18b8-0de7-4bbc-a644-31ec2a91e548(SPL_Somatic_Touch_01_Cast),,;acfe8d41-20c1-4fe8-b158-f4b2be86e080(SPL_Somatic_Touch_01_Recover),,;,,;,,"
+data "VerbalIntent" "Buff"
+data "SpellFlags" "CannotTargetTerrain;IsLinkedSpellContainer"
+data "RequirementConditions" "HasPassive('PsionicSynthesis') and HasPassive('Telekinesis',context.Source) and HasPassive('Psychokinesis')"
+data "PrepareEffect" "c238f860-37c1-47b1-8030-14fa6a1bdfa1"
+data "CastEffect" "33ba4bed-e160-4019-9fbc-3a4d3bb924a3"
+data "TargetEffect" "fb919edf-4dce-45d8-9338-91f26bccec31"
+
+new entry "Target_PhysicalTelekinesis_Movement"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_PhysicalTelekinesis"
+data "SpellContainerID" "Target_PhysicalTelekinesis"
+data "SpellProperties" "ApplyStatus(PHYSICAL_TELEKINESIS_MOVEMENT,100,1)"
+data "TargetRadius" "18"
+data "Icon" "Action_Jump"
+data "DisplayName" "CB95B0A639E68370BD4BF70C56B9DB3E94B6B"
+data "Description" "8530B07DDF22835BF8ACDE66635877E8763E5"
+data "UseCosts" "PsiPoint:1"
+
+new entry "Target_PhysicalTelekinesis_Disadvantage"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_PhysicalTelekinesis"
+data "SpellContainerID" "Target_PhysicalTelekinesis"
+data "SpellProperties" "ApplyStatus(PHYSICAL_TELEKINESIS_DISADVANTAGE,100,1)"
+data "TargetRadius" "18"
+data "Icon" "Spell_Abjuration_Resistance"
+data "DisplayName" "2B9EC4436BE146B1AED05A7B826551FE7E6EE"
+data "Description" "90BE168C47FBE4570BA3FDCDC809858D6125F"
+data "UseCosts" "PsiPoint:1"
+
+new entry "Target_PhysicalTelekinesis_Advantage"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_PhysicalTelekinesis"
+data "SpellContainerID" "Target_PhysicalTelekinesis"
+data "SpellProperties" "ApplyStatus(PHYSICAL_TELEKINESIS_ADVANTAGE,100,1)"
+data "TargetRadius" "18"
+data "Icon" "Action_SneakAttack_Melee"
+data "DisplayName" "564902B2C2A3785366DC06124F71DA9646A2B"
+data "Description" "9BB302CDAE33064715681164A0D6960591FF1"
+data "UseCosts" "PsiPoint:1"
+
+new entry "Shout_KineticMastery"
+type "SpellData"
+data "SpellType" "Shout"
+data "SpellProperties" "ApplyStatus(KINETICMASTERY,100,1)"
+data "TargetConditions" "Self()"
+data "Icon" "Spell_Enchantment_CommandHalt"
+data "DisplayName" "06E799F13071B5ACFCE75DFB68A5102519A85"
+data "Description" "DE6CE803147B53B7A01CA344385B45AE99BAB"
+data "PrepareEffect" "VFX_Spells_Prepare_Arcane_Intent_Control_CastFX_Textkey_01:Dummy_CastFX:VFX_Prepare_01:0:None::None::0:0::::;VFX_Spells_Prepare_Arcane_Intent_Control_CastFX_01:Dummy_CastFX::0:None::None::0:0::::;VFX_Spells_Prepare_Arcane_Intent_Control_EyeFX_01:Dummy_EyeFX_01::0:None::None::0:0::::;VFX_Spells_Prepare_Arcane_Intent_Control_EyeFX_02:Dummy_EyeFX_02::0:None::None::0:0::::;VFX_Spells_Prepare_Arcane_Intent_Control_HoldPerson_HandFX_Textkey_01:Dummy_L_HandFX:VFX_Prepare_01:0:None::None::0:0::::;VFX_Spells_Prepare_Arcane_Intent_Control_HandFX_Overlay_Textkey_01:Dummy_L_HandFX:VFX_Prepare_01:0:None::None::0:0::::"
+data "CastEffect" "VFX_Spells_Cast_Intent_Control_TargetSingle_R_HandFX_01,KeepRot:Dummy_R_HandFX::0:None::None::0:0::::;VFX_Spells_Cast_Intent_Control_TargetSingle_R_HandFX_Textkey_01,Detach:Dummy_R_HandFX:Cast:0:None::None::0:0::::"
+data "TargetEffect" "VFX_Spells_Cast_Intent_Control_TargetSingle_Impact_Root_Textkey_01:Dummy_Root:Cast:0:None::None::0:0::::;VFX_Spells_Cast_Intent_Control_TargetSingle_Impact_BodyFX_Textkey_01:Dummy_BodyFX:Cast:0:None::None::0:0::::;VFX_Spells_Cast_Intent_Control_TargetSingle_Impact_HeadFX_Textkey_01,FaceSource:Dummy_HeadFX:Cast:0:None::None::0:0::::;VFX_Spells_Cast_Intent_Control_TargetSingle_Impact_HeadFX_Textkey_02,FaceSource,Detach:Dummy_HeadFX:Cast:0:None::None::0:0::::;VFX_Spells_Cast_Intent_Control_TargetSingle_Impact_EyeFX_Textkey_01:Dummy_EyeFX_01:Cast:0:None::None::0:0::::;VFX_Spells_Cast_Intent_Control_TargetSingle_Impact_EyeFX_Textkey_02:Dummy_EyeFX_02:Cast:0:None::None::0:0::::"
+data "CastTextEvent" "Cast"
+data "SpellAnimation" "554a18f7-952e-494a-b301-7702a85d4bc9(SPL_Arcane_Control_01_Prepare);;ab7b6aac-b3c9-4918-8f17-f777a94dcb5e(SPL_Somatic_Target_01_Cast);57211a11-ed0b-46d7-9369-81df25a85df6(SPL_Somatic_Target_01_Recover);;"
+data "RequirementConditions" "HasPassive('PsionicSynthesis') and HasPassive('Telekinesis') and HasPassive('Psychokinetics')"
+
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+<!----------------- Multiple Discipline Statuses  ---------------->
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+
+new entry "INVEST_LIFE"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead"
+
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+<!------------ Multiple Discipline Feature Passives  ------------->
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+
+new entry "EmpoweredPsionics_EmpoweredStrike"
+type "PassiveData"
+using "EmpoweredPsionics_Psychic"
+data "Conditions" "IsEmpoweredStrikePower()"
+data "StatsFunctors" "IF(SpellId('Projectile_TelekineticForce')):DealDamage(IntelligenceModifier,Bludgeoning)"
+data "StatsFunctorContext" "OnAttack"
+
+new entry "PsionicTalents_EmpoweredStrike"
+type "PassiveData"
+data "DisplayName" "85C7151C927A74A1087677F72F91532DA17F2"
+data "Description" "4AC77F560396B1AA9C1307057DCC28F0488FA"
+data "ExtraDescription" "5ef24033-1ceb-41e6-bd96-a1df3d149e91;1"
+data "Icon" "PsionicTalent_Psion_EmpoweredStrike"
+data "Properties" "Highlighted"
+
+new entry "PsionicTalents_LifeWielder"
+type "PassiveData"
+data "DisplayName" "1AF12047CD6E67C3102C6C5515F9A29100E0B"
+data "Description" "F4FEC1207A36D312F469F42A1579AA39712FA"
+data "ExtraDescription" "2f72635b-6f58-4772-86c2-909856f74d86;1"
+data "Icon" "PsionicTalent_Psion_InvestLife"
+data "Properties" "Highlighted"
+data "Boosts" "UnlockSpell(Target_InvestLife)"
+
+new entry "PsionicTalents_PropelledBound"
+type "PassiveData"
+data "DisplayName" "3E50D8CA7723995C16B7D0D46062A33384F3F"
+data "Description" "3DA2796EE9C0DB07A0631DC488D6E5287F1BE"
+data "ExtraDescription" "5ef24033-1ceb-41e6-bd96-a1df3d149e91;1"
+data "Icon" "PsionicTalent_Psion_PropelledBound"
+data "Properties" "Highlighted"
+data "Boosts" "UnlockSpell(Projectile_PropelledBound)"
+
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+<!------------------ Psionic Synthesis Statuses  ----------------->
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+
+new entry "KINETICMASTERY"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead"
+
+new entry "PARASITIC_NIGHTMARE"
+type "StatusData"
+data "StatusType" "BOOST"
+data "Passives" "ParasiticNightmare"
+data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead"
+
+new entry "INVISIBILITY_PROC"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead"
+
+new entry "INVISIBLE_TELEPORT"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead"
+
+new entry "USE_REACTIONPOINT"
+type "StatusData"
+data "StatusType" "BOOST"
+data "OnApplyFunctors" "UseActionResource(ReactionActionPoint,1)"
+data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead"
+
+new entry "ENHANCINGSURGE_PHYSICALTELEKINESIS"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "PHYSICAL_TELEKINESIS"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "PHYSICAL_TELEKINESIS_MOVEMENT"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "D10ADC5A843D262B238178BC71E69740577E6"
+data "Description" "2DDA6D160B41BCCBCB302105F3DD881BC6CB9"
+data "Boosts" "UnlockSpell(Projectile_PhysicalTelekinesis_Movement)"
+
+new entry "PHYSICAL_TELEKINESIS_DISADVANTAGE"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "D10ADC5A843D262B238178BC71E69740577E6"
+data "Description" "2FE04617B3FC9018E81A28D2A6315CC950552"
+data "Boosts" IF(IsWeaponAttack(context.Source)):Disadvantage(AttackTarget)"
+
+new entry "PHYSICAL_TELEKINESIS_ADVANTAGE"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "D10ADC5A843D262B238178BC71E69740577E6"
+data "Description" "D316E5A7525D16B530389A69A50BE8BC3775F"
+data "Boosts" IF(IsWeaponAttack(context.Source)):Advantage(AttackRoll);Advantage(Skill, Athletics)"
+
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+<!------------------ Psionic Synthesis Passives  ----------------->
+<!--<<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>><<>>-->
+
+new entry "PsionicTalents_PhysicalTelekinesis"
+type "PassiveData"
+data "DisplayName" "C76804A2C61C056D544C5D5CA3C3F78A9E0F5"
+data "Description" "33D18B863C12B7F66C6E360A9D30549B01BC5"
+data "Boosts" "UnlockSpell(Target_PhysicalTelekinesis)"
+
+new entry "PsionicTalents_KineticMastery"
+type "PassiveData"
+data "DisplayName" "4062799C6114A11FFF16283EE08BC76393B2D"
+data "Description" "A0AF9FBF60E6FAF91601D6392B129658FE24F"
+
+new entry "PsionicTalents_ElementalPhasing"
+type "PassiveData"
+data "DisplayName" "34A17E15A4963EBEEBFC2B2433896DE038735"
+data "Description" "FD92263E4558295F48F73DB97DE979DFAEC06"
+
+new entry "PsionicTalents_ParasiticNightmare"
+type "PassiveData"
+data "DisplayName" "1B9D3024C51B81247B86CEBDC269D0A36AD7E"
+data "Description" "5682ECD79880AA552ED89325E10B954AB266E"
+
+new entry "ParasiticNightmare"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctors" "ApplyStatus(SELF,FRIGHTENED_MOVED,100,1)"
+data "StatsFunctorContext" "OnMovedDistance"
+
+new entry "PsionicTalents_ElementEater"
+type "PassiveData"
+data "DisplayName" "A1E9CAEA0F461A15B18D93FFA68C7B0A56FCD"
+data "Description" "713290C43E2F8CFB53BC0950F4D62E5CDEFAF"
