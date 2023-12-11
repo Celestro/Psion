@@ -1,0 +1,7 @@
+{
+    "RequiredVersion": 1,
+    "ModTable": "Psion_43422ece-5be5-4f88-b992-769e1094bb53",
+    "FeatureFlags": [
+        "Lua"
+    ]
+}
