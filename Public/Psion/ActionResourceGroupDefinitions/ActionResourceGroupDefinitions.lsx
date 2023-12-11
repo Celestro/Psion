@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="0" build="21"/>
+    <region id="ActionResourceGroupDefinitions">
+        <node id="root">
+            <children>
+                <node id="ActionResourceGroupDefinition">
+                    <attribute id="ActionResourceDefinitions" type="LSString" value="c47c32fa-ded4-4c49-8ffe-3f3b8aca28f9;fb77c700-1482-4519-9c6b-ad6355416377"/>
+                    <attribute id="Name" type="LSString" value="PsiPointGroup"/>
+                    <attribute id="UUID" type="guid" value="76aaa4f9-2d3c-4fac-8aeb-b7ec7c3e8e3b"/>
+                </node>
+                <node id="ActionResourceGroupDefinition">
+                    <attribute id="ActionResourceDefinitions" type="LSString" value="62881577-b005-4b4b-a2ae-6b778849e0ca;b08e0385-9bdc-4a39-acfa-48dd26323ca0;fb77c700-1482-4519-9c6b-ad6355416377"/>
+                    <attribute id="Name" type="LSString" value="PsionicChargePointGroup"/>
+                    <attribute id="UUID" type="guid" value="aa104aeb-7e87-4685-9f2d-583f97b4ee4c"/>
+                </node>
+                <node id="ActionResourceGroupDefinition">
+                    <attribute id="ActionResourceDefinitions" type="LSString" value="734cbcfb-8922-4b6d-8330-b2a7e4c14b6a;ea2839b2-98f1-42c9-a041-2d980ecd165c"/>
+                    <attribute id="Name" type="LSString" value="AstralConstructActionPointGroup"/>
+                    <attribute id="UUID" type="guid" value="318cfc11-6d56-47c4-a067-599b44559aab"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

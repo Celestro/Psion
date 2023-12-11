@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="0" revision="6" build="3" />
+	<region id="TranslatedStringKeys">
+		<node id="TranslatedStringKeys">
+			<children>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_Shout_Thaumaturgy_Psion_Description" />
+					<attribute id="Content" type="TranslatedString" handle="cd13d47c-b27a-4349-b85d-8711859fa3b7" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_Shout_Thaumaturgy_OverwhelmingPower_Description" />
+					<attribute id="Content" type="TranslatedString" handle="00f3e5dc-f794-4806-9d11-f3ab7fce7e8f" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_Shout_AllSeeingEye_Description" />
+					<attribute id="Content" type="TranslatedString" handle="45bd140f-2a79-4cfd-b456-67131c2232e9" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_Shout_MindOverMatter_Description" />
+					<attribute id="Content" type="TranslatedString" handle="dc2ce574-3816-4d06-8f14-849116fcdf41" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_Shout_MindOverMatter_Strength_Description" />
+					<attribute id="Content" type="TranslatedString" handle="324ac521-1b01-4109-84fd-508673106c6d" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_Shout_MindOverMatter_Dexterity_Description" />
+					<attribute id="Content" type="TranslatedString" handle="9e827579-91fa-43e3-a494-82ee93c4a472" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_Shout_MindOverMatter_Constitution_Description" />
+					<attribute id="Content" type="TranslatedString" handle="2bed3d22-2593-4d77-92d5-41c4d801d66c" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_Shout_MindOverMatter_DeathSavingThrow_Description" />
+					<attribute id="Content" type="TranslatedString" handle="0759a2ac-5d4d-4cc0-89ee-b963783c3bbf" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_Shout_PsionicCharge_Description" />
+					<attribute id="Content" type="TranslatedString" handle="69cb4982-10bb-4cd7-b314-fb27e6d039dc" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_Shout_PsionicCharge_Damage_Description" />
+					<attribute id="Content" type="TranslatedString" handle="279d1eea-d20c-444c-a40a-1690df02ada5" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

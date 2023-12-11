@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="0" build="48"/>
+    <region id="DefaultValues">
+        <node id="root">
+            <children>
+                <node id="DefaultValue">
+                    <attribute id="ClassUUID" type="guid" value="00000000-0000-0000-0000-000000000000"/>
+                    <attribute id="FeatUUID" type="guid" value="d215b9ad-9753-4d74-8ff9-24bf1dce53d6"/>
+                    <attribute id="Level" type="int32" value="4"/>
+                    <attribute id="OriginUUID" type="guid" value="00000000-0000-0000-0000-000000000000"/>
+                    <attribute id="RaceUUID" type="guid" value="00000000-0000-0000-0000-000000000000"/>
+                    <attribute id="SubclassUUID" type="guid" value="00000000-0000-0000-0000-000000000000"/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="a645f207-5284-4a17-9f0a-51459db38f0a"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

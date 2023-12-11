@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="9" build="322"/>
+    <region id="ProgressionDescriptions">
+        <node id="root">
+            <children>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h92f1ec43g6361g4f52gaf59ge9fd09cce03e" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h43d4142eg88c2g474dg8affg22f316be5781" version="1"/>
+                    <attribute id="Hidden" type="bool" value="false"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="ProgressionTableId" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="SelectorId" type="FixedString" value=""/>
+                    <attribute id="Type" type="FixedString" value="Psion"/>
+                    <attribute id="UUID" type="guid" value="44d8c637-c66c-4eb8-a5ab-fa8e6b097083"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="ha292d085g6bd4g4c7eg9926g046b3d31e968" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h76127eebgb8a8g47eegb88fg5a492c3ef51f" version="1"/>
+                    <attribute id="Hidden" type="bool" value="false"/>
+                    <attribute id="ParamMatch" type="FixedString" value="0:PsiPoint"/>
+                    <attribute id="ProgressionTableId" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="Type" type="FixedString" value="ActionResource"/>
+                    <attribute id="UUID" type="guid" value="28edae78-1de2-4976-8aa9-eac4966d6ee8"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h238e26c4g7029g47f2g8d59g788c98e14629" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h76127eebgb8a8g47eegb88fg5a492c3ef51f" version="1"/>
+                    <attribute id="Hidden" type="bool" value="false"/>
+                    <attribute id="ParamMatch" type="FixedString" value="0:PsiPointMastery"/>
+                    <attribute id="ProgressionTableId" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="SelectorId" type="FixedString" value=""/>
+                    <attribute id="Type" type="FixedString" value="ActionResource"/>
+                    <attribute id="UUID" type="guid" value="5fa09b56-3937-40ae-8a70-647b6c663212"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h7d1b42f2g1b26g4ac4gbf0dgca5d2f33b70a" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h6bd2b5f2g911cg4b38ga8dcge5a710db2222" version="1"/>
+                    <attribute id="Hidden" type="bool" value="false"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="ProgressionTableId" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="SelectorId" type="FixedString" value="PsionicTalents"/>
+                    <attribute id="Type" type="FixedString" value=""/>
+                    <attribute id="UUID" type="guid" value="bfd48168-2415-41c1-b05d-0e65df627d7e"/>
+                </node>
+                <node id="ProgressionDescription"> Unleashed Mind
+                    <attribute id="Description" type="FixedString" value="PsionicTalents_Description"/>
+                    <attribute id="DisplayName" type="FixedString" value="PsionicTalents_DisplayName"/>
+                    <attribute id="Hidden" type="bool" value="false"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="ProgressionTableId" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="SelectorId" type="FixedString" value="PsionicTalents"/>
+                    <attribute id="Type" type="FixedString" value=""/>
+                    <attribute id="UUID" type="guid" value="7a504c0d-b3da-4361-b781-320f8a6f7760"/>
+                </node>
+                <node id="ProgressionDescription"> Awakened Mind
+                    <attribute id="Description" type="FixedString" value="PsionicTalents_Description"/>
+                    <attribute id="DisplayName" type="FixedString" value="PsionicTalents_DisplayName"/>
+                    <attribute id="Hidden" type="bool" value="false"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="ProgressionTableId" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="SelectorId" type="FixedString" value="PsionicTalents"/>
+                    <attribute id="Type" type="FixedString" value=""/>
+                    <attribute id="UUID" type="guid" value="d3f0d835-56ad-4854-a304-1e12921ee7f9"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h97901d36g0b67g4fbbgba26g500b6e9ee969" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h45e8c15eg262cg4684g954bg1837c9368db0" version="1"/>
+                    <attribute id="SelectorId" type="FixedString" value="PsionicTalentReplace"/>
+                    <attribute id="UUID" type="guid" value="da44356d-42f6-4ec8-82c4-913823609a49"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="hdb96c4e5g5506g4821g937dgbfe1ee2ca2d0" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hade7cd24g45d5g453dg8c63ga9915acc4c3e" version="1"/>
+                    <attribute id="Hidden" type="bool" value="false"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="ProgressionTableId" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="SelectorId" type="FixedString" value="PsionicDisciplines"/>
+                    <attribute id="Type" type="FixedString" value=""/>
+                    <attribute id="UUID" type="guid" value="1358fd63-3624-4384-a2fe-017c6693fd54"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h7a38440bg63feg4ed8g9102g5da566b15ab9" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hf11a205cg08bag4414g8833gf2ccfc0742ce" version="1"/>
+                    <attribute id="Hidden" type="bool" value="false"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="ProgressionTableId" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="SelectorId" type="FixedString" value="InnatePsionics"/>
+                    <attribute id="Type" type="FixedString" value=""/>
+                    <attribute id="UUID" type="guid" value="a411fbfe-3b62-4566-a7cf-8e0af5430af3"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="FixedString" value="WarpedMind_Description"/>
+                    <attribute id="DisplayName" type="FixedString" value="WarpedMind_DisplayName"/>
+                    <attribute id="ExactMatch" type="FixedString" value="Advantage(SavingThrow,Wisdom)"/>
+                    <attribute id="Hidden" type="bool" value="false"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="PassivePrototype" type="FixedString" value="WarpedMind_SavingThrows"/>
+                    <attribute id="ProgressionTableId" type="guid" value="00000000-0000-0000-0000-000000000000"/>
+                    <attribute id="SelectorId" type="FixedString" value=""/>
+                    <attribute id="Type" type="FixedString" value=""/>
+                    <attribute id="UUID" type="guid" value="00ed1632-f72a-41d6-89c8-c9bd37e261d0"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="FixedString" value="Enhancement_Description"/>
+                    <attribute id="DisplayName" type="FixedString" value="Enhancement_DisplayName"/>
+                    <attribute id="ExactMatch" type="FixedString" value="RollBonus(SkillCheck,1d4,Strength)"/>
+                    <attribute id="Hidden" type="bool" value="true"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="PassivePrototype" type="FixedString" value="Enhancement"/>
+                    <attribute id="ProgressionId" type="guid" value="9de9f299-cffe-4834-915b-514993cb5961"/>
+                    <attribute id="ProgressionTableId" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="SelectorId" type="FixedString" value=""/>
+                    <attribute id="Type" type="FixedString" value="RollBonus"/>
+                    <attribute id="UUID" type="guid" value="8ae8edf1-5a67-4456-bcd7-88ffab63856f"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="FixedString" value="Enhancement_Description"/>
+                    <attribute id="DisplayName" type="FixedString" value="Enhancement_DisplayName"/>
+                    <attribute id="ExactMatch" type="FixedString" value="RollBonus(SkillCheck,1d4,Dexterity)"/>
+                    <attribute id="Hidden" type="bool" value="true"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="PassivePrototype" type="FixedString" value="Enhancement"/>
+                    <attribute id="ProgressionId" type="guid" value="9de9f299-cffe-4834-915b-514993cb5961"/>
+                    <attribute id="ProgressionTableId" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="SelectorId" type="FixedString" value=""/>
+                    <attribute id="Type" type="FixedString" value="RollBonus"/>
+                    <attribute id="UUID" type="guid" value="71eafb33-608b-424a-9d9d-32eb211fa759"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="ExactMatch" type="FixedString" value="RollBonus(SkillCheck,1d4,Strength)"/>
+                    <attribute id="Hidden" type="bool" value="true"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="ProgressionTableId" type="guid" value="00000000-0000-0000-0000-000000000000"/>
+                    <attribute id="SelectorId" type="FixedString" value=""/>
+                    <attribute id="Type" type="FixedString" value="RollBonus"/>
+                    <attribute id="UUID" type="guid" value="03f89678-cfbd-4233-a10b-1c71bd52bf7e"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="ExactMatch" type="FixedString" value="RollBonus(SkillCheck,1d4,Dexterity)"/>
+                    <attribute id="Hidden" type="bool" value="true"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="ProgressionTableId" type="guid" value="00000000-0000-0000-0000-000000000000"/>
+                    <attribute id="SelectorId" type="FixedString" value=""/>
+                    <attribute id="Type" type="FixedString" value="RollBonus"/>
+                    <attribute id="UUID" type="guid" value="0ed1af45-489d-4b2f-a10b-2721ed5ed249"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="FixedString" value="StateOfMind_Description"/>
+                    <attribute id="DisplayName" type="FixedString" value="StateOfMind_DisplayName"/>
+                    <attribute id="ExactMatch" type="FixedString" value="Resistance(Fire,Resistant)"/>
+                    <attribute id="Hidden" type="bool" value="false"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="PassivePrototype" type="FixedString" value="StateOfMind"/>
+                    <attribute id="ProgressionId" type="guid" value="9de9f299-cffe-4834-915b-514993cb5961"/>
+                    <attribute id="ProgressionTableId" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="SelectorId" type="FixedString" value=""/>
+                    <attribute id="Type" type="FixedString" value="Resistance"/>
+                    <attribute id="UUID" type="guid" value="d840408e-584b-4ad7-99e2-d66293e92895"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Description" type="FixedString" value="StateOfMind_Description"/>
+                    <attribute id="DisplayName" type="FixedString" value="StateOfMind_DisplayName"/>
+                    <attribute id="ExactMatch" type="FixedString" value="Resistance(Cold,Resistant)"/>
+                    <attribute id="Hidden" type="bool" value="true"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="PassivePrototype" type="FixedString" value="StateOfMind"/>
+                    <attribute id="ProgressionId" type="guid" value="9de9f299-cffe-4834-915b-514993cb5961"/>
+                    <attribute id="ProgressionTableId" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="SelectorId" type="FixedString" value=""/>
+                    <attribute id="Type" type="FixedString" value="Resistance"/>
+                    <attribute id="UUID" type="guid" value="43a433e9-76f2-456f-aa44-2dae0df99021"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="ExactMatch" type="FixedString" value="Resistance(Fire,Resistant)"/>
+                    <attribute id="Hidden" type="bool" value="true"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="ProgressionTableId" type="guid" value="00000000-0000-0000-0000-000000000000"/>
+                    <attribute id="SelectorId" type="FixedString" value=""/>
+                    <attribute id="Type" type="FixedString" value="Resistance"/>
+                    <attribute id="UUID" type="guid" value="d292fc8b-0194-4fae-9859-d83c8ee87b7d"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="ExactMatch" type="FixedString" value="Resistance(Cold,Resistant)"/>
+                    <attribute id="Hidden" type="bool" value="true"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="ProgressionTableId" type="guid" value="00000000-0000-0000-0000-000000000000"/>
+                    <attribute id="SelectorId" type="FixedString" value=""/>
+                    <attribute id="Type" type="FixedString" value="Resistance"/>
+                    <attribute id="UUID" type="guid" value="fbc9e0c3-954e-4315-a173-c7f5a62cbf1c"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Hidden" type="bool" value="true"/>
+                    <attribute id="ParamMatch" type="FixedString" value="0:UncannyInsightPoint"/>
+                    <attribute id="ProgressionTableId" type="guid" value="00000000-0000-0000-0000-000000000000"/>
+                    <attribute id="SelectorId" type="FixedString" value=""/>
+                    <attribute id="Type" type="FixedString" value="ActionResource"/>
+                    <attribute id="UUID" type="guid" value="6fb6e505-b967-4a27-b962-6077fd0f4abb"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Hidden" type="bool" value="false"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="PassivePrototype" type="FixedString" value="GibberingTerror"/>
+                    <attribute id="ProgressionTableId" type="guid" value="00000000-0000-0000-0000-000000000000"/>
+                    <attribute id="SelectorId" type="FixedString" value=""/>
+                    <attribute id="Type" type="FixedString" value=""/>
+                    <attribute id="UUID" type="guid" value="9eb4e8cf-218f-4712-a95b-3ec631019faa"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="ExactMatch" type="FixedString" value="Tag(FRIGHTENED_ADV)"/>
+                    <attribute id="Hidden" type="bool" value="true"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="PassivePrototype" type="FixedString" value="AlienMind"/>
+                    <attribute id="ProgressionTableId" type="guid" value="00000000-0000-0000-0000-000000000000"/>
+                    <attribute id="SelectorId" type="FixedString" value=""/>
+                    <attribute id="Type" type="FixedString" value=""/>
+                    <attribute id="UUID" type="guid" value="3cfcb3a2-b03f-4a3d-a684-0ac33c4e2338"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="ExactMatch" type="FixedString" value="Tag(CHARMED_ADV)"/>
+                    <attribute id="Hidden" type="bool" value="true"/>
+                    <attribute id="ParamMatch" type="FixedString" value=""/>
+                    <attribute id="PassivePrototype" type="FixedString" value="AlienMind"/>
+                    <attribute id="ProgressionTableId" type="guid" value="00000000-0000-0000-0000-000000000000"/>
+                    <attribute id="SelectorId" type="FixedString" value=""/>
+                    <attribute id="Type" type="FixedString" value=""/>
+                    <attribute id="UUID" type="guid" value="a86b31ed-29d6-407e-9f94-71dcba0e423f"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Hidden" type="bool" value="true"/>
+                    <attribute id="ParamMatch" type="FixedString" value="0:PsychicOnslaughtPoint"/>
+                    <attribute id="ProgressionTableId" type="guid" value="00000000-0000-0000-0000-000000000000"/>
+                    <attribute id="SelectorId" type="FixedString" value=""/>
+                    <attribute id="Type" type="FixedString" value="ActionResource"/>
+                    <attribute id="UUID" type="guid" value="a811d9bd-7cb3-4f4d-be4c-2dccf52e5eec"/>
+                </node>
+                <node id="ProgressionDescription">
+                    <attribute id="Hidden" type="bool" value="true"/>
+                    <attribute id="ParamMatch" type="FixedString" value="0:RiftbornPoint"/>
+                    <attribute id="ProgressionTableId" type="guid" value="00000000-0000-0000-0000-000000000000"/>
+                    <attribute id="SelectorId" type="FixedString" value=""/>
+                    <attribute id="Type" type="FixedString" value="ActionResource"/>
+                    <attribute id="UUID" type="guid" value="26242e68-4c66-4dc4-aaac-6d8ac8803822"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

@@ -1,0 +1,1179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="0" revision="6" build="3" />
+	<region id="TranslatedStringKeys">
+		<node id="TranslatedStringKeys">
+			<children>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_AberrantShape_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h7329fb58gc547g440bg853dg7223d553edd4" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_AberrantShape_Dismiss_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h84985418g6127g4259g82d6g25fb5be199e0" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_ActionSurge_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="ha19696e1gf837g4665g86feg7e149abcfa12" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_AlterSelf_Drow_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h2f0af232g6cd8g4821g8f99gd05d95b4ffb2" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_AlterSelf_Duergar_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h2a73384egb82ag4c75ga154g4b820a9005fd" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_AlterSelf_Dwarf_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h359c7cdfg6e2ag410fg9f6bgf6a72c3f9ee3" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_AlterSelf_Elf_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h450d3dbegb595g4a3cg960egb89d9809740c" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_AlterSelf_Githyanki_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="he0b573cdg14d4g42e1gbe19gba7a22155612" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_AlterSelf_HalfDrow_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hc00fe3b7gb807g49b5g8b09gc33eba044efe" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_AlterSelf_HalfElf_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="he91d1e05gaef4g4f12g9276g26a76314056f" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_AlterSelf_Halfling_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h73050b44g2e44g4ca0gaa59g08bd05347fd6" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_AlterSelf_Human_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h66e79df5ge0f9g41a3g9195gdddcb78d6969" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_AlterSelf_Tiefling_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hb890accfgb239g402dgb5b4g8fed5614fb47" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_ArcaneRecovery_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h7d59230fg2bf7g436dgb436g08e0b4e9234e" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_ArcaneRecovery_1_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hc7f48f18ga003g4998g856cg67a9fac4f0c2" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_ArcaneRecovery_2_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h9a67526fg98f7g4621g9f85g30d987f59429" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_ArmorOfAgathys_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h0cf9ffebga616g4e18g84aeg73adc4261808" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_BladeWard_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h77b9ae20ge545g4842gbe2fg8096e232c118" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Blur_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hf5a7c326gf49dg419eg8859g9895d2c94935" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_BreakFree_Restrained_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hd474c61bgbb80g4b8dgb056g7a3d452b07d1" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_ComprehendLanguages_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h04d9e59cgae0bg436fgb641g42422aca1383" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Crouch_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h68d511b6g2409g442cg8a7eg371887ae84ce" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Dash_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h624300d5g36aag4529gacffg2980741b1698" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Dash_BonusAction_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hfc469095gb1c3g471aga51fgf9b5195409a5" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Dash_CunningAction_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hca05588dgfa78g469agaeaag31c022d47105" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Dash_StepOfTheWind_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hdf2b84c8ge7b9g4267gb032g90354a41a10f" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_BootsOfSpeed_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h477b3130ge61dg4619g9f20g4e2f90643f12" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DetectEvilAndGood_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h773aca43gdaa6g42e6g8316g716a290155db" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DetectThoughts_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h7335fb51g4da9g4257gb154g03949f63e18e" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Disengage_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hda935133g8b96g4a80g96c5g0e07b53cbf27" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Disengage_BonusAction_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h42fd1334g1251g4ce6gbcd8gc38a02443a74" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Disengage_StepOfTheWind_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h93442687gdbfbg40ebg813cg0ecb8528ee0f" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hd55daa90gcf0eg4587g95a7g23066280b458" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Tiefling_Male_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h48782d39g2876g455bg8c41g89ff7982cbd0" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Tiefling_Female_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h20a29ea3g41fag4d83gb788geffc72e8e186" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Drow_Male_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h21346f0dgbd5cg46b7gae73gd591f6655e32" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Drow_Female_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h3e50f066g600bg460fgba49g405a4d3ffd5a" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Human_Male_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h992948b2gd3fag4254gbe83g29da2ce31da7" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Human_Female_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h639024b9gf27dg4c88gb672gd244f76ddfaf" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Githyanki_Male_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h846e3041g7c73g4806gad43g9e74d887a5c4" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Githyanki_Female_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h198481ebg8043g4cb1g8beag48a7af39fe05" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Dwarf_Male_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="ha0890517g18a6g4733gb437g42b9b7c7faa4" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Dwarf_Female_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h3c8c6eecge427g4f21gb610ge552c348ded8" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Elf_Male_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h0435a5e3ge5e5g4824gadc4gffdc4199121f" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Elf_Female_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="ha618db3bg3347g48b8gb542g42e7fc87a395" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_HalfElf_Male_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hc10d3d93g97e5g4c4fga4fagcb66beb0d313" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_HalfElf_Female_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h64046560gd3ceg47f8gac32g7a9615e54954" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Halfling_Male_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h4f741fdegc70fg493egaa98gc423796ce956" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Halfling_Female_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h6a352488g3c99g4e51ga4f0gb324a4c7e400" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_MaskOfManyFaces_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h4c3275c4g4dcag4bbdg8ff6gb1814eb825a9" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Tiefling_Male_MaskOfManyFaces_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h2a1dabaeg7434g40daga75agf6841bda1bbb" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Tiefling_Female_MaskOfManyFaces_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hc86f3040g7fcag48afga4aeg827edb705f82" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Drow_Male_MaskOfManyFaces_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="he5142030gc7a0g45a9gacc5gcd961ee6ded0" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Drow_Female_MaskOfManyFaces_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h04ef6a08g5873g4cfeg8c46g4af3c00245fc" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Human_Male_MaskOfManyFaces_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h497ff765g73b2g4620g83fegd3a6fc5a6c75" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Human_Female_MaskOfManyFaces_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h52956977g2173g44a2gac95g4c3a3b5cf06d" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Githyanki_Male_MaskOfManyFaces_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hd5d0f0fcga7a2g49f9g839dg0b70d0491465" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Githyanki_Female_MaskOfManyFaces_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hfad5ab33g1fb4g48d9g864dge70a20a9748a" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Dwarf_Male_MaskOfManyFaces_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h78b77864g5083g4facgbf59g05f14511f652" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Dwarf_Female_MaskOfManyFaces_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h339961a8gc045g4ceag8121ge7e9d1f01f40" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Elf_Male_MaskOfManyFaces_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h13497812gab1ag4191gb4d7gb63470d584bc" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Elf_Female_MaskOfManyFaces_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h65503798ge528g4b67g9384gbb8708bd7d3a" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_HalfElf_Male_MaskOfManyFaces_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h9ccd7de7g06e7g41d1gad5egf6fc423776f9" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_HalfElf_Female_MaskOfManyFaces_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hf3d9424fgfce1g492dgb5c7g50abfe2367f9" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Halfling_Male_MaskOfManyFaces_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="ha92931baged57g4ef5g9b1bgb8563b209612" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Halfling_Female_MaskOfManyFaces_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h6b36cb75g1e2ag43a7ga30ag3ade7343c620" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_DisguiseSelf_Cancel_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h1b3dfa09g5f88g48e2g8869gcf4076e0ed12" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_ExpeditiousRetreat_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hb7f46a14g8e35g40ebgb747g327c9f926e14" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_FalseLife_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h41067cc2g069fg4399g9eabg237a7799da34" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_FalseLife_FiendishVigor_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h2b5512c3g5315g4b75gb5c4gcaf1fed13056" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_FlameBlade_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h3b3917aagb11fg4270g8aa7gbdf9bd9f8841" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_HellishRebuke_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h52d3f099g463fg43acgaf9egf0cb5e84c37b" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Hide_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h91ec86e6g082bg46dagb37dgc42e6d4e1925" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Hide_BonusAction_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h9fe46a26gc140g4fbfgb3b3gf82fa9a95b94" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Inkblot_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h4a6bbad1g2b33g4007g9fbdgab45ea01bdb2" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_MageArmor_ArmorOfShadows_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h9bbec5adg4d8cg4dc3g9f33g9ae3458794fb" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_MirrorImage_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h72b46baeg6aebg441dg8353g88a660c5321c" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_NaturalRecovery_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h17002d15gd024g41f7ga17bg49b42c867b42" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_NaturalRecovery_1_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hd090ddebg2366g4fe8g84bbgac8315160073" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_NaturalRecovery_2_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h61313336g57afg4959ga864gae5765003147" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_ProduceFlame_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hfd755f83gdef4g4c34g9b6fg44ab3fd26c96" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_ProduceFlame_Dismiss_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="ha026fd7bg4999g44f2g9772gbfcfaf95e43e" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_ReflectiveShell_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h351ee99fgfc77g4237gabacg6fad286784c4" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_RegainHP_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="ha5d58ce6g821fg4997g9f9dg67982f15fa56" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_SecondWind_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h9a3262d9g1cf8g40d2gae47ga2703e761c79" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Shillelagh_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h88189f48ga78cg4a13ga52fg9c789a31c49e" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_SpeakWithAnimals_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hbdc68d9egad97g44d3g80afg87dcae289616" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_SpeakWithAnimals_BeastSpeech_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h797e3d2fgac2fg4a17gab59g7dea2e9f9cb8" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Thaumaturgy_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hadf0e16bg56d2g4ea9ga9b1gb697214b5e30" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hde7c0e66g9526g4e3bgb10cg1f7f82300b96" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Dismiss_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h496eb8b3g1440g4fd8gbdb3g055cafcab785" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Badger_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h5dddcb30g1c17g4c76g8ba7g90fd1c075df1" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Bear_Polar_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h4d0a0c74g0bcbg4429g96edga6c930c88c5e" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Cat_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hfdcc3cd5g97bbg49d7ga5a9g0b7b2815a674" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_DeepRothe_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h66ecf0feg26f9g424ag8002g9f7a0f746d10" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Raven_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h605796f1gbcb9g4bf2gb46dg2100cebc27a5" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Spider_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="ha18a7b48g111ag4011gbd21gb7d6191ab5ba" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Wolf_Dire_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h90c01d74gf156g4626ga8cag30c6f8d775e3" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Combat_Heal_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h669ba7f4g8ceeg486cgb81dgf7d3a065d75e" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Combat_Heal_1_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h8ee34794g52f7g4282gaf93g5db11b8a5504" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Combat_Heal_2_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h5577f616gfdd6g458cga364g353d308a4f17" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Aid_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h7004f952g06a0g4400g855eg74f3029baed1" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_ArmsOfHadar_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h88ad6961g68dcg4c78g9837g83b208729203" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_CharmAnimalsAndPlants_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hf05494abg430eg4272ga3feg86abb2523c28" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_FeatherFall_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="ha954c1d2g1153g4859g8aa5gfaa6970764a6" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_PassWithoutTrace_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h2b6ab85cg8d21g4c23g895eg6b8a61fdabab" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_PrayerOfHealing_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hf94be341gafa8g455dgaa74g66168a9721a4" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_PreserveLife_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h58347e3dg4eb2g4ed1g9537g4f361e1644db" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_RadianceOfTheDawn_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h80e416d2g85efg490eg9ce6g6434bd0d5da9" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Repulsor_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h00edf05cgb29cg4037g9f2cg780dfce80b7a" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_TurnUndead_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h3e63e6aag19b0g400agb559g2e9ba2ea4bde" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_CallForHelp_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h9db85a0bg05d0g49e3g94aegbfd49ccd0d9b" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_HelpArrives_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="ha6389ef9gc227g4122ga945g0b55c9f9861c" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_CallForHelp_HookHorror_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hfb23276cg3fc0g430cgaebbg6cc18637d5b0" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_HelpArrives_HookHorror_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h0d842becg7cb8g495eg9b0eg66158b27b6fd" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Distract_Cat_Summon_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h24e4566cg132ag4dbegb355g6140a0dba1ea" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Disengage_Goblin_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h31d7b97fgbfdfg4b83g84c3gb867c5cd03fd" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Enlarge_Duergar_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hd73f38e6g03d1g47aega99eg97c05961a687" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_GoadingRoar_Bear_Summon_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hd0467b10g17c5g47b5g959bg3a765850133c" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_GoblinWarcry_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h9a58b342g0424g4adcgb2bagd0b15f049090" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Invisibility_Imp_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="ha3341df2g9635g4956g952egb7a2ee3366c4" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Leadership_Hobgoblin_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="ha5fe3331gf593g4a3bg8b72g0afb6acc741a" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_LuringSong_Harpy_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hc81c3697g25b2g4f41g921fg40419a723363" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_PackHowl_Wolf_Dire_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h5cc82965gdad6g4f67g9461gbd13f2badd6d" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Reckless_Minotaur_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hd2057539gbc0eg47cbgb24fg3a18f6cb95a9" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_StaticOverdrive_Automaton_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h1fc6c0bbg4cf4g4ac7g8e8dgbe7ead417b34" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_SuddenRush_Gnoll_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h7ab2a30dg4b56g4fa6g8a20gff3783b5eb82" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Badger_NPC_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hdb8fc4c3g03fag4218ga7d8ge66e2f98640b" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Bear_NPC_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h40eb9c2dg3f4ag4f5dga0f8g813860d0dfbc" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Bear_Black_NPC_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hbaf879e0g5fb3g4a5cg87afgcb228767a2d9" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Bear_Polar_NPC_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h4bdc5418gc5c0g4f52g9b7bg689946603eb4" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Boar_NPC_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h8e7fb2aeg2e61g4b5egbf77g61497e63b8eb" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_DeepRothe_NPC_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hc76400ebg8016g4405g9c60ga06d7fc9b2ce" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Spider_NPC_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hab6130d4g415cg4724ga5dbg8b85741fb8b7" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Wolf_NPC_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h00d04dbcg49c6g4c28g90fdg1a2b3129dca0" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Wolf_Dire_NPC_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hb94b6f9fge6e7g4216g9a9cg568336a7684c" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildShape_Bear_Grey_NPC_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h6cb87a4cg51a6g48deg8d95g14538ae4d7c7" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Disengage_CunningAction_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="habbf694cg5362g4822g9948gbdb661c80b50" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_HellishRebuke_AsmodeusTiefling_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="he1a20593g9e51g43b7g8150g85906843c087" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Stomp_AdamantineGolem_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h7b59dec2g26bcg490fg949bgacc43bcb8c54" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_CreateLava_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="he58601c6g6188g4ab6g905fg6707591b0502" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Reduce_Duergar_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h332598b3g05f7g4bf9gaa5eg4d01a43d04be" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Steady_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hb5fad65fg4751g45d2gb3f1ga6ed5085c68e" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_SteadyRanged_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="ha07074c0gf103g42ffg8e82gf2e599cf32fd" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_FullSwing_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hdaa552fdgfa13g49bdgbc02g2b63b4757bac" version="2" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_CreateSorceryPoints_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h02c61e87g4e01g443agb4f1g3d95480552fc" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_CreateSorceryPoints_1_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hd47cd03fg7ec1g40adg9449g9106d74b0baa" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_CreateSorceryPoints_2_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h924031bagdb2dg4a77gb05dg69b30456a4ad" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_CreateSorceryPoints_3_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hfb3280c3gc9b0g4299gac43g3021ec0bb79c" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_CreateSorceryPoints_4_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h38a31ba8g9b43g4da2gba82ga3edc87e7fcf" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_CreateSpellSlot_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hcd295291g7885g4073gae09ge965b053adee" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_CreateSpellSlot_1_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hde15bfd4g648bg44e6g9cc8gcc81c7180d12" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_CreateSpellSlot_2_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h20f1fa21g2e23g428dga7c4ge464d0d1b0ce" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_CreateSpellSlot_3_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hbff2b697g31b6g4abcg84f2g692bca7c5333" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_CreateSpellSlot_4_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h9858a853gba85g4d43g962dgfbbefc05f7d2" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout__WildMagic_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h26ec997bg87dfg4640gb3adg18c5cdca085d" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildMagic_TurnMagic_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h49dce8a7gc933g4c25g821egd11f88b72343" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildMagic_Burning_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="hd0aa2bb6gd33fg4eadg9569gf793c4a39eca" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildMagic_Teleport_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="he8311249g80bcg4af2gbc65g3d30e8e5611c" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildMagic_Enchant_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h15c3a36fga700g4470g9858g15a7307100c6" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildMagic_SorceryPoints_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h1a0e9ef5g5b9dg481bg9430g7f8bf97f9eef" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildMagic_Fog_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h617c6823g1773g49e7g965ag6af02f96e326" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildMagic_Blur_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h86104902g1e49g4dbcg8952g7471eba4a314" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildMagic_Heal_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h5a59306fg5678g4eb6gb0d7gacc20b63cb19" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildMagic_Mephit_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h0dbca1a8g9927g4fbagaa92gf495ccfc0747" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_WildMagic_Swap_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h62cd61cfg1d46g4a68g8ba5ge3b913596f7d" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Shared_Shout_Fury_Gnoll_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="h362d724dg77cfg42e2gb86cg7dd66a028484" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

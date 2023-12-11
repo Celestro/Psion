@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="0" revision="6" build="5" />
+	<region id="TranslatedStringKeys">
+		<node id="TranslatedStringKeys">
+			<children>
+				<node id="TranslatedStringKey">
+					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="UUID" type="FixedString" value="Psion_EnhancementRequirement_Description" />
+					<attribute id="Content" type="TranslatedString" handle="11d3a5ba-b28d-4b22-8a91-22940fc5109d" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="UUID" type="FixedString" value="Psion_EnhancementBodyControlRequirement_Description" />
+					<attribute id="Content" type="TranslatedString" handle="c2a49248-c981-4f9e-8915-77398cfb1637" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="UUID" type="FixedString" value="Psion_EnhancementConsumptionRequirement_Description" />
+					<attribute id="Content" type="TranslatedString" handle="2f72635b-6f58-4772-86c2-909856f74d86" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="UUID" type="FixedString" value="Psion_TelekinesisRequirement_Description" />
+					<attribute id="Content" type="TranslatedString" handle="cc82f7d6-bcdc-404b-9643-a8621f5b2e79" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="UUID" type="FixedString" value="Psion_TelekinesisPsychokineticsRequirement_Description" />
+					<attribute id="Content" type="TranslatedString" handle="5ef24033-1ceb-41e6-bd96-a1df3d149e91" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="UUID" type="FixedString" value="Psion_TelepathyRequirement_Description" />
+					<attribute id="Content" type="TranslatedString" handle="5b4299a2-6566-477f-93eb-f9c0a6b18eb1" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="UUID" type="FixedString" value="Psion_ProjectionRequirement_Description" />
+					<attribute id="Content" type="TranslatedString" handle="a4cfa992-7c47-4389-9506-0eb48c04d7bc" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="UUID" type="FixedString" value="Psion_PsychokineticsRequirement_Description" />
+					<attribute id="Content" type="TranslatedString" handle="4f07ffa5-bf6e-409b-bfa7-9c530786f3b8" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="UUID" type="FixedString" value="Psion_PsychokineticsElementalEmotionsRequirement_Description" />
+					<attribute id="Content" type="TranslatedString" handle="22508162-b0e2-419c-9f1c-775b5124888e" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="UUID" type="FixedString" value="Psion_PrecognitionRequirement_Description" />
+					<attribute id="Content" type="TranslatedString" handle="a85b8924-1199-43c0-ad85-1c2a02a88062" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="UUID" type="FixedString" value="Psion_TranspositionRequirement_Description" />
+					<attribute id="Content" type="TranslatedString" handle="4668653e-cccb-4cff-82e8-1bca2c40e57a" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="UUID" type="FixedString" value="Psion_TranspositionRiftStrikeRequirement_Description" />
+					<attribute id="Content" type="TranslatedString" handle="9b3884b8-e3e3-4c03-bea5-ed4fc5f6a808" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="UUID" type="FixedString" value="Psion_ConsumptionRequirement_Description" />
+					<attribute id="Content" type="TranslatedString" handle="614fdfe7-4485-4b14-8d42-050e2d7b641b" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_MentalAwareness_Passive_Description" />
+					<attribute id="Content" type="TranslatedString" handle="1c6ff3d1-58db-4db3-98f7-817598859016" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_MindReader_Passive_Description" />
+					<attribute id="Content" type="TranslatedString" handle="1a217877-9d5d-483c-846b-212fcd26561d" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_AllSeeingEye_Passive_Description" />
+					<attribute id="Content" type="TranslatedString" handle="4b06718a-178e-4d8d-98e0-ca028feab964" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_AllSeeingEye_Toggle_Passive_Description" />
+					<attribute id="Content" type="TranslatedString" handle="e45278fa-8c36-4ddc-b260-81be871750b7" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_FullAwakening_Passive_Description" />
+					<attribute id="Content" type="TranslatedString" handle="1121426e-75c5-4ee4-b699-ac396b7167be" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_UncontrollableMind_Passive_Description" />
+					<attribute id="Content" type="TranslatedString" handle="2744f027-b1a1-497c-8e0f-b2c0557117f2" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_UnstoppableRampage_Passive_Description" />
+					<attribute id="Content" type="TranslatedString" handle="e185ad64-bf10-41ae-8c46-1aca62badf2a" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_BalanceOfPower_Passive_Description" />
+					<attribute id="Content" type="TranslatedString" handle="355fc898-d27c-47cf-ac3f-93b81e43f59f" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_PerfectedEnhancement_Passive_Description" />
+					<attribute id="Content" type="TranslatedString" handle="776f7652-b278-4dcc-a6f6-aacce3504cf0" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_MentalControl_Passive_Description" />
+					<attribute id="Content" type="TranslatedString" handle="83764759-0077-45b2-85ec-a419c816d529" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_MindOverMatter_Passive_Description" />
+					<attribute id="Content" type="TranslatedString" handle="49c57bb6-9b8c-4f52-b87c-5028f756b6b3" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_ConsumingLink_Passive_Description" />
+					<attribute id="Content" type="TranslatedString" handle="570f8804-fb68-40b3-99fe-736b6015234f" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="UUID" type="FixedString" value="Psion_ConsumedStrength_Passive_Description" />
+					<attribute id="Content" type="TranslatedString" handle="2d1c2889-86a8-41d7-ae0b-91778b898abb" version="3" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

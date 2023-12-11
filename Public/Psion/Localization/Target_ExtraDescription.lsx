@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="0" revision="6" build="5" />
+	<region id="TranslatedStringKeys">
+		<node id="TranslatedStringKeys">
+			<children>
+				<node id="TranslatedStringKey">
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Content" type="TranslatedString" handle="025289c8-2ab3-4704-8b9b-f761f93ab49f" version="1" />
+					<attribute id="UUID" type="FixedString" value="Psion_Target_TelekineticForce_ExtraDescription" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+					<attribute id="Content" type="TranslatedString" handle="4550f1ec-8fa5-4683-8e0f-904a765b6b93" version="1" />
+					<attribute id="UUID" type="FixedString" value="Psion_Target_MindLeech_ExtraDescription" />
+					<attribute id="Stub" type="bool" value="True" />
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

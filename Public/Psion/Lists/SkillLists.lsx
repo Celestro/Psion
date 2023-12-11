@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="0" build="21"/>
+    <region id="SkillLists">
+        <node id="root">
+            <children>
+                <node id="SkillList">
+                    <attribute id="Skills" type="LSString" value="Perception, Deception, Intimidation, Investigation, Insight, History, Medicine, Religion"/>
+                    <attribute id="UUID" type="guid" value="c1482cc7-807c-423d-a76a-fdc98f1bbbd0"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

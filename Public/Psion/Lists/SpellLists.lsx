@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="0" build="49"/>
+    <region id="SpellLists">
+        <node id="root">
+            <children>
+                <node id="SpellList"> 6th Level Innate Psionics Spell
+                    <attribute id="Spells" type="LSString" value="Projectile_Disintegrate_Psion"/>
+                    <attribute id="UUID" type="guid" value="762f21a2-19a1-4c35-9383-0a9d9af3cbb2"/>
+                </node>
+                <node id="SpellList"> 7th Level Innate Psionics Spell
+                    <attribute id="Spells" type="LSString" value="Target_Regenerate_Psion"/>
+                    <attribute id="UUID" type="guid" value="cba2428f-6d17-408a-80ce-822eeb4f25a4"/>
+                </node>
+                <node id="SpellList"> 8th Level Innate Psionics Spell
+                    <attribute id="Spells" type="LSString" value="Target_DominateMonster_Psion;Target_Feeblemind_Psion;Target_MindBlank_Psion;Target_PowerWordStun_Psion"/>
+                    <attribute id="UUID" type="guid" value="7127e90b-7acd-412b-ad92-cb97fd83e506"/>
+                </node>
+                <node id="SpellList"> 9th Level Innate Psionics Spell
+                    <attribute id="Spells" type="LSString" value="Target_Foresight_Psion;Target_PowerWordKill_Psion;Target_TimeStop_Psion"/>
+                    <attribute id="UUID" type="guid" value="de679f4a-4a04-41da-8fb0-023041c86513"/>
+                </node>
+                <node id="SpellList"> Mystery Cult 1st Level Domain Spells
+                    <attribute id="Spells" type="LSString" value="Target_CauseFear;Target_DissonantWhispers"/>
+                    <attribute id="UUID" type="guid" value="821797ca-555a-4b19-b4f2-d00b3dc798b9"/>
+                </node>
+                <node id="SpellList"> Mystery Cult Channel Divinity Spell
+                    <attribute id="Spells" type="LSString" value="Target_InvokeBetrayal"/>
+                    <attribute id="UUID" type="guid" value="f7698052-3702-4480-8c8e-417e31239c25"/>
+                </node>
+                <node id="SpellList"> Mystery Cult 2nd Level Domain Spells
+                    <attribute id="Spells" type="LSString" value="Shout_DetectThoughts;Target_Suggestion"/>
+                    <attribute id="UUID" type="guid" value="a00d0284-a869-41d4-99eb-fc17a10e5e08"/>
+                </node>
+                <node id="SpellList"> Mystery Cult 3rd Level Domain Spells
+                    <attribute id="Spells" type="LSString" value="Zone_Fear;Target_EnemiesAbound"/>
+                    <attribute id="UUID" type="guid" value="62bce632-fd5b-484b-8db0-f9eb94643ab7"/>
+                </node>
+                <node id="SpellList"> That Which Is Beyond 2nd Level Spells
+                    <attribute id="Spells" type="LSString" value="Target_Darkness;Shout_DetectThoughts;Target_HoldPerson;Target_Invisibility;Shout_MirrorImage;Target_MistyStep;Projectile_RayOfEnfeeblement;Target_PsychicDrain_Spell;Target_Shatter;Target_Silence;Shout_ArmorOfAgathys;Shout_ArmsOfHadar;Target_CharmPerson;Target_DissonantWhispers;Shout_ExpeditiousRetreat;Shout_HellishRebuke;Target_Hex;Target_HideousLaughter;Target_ProtectionFromEvilAndGood;Projectile_WitchBolt"/>
+                    <attribute id="UUID" type="guid" value="2b7fadab-7e00-444c-858b-5e4c8840eed2"/>
+                </node>
+                <node id="SpellList"> Planetouched Origin 1st Level Origin Spell
+                    <attribute id="Spells" type="LSString" value="Shout_Flicker_Spell"/>
+                    <attribute id="UUID" type="guid" value="ff26a651-ef05-42c2-8cc6-0efd2897abfa"/>
+                </node>
+                <node id="SpellList"> Planetouched Origin 1st Level Spells
+                    <attribute id="Spells" type="LSString" value="Shout_AbsorbElements;Zone_BurningHands;Target_ChaosBolt;Target_CharmPerson;Projectile_ChromaticOrb;Zone_ColorSpray;Shout_DisguiseSelf;Shout_EarthTremor;Shout_ExpeditiousRetreat;Shout_FalseLife;Shout_FeatherFall;Target_FogCloud;Projectile_IceKnife;Target_Jump;Target_MageArmor;Projectile_MagicMissile;Projectile_RayOfSickness;Shout_Shield;Target_Sleep;Zone_TashasCausticBrew;Zone_Thunderwave;Projectile_WitchBolt"/>
+                    <attribute id="UUID" type="guid" value="0115c2fe-a4c4-4352-9f81-fb9619d41590"/>
+                </node>
+                <node id="SpellList"> Planetouched Origin 2nd Level Origin Spell
+                    <attribute id="Spells" type="LSString" value="Target_MistyStep"/>
+                    <attribute id="UUID" type="guid" value="4963fbef-f917-4fbd-b430-05e59674eb69"/>
+                </node>
+                <node id="SpellList"> Planetouched Origin 2nd Level Spells
+                    <attribute id="Spells" type="LSString" value="Zone_AganazzarsScorcher;Shout_AlterSelf;Target_Blindness;Shout_Blur;Target_CloudOfDaggers;Target_CrownOfMadness;Target_Darkness;Target_Darkvision;Shout_DetectThoughts;Target_DragonsBreath;Target_DustDevil;Target_EnhanceAbility;Target_EnlargeReduce;Zone_GustOfWind;Target_HoldPerson;Target_Invisibility;Target_Knock;Target_Levitate;Target_MaximiliansEarthenGrasp;Target_MindSpike;Shout_MirrorImage;Target_MistyStep;Projectile_ScorchingRay;Shout_ShadowBlade;Target_Shatter;Target_SnillocsSnowballStorm;Target_Suggestion;Target_TashasMindWhip;Shout_WardingWind;Target_Web;Shout_AbsorbElements;Zone_BurningHands;Target_ChaosBolt;Target_CharmPerson;Projectile_ChromaticOrb;Zone_ColorSpray;Shout_DisguiseSelf;Shout_EarthTremor;Shout_ExpeditiousRetreat;Shout_FalseLife;Shout_FeatherFall;Target_FogCloud;Projectile_IceKnife;Target_Jump;Target_MageArmor;Projectile_MagicMissile;Projectile_RayOfSickness;Shout_Shield;Target_Sleep;Zone_TashasCausticBrew;Zone_Thunderwave;Projectile_WitchBolt"/>
+                    <attribute id="UUID" type="guid" value="a5f7e7ec-bdfd-42e4-a1ba-65bf9dac992f"/>
+                </node>
+                <node id="SpellList"> Planetouched Origin 3rd Level Origin Spell
+                    <attribute id="Spells" type="LSString" value="Shout_Blink"/>
+                    <attribute id="UUID" type="guid" value="25b06ade-b258-459c-8bf9-0ce2671e653d"/>
+                </node>
+                <node id="SpellList"> Planetouched Origin 3rd Level Spells
+                    <attribute id="Spells" type="LSString" value="Shout_Blink;Target_Daylight;Target_EnemiesAbound;Target_EruptingEarth;Zone_Fear;Projectile_Fireball;Target_Fly;Target_Haste;Target_IntellectFortress;Zone_LightningBolt;Shout_MinuteMeteors;Target_ProtectionFromEnergy;Target_SleetStorm;Target_StinkingCloud;Shout_ThunderStep;Shout_WaterWalk;Zone_AganazzarsScorcher;Shout_AlterSelf;Target_Blindness;Shout_Blur;Target_CloudOfDaggers;Target_CrownOfMadness;Target_Darkness;Target_Darkvision;Shout_DetectThoughts;Target_DragonsBreath;Target_DustDevil;Target_EnhanceAbility;Target_EnlargeReduce;Zone_GustOfWind;Target_HoldPerson;Target_Invisibility;Target_Knock;Target_Levitate;Target_MaximiliansEarthenGrasp;Target_MindSpike;Shout_MirrorImage;Target_MistyStep;Projectile_ScorchingRay;Shout_ShadowBlade;Target_Shatter;Target_SnillocsSnowballStorm;Target_Suggestion;Target_TashasMindWhip;Shout_WardingWind;Target_Web;Shout_AbsorbElements;Zone_BurningHands;Target_ChaosBolt;Target_CharmPerson;Projectile_ChromaticOrb;Zone_ColorSpray;Shout_DisguiseSelf;Shout_EarthTremor;Shout_ExpeditiousRetreat;Shout_FalseLife;Shout_FeatherFall;Target_FogCloud;Projectile_IceKnife;Target_Jump;Target_MageArmor;Projectile_MagicMissile;Projectile_RayOfSickness;Shout_Shield;Target_Sleep;Zone_TashasCausticBrew;Zone_Thunderwave;Projectile_WitchBolt"/>
+                    <attribute id="UUID" type="guid" value="d0b67482-d354-4634-801d-60fb0c88bbce"/>
+                </node>
+                <node id="SpellList"> Mind Reaper 3rd Level Spell Addition
+                    <attribute id="Spells" type="LSString" value="Target_CauseFear"/>
+                    <attribute id="UUID" type="guid" value="1123197d-b259-4231-b36f-e20044afa7bd"/>
+                </node>
+                <node id="SpellList"> Mind Reaper 5th Level Spell Addition
+                    <attribute id="Spells" type="LSString" value="Shout_DetectThoughts"/>
+                    <attribute id="UUID" type="guid" value="252375b5-9011-4713-94f1-c23d4d4ae970"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

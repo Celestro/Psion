@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="7" build="405"/>
+    <region id="EquipmentLists">
+        <node id="root">
+            <children>
+                <node id="EquipmentList">
+                    <attribute id="Items" type="LSString" value="ARM_Psion_Padded;ARM_Psion_Clothing"/>
+                    <attribute id="UUID" type="guid" value="ba1264bc-b1d5-49cb-a2b9-29ecf3b2a6a7"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

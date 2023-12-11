@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="0" build="49"/>
+    <region id="Feats">
+        <node id="root">
+            <children>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="InnerPower"/>
+                    <attribute id="PassivesAdded" type="LSString" value="InnerPower_ActionResource;InnerPower_Healing"/>
+                    <attribute id="UUID" type="guid" value="62c3dbc5-f614-4cf9-ac08-8395459677db"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="PsionicAdept_Consumption"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PsionicAdept_PsiPoint;PsionicAdept_Consumption;Consumption"/>
+                    <attribute id="UUID" type="guid" value="756d9876-aa2e-4e79-b180-5267d4cbdf3d"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="PsionicAdept_Enhancement"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PsionicAdept_PsiPoint;PsionicAdept_Enhancement;Enhancement"/>
+                    <attribute id="UUID" type="guid" value="a79fd108-21c3-41dd-89ec-2b162df59bd4"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="PsionicAdept_Precognition"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PsionicAdept_PsiPoint;PsionicAdept_Precognition;Precognition"/>
+                    <attribute id="UUID" type="guid" value="75439614-cdb4-4d82-937a-bc61f51364f4"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="PsionicAdept_Projection"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PsionicAdept_PsiPoint;PsionicAdept_Projection;Projection"/>
+                    <attribute id="UUID" type="guid" value="b8297bb6-8066-462b-976b-c2dd9744aa9e"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="PsionicAdept_Psychokinetic"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PsionicAdept_PsiPoint;PsionicAdept_Psychokinetics;Psychokinetics"/>
+                    <attribute id="UUID" type="guid" value="3f6c05ea-339a-42a4-9b56-33195b81aae8"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="PsionicAdept_Telekinesis"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PsionicAdept_PsiPoint;PsionicAdept_Telekinesis;Telekinesis"/>
+                    <attribute id="Requirements" type="LSString" value="FeatRequirementTelekinesis()"/>
+                    <attribute id="UUID" type="guid" value="0724dc7d-e424-4d85-9975-b0674a5ca9cf"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="PsionicAdept_Telepathy"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PsionicAdept_PsiPoint;PsionicAdept_Telepathy;Telepathy"/>
+                    <attribute id="UUID" type="guid" value="92f7c182-ff42-4be9-954d-584959ac75f1"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="PsionicAdept_Transposition"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PsionicAdept_PsiPoint;PsionicAdept_Transposition;Transposition"/>
+                    <attribute id="UUID" type="guid" value="c6ef44a4-3e4f-45ad-82d1-bf47edd68a4f"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="PsionicMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value=""/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(f40cddb8-c205-4ac2-ba0d-d4494b3c77ea,1,PsionicTalents)"/>
+                    <attribute id="UUID" type="guid" value="957f6401-c381-4bd2-84c1-24d84c65f2c8"/>
+                </node>
+                <node id="Feat">
+                    <attribute id="Name" type="FixedString" value="WarPsion"/>
+                    <attribute id="PassivesAdded" type="LSString" value="WarPsion_OpportunitySpell;WarPsion_Bonuses"/>
+                    <attribute id="UUID" type="guid" value="2bd7fb06-07ac-41dc-8fe4-86de111a1f47"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

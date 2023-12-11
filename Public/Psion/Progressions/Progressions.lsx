@@ -1,0 +1,1626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="9" build="330"/>
+    <region id="Progressions">
+        <node id="root">
+            <children>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);ProficiencyBonus(SavingThrow,Intelligence);ProficiencyBonus(SavingThrow,Wisdom);Proficiency(LightArmor);Proficiency(SimpleWeapons);"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Psion_Setup;Psychokinetics_Fire_Specialization;Psychokinetics_Cold_Specialization;Psychokinetics_Lightning_Specialization;ElementalBlast_Overcharged;EmpoweredStrike_Statuses;ElementalBlast_Overcharged"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSkills(c1482cc7-807c-423d-a76a-fdc98f1bbbd0,2);AddSpells(bd464620-e828-4209-a88d-55b0c1d7a368);SelectAbilityBonus(b9149c8e-52c8-46e5-9cb6-fc39301c05fe,AbilityBonus,2,1)"/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="922d450a-443f-4f55-8e44-5bd4e33f8184"/>
+                    <children>
+                        <node id="SubClasses">
+                            <children>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="e74c4a1b-d194-4b6e-ba79-c45a6f7f3806"/>
+                                </node>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="910ccffc-6e10-47e6-86ab-2807d30ff1c0"/>
+                                </node>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="8ce0a2c5-d76c-48d1-b80b-21fc252ebf66"/>
+                                </node>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="df8a9e37-a3ff-4bb6-9213-5615d6800d65"/>
+                                </node>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="37ce4892-cb2e-4a1a-bbaa-8be53a2a7df4"/>
+                                </node>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="f2c425c3-ec2a-434c-8726-ceac80343d00"/>
+                                </node>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="338385b9-ebaa-4d63-b661-7272ea2d23b5"/>
+                                </node>
+                                <node id="SubClass">
+                                    <attribute id="Object" type="guid" value="00ff4148-febf-41d7-891d-a4ef200449cb"/>
+                                </node>
+                            </children>
+						</node>
+					</children>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);"/>
+                    <attribute id="Level" type="uint8" value="2"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="0e2a8839-fe0c-41dc-a85b-cdc796fd73d4"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);"/>
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(24ad5444-e335-4af4-b3b5-37d1590b2dea,1,PsionicDisciplines)"/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="c0bd761b-3b46-4dec-987c-d793d192c172"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0)"/>
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="d766ad15-d9f9-4c20-8e66-8d6fd6cf3823"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);ActionResource(PsiPointMastery,1,0);ProficiencyBonusOverride(3)"/>
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PsionicMastery"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="890c3393-ac7d-42df-9474-3a47695cd040"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);"/>
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="0327ff63-802f-4d3c-bb86-e45f1d093775"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);"/>
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="PassivesAdded" type="LSString" value=""/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(473a3acf-4cb3-4938-9396-3092be3556ea)"/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="f18be87f-9197-48d0-8bed-cbad5fbc482d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);"/>
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="a211ca15-865b-43f4-80ab-d12773c787d2"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);ProficiencyBonusOverride(4)"/>
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(d48dea7c-d71e-4e96-83f9-a9027fbd2f19)"/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="e403270a-2b8a-4821-9520-0fc3e9c61b17"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);"/>
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="26477702-ac03-41fd-98f7-c951eeccce86"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);ActionResource(PsiPointMastery,1,0);ActionResource(InnatePsionics6,1,0)"/>
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(5949768a-a96c-4f30-8923-188edb06f3cd,1,InnatePsionics)"/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="615d3b44-5c45-4c32-9b4c-6c8d4531850a"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);"/>
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="8c1b2525-e3f1-467c-8a26-8bfde5b6fcba"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);ProficiencyBonusOverride(5);ActionResource(InnatePsionics7,1,0)"/>
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(d03e6724-e059-4498-90a4-4907d2732c42,1,InnatePsionics)"/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="22b05ba3-a057-49ee-80ac-d05a016afc46"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);"/>
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="e526e322-6e50-43ba-a07f-1d187b91fed8"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);ActionResource(InnatePsionics8,1,0)"/>
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(4151d574-9f65-4230-a681-3b5c358ed389,1,InnatePsionics)"/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="d95b41e0-7606-4b46-93bd-eb107f1661dc"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);"/>
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="41c1e01e-e10a-4b37-a911-74d5b94eaaba"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);ActionResource(PsiPointMastery,1,0);ProficiencyBonusOverride(6);ActionResource(InnatePsionics9,1,0)"/>
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(a0644f67-01bc-4e6f-bc9c-741353b6a0cb,1,InnatePsionics)"/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="7bdc8377-d68e-44fc-81ea-1d29ce144339"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);"/>
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(24ad5444-e335-4af4-b3b5-37d1590b2dea,1,PsionicDisciplines)"/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="de03c97d-d875-42b9-9d89-63b891d3a1d8"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);"/>
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="66aa0df0-6fc4-425c-850e-e7ec53e42a15"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(PsiPoint,1,0);"/>
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="Psion"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Ascension"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="d1e2f45e-75ff-4fef-aaed-093f248285c3"/>
+                    <attribute id="UUID" type="guid" value="d0cd0983-e190-40b8-8b99-b8c26888d50c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="UnshackledPower;Telekinesis;OverwhelmingPower"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="06d5b8fe-f0cf-4f12-872c-54fa6c0ceac8"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="2"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(e28a07ac-0d19-4e0c-a0cd-157a8020d382,2,PsionicTalents)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="b87ab841-d6fc-4b8f-a597-de283fc9f5c4"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value=""/>
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="RampagingPower"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(e28a07ac-0d19-4e0c-a0cd-157a8020d382,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="bee702f6-3a0e-4245-bb04-23cd7bc769c1"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(e28a07ac-0d19-4e0c-a0cd-157a8020d382,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="2aaae20e-28f8-45f7-b0bc-e391f97d9d91"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(e899b07a-5052-411d-a4b5-45f672846ebe,1,PsionicTalents);ReplacePassives(e899b07a-5052-411d-a4b5-45f672846ebe,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="7fe13446-1042-49fd-b3d8-e6aa3a2132be"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EmpoweredPsionics;EmpoweredPsionics_Force;EmpoweredPsionics_Multi;EmpoweredPsionics_Bludgeoning;EmpoweredPsionics_Psychic;EmpoweredPsionics_EmpoweredStrike"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(aa329c5b-ca46-4277-8729-ec6440cd8f4c,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="f29d9698-a89f-4702-82ae-1a8000c932ab"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(aa329c5b-ca46-4277-8729-ec6440cd8f4c,1,PsionicTalents);ReplacePassives(aa329c5b-ca46-4277-8729-ec6440cd8f4c,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="0be4d358-64bf-4e79-803c-8dd97b98d153"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(aa329c5b-ca46-4277-8729-ec6440cd8f4c,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="3475b548-b97b-4347-b408-f80323479731"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(13e91703-8d4b-4981-8c42-21801db244a9,1,PsionicTalents);ReplacePassives(13e91703-8d4b-4981-8c42-21801db244a9,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="9ad20019-8910-40e6-8c3e-a6b55781c879"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="UncontrollableMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(13e91703-8d4b-4981-8c42-21801db244a9,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="65e32699-227c-43ea-8a41-15f4ab60e875"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(9dcae81b-f400-4f32-8d29-39c2e6e37ef4,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="6030e206-268c-4c58-85a6-7ea99a0cf5df"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(9dcae81b-f400-4f32-8d29-39c2e6e37ef4,1,PsionicTalents);ReplacePassives(9dcae81b-f400-4f32-8d29-39c2e6e37ef4,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="098ab966-4398-4a54-b5ce-233d5fb0a737"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(9dcae81b-f400-4f32-8d29-39c2e6e37ef4,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="45e4844d-8fe5-434a-a8c4-5962af234689"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="UnstoppableRampage"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(9dcae81b-f400-4f32-8d29-39c2e6e37ef4,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="8a3da19a-65a3-41a6-9704-54dff2e61363"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(9dcae81b-f400-4f32-8d29-39c2e6e37ef4,1,PsionicTalents);ReplacePassives(9dcae81b-f400-4f32-8d29-39c2e6e37ef4,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="ef0ea186-f96d-44b5-bf41-33b7f8ec54a7"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(9dcae81b-f400-4f32-8d29-39c2e6e37ef4,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="80071ccb-c0e8-4745-be53-abede58eccd8"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(9dcae81b-f400-4f32-8d29-39c2e6e37ef4,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="392f075f-bc18-4ecf-ace0-a14c14bdee58"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(9dcae81b-f400-4f32-8d29-39c2e6e37ef4,1,PsionicTalents);ReplacePassives(9dcae81b-f400-4f32-8d29-39c2e6e37ef4,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="9b44afe1-bebd-46b4-9d5c-11e50b3fc3a8"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(9dcae81b-f400-4f32-8d29-39c2e6e37ef4,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="22f14bcd-48b1-4bbb-81d9-05d723255906"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="UnleashedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(9dcae81b-f400-4f32-8d29-39c2e6e37ef4,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="97bf1a33-fa5d-42db-8e9f-863b4a71f1be"/>
+                    <attribute id="UUID" type="guid" value="f1bc6567-9c03-4969-86bc-fce94a23550b"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="OpenedMind;Telepathy;MentalAwareness"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="cf1417cb-46d2-4e4f-bcc3-61a29e2a79df"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="2"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(f40cddb8-c205-4ac2-ba0d-d4494b3c77ea,2,PsionicTalents)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="8232315a-e149-4464-9c7b-80b64a2179f6"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="MindReader;MindReader_IntelligenceSavingThrow"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(f40cddb8-c205-4ac2-ba0d-d4494b3c77ea,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="84a00cea-ff23-4e9d-82a0-5b231b8508a4"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(f40cddb8-c205-4ac2-ba0d-d4494b3c77ea,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="9b429cbe-ef5d-4d68-b46a-a744b67dba49"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="PassivesRemoved" type="LSString" value="PsionicTalents_ConsumingLink"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(6636bc51-3501-4d04-bfa6-a578ffffbed8,1,PsionicTalents);ReplacePassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="47475a7c-faa7-47e5-9c24-224700734d01"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EmpoweredPsionics;EmpoweredPsionics_Force;EmpoweredPsionics_Multi;EmpoweredPsionics_Bludgeoning;EmpoweredPsionics_Psychic;EmpoweredPsionics_EmpoweredStrike"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="2bc71dfd-e71c-42e6-b36b-29f0b8894e69"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalents);ReplacePassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="c7989482-22f3-4e7f-a2bc-3751e9675fb9"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="79c4bd3e-bca4-4be9-9098-339fec361558"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(ec7d5228-34b7-4f27-b09a-bf84f3522e21,1,PsionicTalents);ReplacePassives(ec7d5228-34b7-4f27-b09a-bf84f3522e21,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="47d3e5d6-5908-4235-b643-b15b07e977b6"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="AllSeeingEye;AllSeeingEye_Toggle"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(ec7d5228-34b7-4f27-b09a-bf84f3522e21,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="98df4942-453d-494e-b9e5-4d6f854c4ce1"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="f6462760-a8f0-4608-8a42-f8e0e3a985be"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalents);ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="dc6e5c45-d3e3-41ad-b4f7-ba01df48ef4d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="e0faf332-9dee-49cf-af3b-8d22001c5a3d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FullAwakening"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="357be726-9993-4259-9fbf-fdb87f14c904"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalents);ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="c2420266-c3b3-4c4a-8ac0-ec60e637676d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="cc04730f-7d28-4914-a055-4f635ee81367"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="7bf21c25-cefa-40c8-9f5c-5b1a7f9c1a43"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalents);ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="30057ca3-62e0-4819-a310-499953304d71"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="bf865769-3b85-4e2a-b392-ab62b7b7950d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="AwakenedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="f5d3d3e8-2549-461f-b75a-04f4bc77011b"/>
+                    <attribute id="UUID" type="guid" value="d839833a-6e3a-4978-82d9-f19e5e02307a"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Enlightened;Enhancement;StateOfMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="9de9f299-cffe-4834-915b-514993cb5961"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="2"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(f40cddb8-c205-4ac2-ba0d-d4494b3c77ea,2,PsionicTalents)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="67095bb6-540f-4535-bf7a-39e6f7dbf64a"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="BalanceOfPower"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(f40cddb8-c205-4ac2-ba0d-d4494b3c77ea,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="e256b18d-bc03-465d-b39c-833f69911131"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(f40cddb8-c205-4ac2-ba0d-d4494b3c77ea,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="456a45a0-d27a-4a54-8995-7385c1b7756b"/>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(6636bc51-3501-4d04-bfa6-a578ffffbed8,1,PsionicTalents);ReplacePassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="7ce99e72-ff56-4006-95bf-bc508f387dce"/>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PerfectedEnhancement"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="4658bf34-5e2b-42a4-833d-0d955e1a09b3"/>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalents);ReplacePassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="12b08ebc-1d73-4eb5-962c-4e0bb94a428b"/>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="7ed5cfec-54c5-4f9d-a307-25d431521a9e"/>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(ec7d5228-34b7-4f27-b09a-bf84f3522e21,1,PsionicTalents);ReplacePassives(ec7d5228-34b7-4f27-b09a-bf84f3522e21,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="18ca164f-2720-4c3f-b4d8-1951cf48918c"/>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="MentalControl"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(ec7d5228-34b7-4f27-b09a-bf84f3522e21,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="a399d18a-12b2-40ce-a174-58840d792416"/>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="4c21ce45-8537-4202-8e65-57252fa0ad71"/>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalents);ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="183459ad-0eb2-411c-b337-6dad1b63f69e"/>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="d8c2fde8-8a78-4359-94c7-ea5cce7d09ce"/>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="MindOverMatter;MindOverMatter_Strength"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="c1c95ff8-14f3-4e0f-8b45-c90d2715ce49"/>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalents);ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="0df65ff1-a1b8-4be9-a03b-bf75e0586e8a"/>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="82375630-5120-409d-b2a2-895a9651356d"/>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="c740fa28-ca8f-449f-8c8a-badc56677859"/>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalents);ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="a34278e0-72fa-473c-884d-59e81e3a79d3"/>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="d8d09a53-2bfd-46cc-9381-59092e05d5ca"/>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="TranscendedMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="3264709a-ec1d-466d-bab5-cb127bd05408"/>
+                    <attribute id="UUID" type="guid" value="a7f1d5c8-5c45-4e67-9cae-161459f4b8fa"/>
+				</node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="CreatorsMind;Projection;BoundlessImagination"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="62d853bf-141b-4da3-9e74-3ff0c06b72fa"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="2"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(a04239ab-4429-4684-a916-7df4077c19ed,2,PsionicTalents)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="d4f1d464-630b-4379-9edd-b762ae8195c5"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="AstralMetastability"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(a04239ab-4429-4684-a916-7df4077c19ed,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="67f46cb1-c9a4-47df-b06f-7bf954d1d86c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(a04239ab-4429-4684-a916-7df4077c19ed,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="46df116e-62f9-4f7c-a8f2-8d87ffd8089e"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="PassivesRemoved" type="LSString" value="PsionicTalents_ProjectedNightmares"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(5c90141a-de9a-41fa-bf53-494137c72f5b,1,PsionicTalents);ReplacePassives(8f00abcb-d53c-4a9c-8e8f-572397e5869a,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="1763e4f7-8f3b-42e1-9278-d4a1edc2867b"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EmpoweredConstruct"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(8f00abcb-d53c-4a9c-8e8f-572397e5869a,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="de130b8f-3419-46b7-b826-151ceb92d968"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(8f00abcb-d53c-4a9c-8e8f-572397e5869a,1,PsionicTalents);ReplacePassives(8f00abcb-d53c-4a9c-8e8f-572397e5869a,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="20f3dab8-db25-4449-b4b2-5d96edb32212"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(8f00abcb-d53c-4a9c-8e8f-572397e5869a,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="14a5ebc7-81b9-4832-bd35-636b15edca91"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(51c36c78-712d-47d7-b8f0-f027a268ac15,1,PsionicTalents);ReplacePassives(51c36c78-712d-47d7-b8f0-f027a268ac15,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="ad4258ba-7638-4b66-8999-5a268414b83a"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="AstralGuardian"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(51c36c78-712d-47d7-b8f0-f027a268ac15,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="704b9a78-c6e5-457f-9aa7-b005bc11095f"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(abe199e5-d05a-4ceb-b6fe-de82a18bf575,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="feb92f61-58e4-426c-8b8f-5a1a31053c71"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(abe199e5-d05a-4ceb-b6fe-de82a18bf575,1,PsionicTalents);ReplacePassives(abe199e5-d05a-4ceb-b6fe-de82a18bf575,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="f93faafb-0ede-4bd7-9c1a-60f84d88eda6"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(abe199e5-d05a-4ceb-b6fe-de82a18bf575,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="d1d0d753-f3cc-4d53-9811-ad5c95f3ac44"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="ImaginaryArmy"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(abe199e5-d05a-4ceb-b6fe-de82a18bf575,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="635626b4-6294-42e3-bfba-cdf6ba14be78"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(abe199e5-d05a-4ceb-b6fe-de82a18bf575,1,PsionicTalents);ReplacePassives(abe199e5-d05a-4ceb-b6fe-de82a18bf575,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="4833bcef-2372-4bc5-bcde-efcde4f252c1"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(abe199e5-d05a-4ceb-b6fe-de82a18bf575,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="3ce75bf8-a4f7-494b-81ec-b9082cb7f9cd"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(abe199e5-d05a-4ceb-b6fe-de82a18bf575,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="1f4cc869-5eca-4dd7-8a81-e992646cc273"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(abe199e5-d05a-4ceb-b6fe-de82a18bf575,1,PsionicTalents);ReplacePassives(abe199e5-d05a-4ceb-b6fe-de82a18bf575,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="560982e7-ea17-4eed-8d73-48f9bb80496e"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(abe199e5-d05a-4ceb-b6fe-de82a18bf575,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="4b93e121-7fb8-4ded-866f-15a82488295f"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="ShapersMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(abe199e5-d05a-4ceb-b6fe-de82a18bf575,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="804b84bc-99ee-434e-90ca-6bb577986213"/>
+                    <attribute id="UUID" type="guid" value="a1c68f89-4a9a-45d7-afe1-d75ce66c9e25"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="SpatialManipulation;SpatialManipulation_Dexterity;Transposition;NomadsGear"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="93d04a18-2b90-46cc-a5e4-3c83297e8712"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="2"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(f40cddb8-c205-4ac2-ba0d-d4494b3c77ea,2,PsionicTalents)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="0f501727-02f6-4570-9cc9-04b26d4309e9"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="CuriousMind;CunningStrikes;PsionicTalents_RiftStrike"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(f40cddb8-c205-4ac2-ba0d-d4494b3c77ea,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="26c60373-0c62-49e1-9c2b-527c57252d50"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(f40cddb8-c205-4ac2-ba0d-d4494b3c77ea,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="30827f4b-550d-4d5b-ae5d-a616ad329086"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(6636bc51-3501-4d04-bfa6-a578ffffbed8,1,PsionicTalents);ReplacePassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="9470615e-27c2-4d22-baa6-d1ad568985e0"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PhaseDancer"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="397f66fc-4289-4d74-98ab-9621e80eb4e0"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalents);ReplacePassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="bb81248b-1f4d-4740-8f99-6fda2efa1cb4"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="96c72196-14eb-404b-8e3c-3f5a967be817"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(ec7d5228-34b7-4f27-b09a-bf84f3522e21,1,PsionicTalents);ReplacePassives(ec7d5228-34b7-4f27-b09a-bf84f3522e21,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="1e921747-852c-4af0-bac8-260aab51ff82"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FlickeringPresence"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(ec7d5228-34b7-4f27-b09a-bf84f3522e21,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="95f4e961-d5b1-4218-81a9-b8dc1cee789a"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="7fea01d5-1486-4156-a198-75928e0152f6"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalents);ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="a65ca7e3-455a-4860-bd91-7c1a46c85aec"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="b8e3c93c-ca52-44ce-bfad-cc35b9fcbeaf"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Planeswalker"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="590c29e2-ef26-4045-ad93-f4ea18c7eb1b"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalents);ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="606b9319-68f7-4db1-a0f4-82b99f77f3b6"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="961ef033-1938-4275-9d4f-89fa5721ff39"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="1b05c24c-70da-44ed-a30a-33ceb7fd5cbb"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalents);ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="0572a268-aeb9-4e72-8630-e288423a49b4"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="2f83ad64-6f6b-4f90-9cc5-2987868f45d7"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="WanderingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="ddb67d64-c377-4329-a6d8-3ecb3feabe6f"/>
+                    <attribute id="UUID" type="guid" value="8622926a-2219-4fee-b4a4-ff516dc78914"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="NaturalForce;Psychokinetics;PrimordialAspect;Psychokinetics_Shaped"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="1820bfba-b63f-49e9-8ddc-0d3514ae1f0c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="2"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(f8ab3298-9d53-4509-8e35-3de26442c611,2,PsionicTalents)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="40bcf1f3-9eda-488b-a527-871f30aa8b91"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="LivingPower;LivingPower_Modifiers"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(f8ab3298-9d53-4509-8e35-3de26442c611,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="e424abdd-41e8-45e4-9b5c-e9064ae94ad3"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(f8ab3298-9d53-4509-8e35-3de26442c611,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="12cebf95-ba08-4838-817d-efa370142257"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(195cd869-6998-44c1-ad22-a7063816ef05,1,PsionicTalents);ReplacePassives(7d6c20fa-4ebb-400c-b4bf-8e4b7e162f50,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="206aca7f-c8fb-4699-a861-fd1b2eddc832"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EmpoweredPsionics;EmpoweredPsionics_Force;EmpoweredPsionics_Multi;EmpoweredPsionics_Bludgeoning;EmpoweredPsionics_Psychic;EmpoweredPsionics_EmpoweredStrike"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(7d6c20fa-4ebb-400c-b4bf-8e4b7e162f50,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="b89cb82c-278c-4ba2-9c53-2fbf5af2ae40"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(7d6c20fa-4ebb-400c-b4bf-8e4b7e162f50,1,PsionicTalents);ReplacePassives(7d6c20fa-4ebb-400c-b4bf-8e4b7e162f50,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="b3697c62-f531-417f-a1cf-4ced7ab8e2d3"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(7d6c20fa-4ebb-400c-b4bf-8e4b7e162f50,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="375a4f85-7d0c-4d5d-8496-4af8daa87daa"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(5a1c6c6d-e321-4831-88ab-2c07cf6eb051,1,PsionicTalents);ReplacePassives(5a1c6c6d-e321-4831-88ab-2c07cf6eb051,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="0a3a3fe0-e9e3-4c43-95bb-9bea71a81454"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FullManifestation;FullManifestation_Active"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(5a1c6c6d-e321-4831-88ab-2c07cf6eb051,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="4d849a5a-ea63-482d-8ea5-3ec63f0bdb8c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(7f1de12a-c44a-44b9-9074-857edbe3a7ee,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="d7a5959f-df8a-414f-b15d-906074e8e0a7"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(7f1de12a-c44a-44b9-9074-857edbe3a7ee,1,PsionicTalents);ReplacePassives(7f1de12a-c44a-44b9-9074-857edbe3a7ee,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="32004dbf-4177-4b3d-8e99-3d7f7fa79710"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(7f1de12a-c44a-44b9-9074-857edbe3a7ee,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="ecf5d3e8-219d-404e-ba01-6e4f847f7735"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+					                    <attribute id="PassivesAdded" type="LSString" value="ElementalForm"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(7f1de12a-c44a-44b9-9074-857edbe3a7ee,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="1a508655-bd2b-4797-a690-d864b81488c7"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(7f1de12a-c44a-44b9-9074-857edbe3a7ee,1,PsionicTalents);ReplacePassives(7f1de12a-c44a-44b9-9074-857edbe3a7ee,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="a8db060a-9a5b-468d-b63b-31d3356fbd75"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(7f1de12a-c44a-44b9-9074-857edbe3a7ee,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="917eb39f-b085-4d84-9a48-365d98d190f7"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(7f1de12a-c44a-44b9-9074-857edbe3a7ee,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="a1181fe6-d03a-4934-a39c-c2eae7ec8ab2"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(7f1de12a-c44a-44b9-9074-857edbe3a7ee,1,PsionicTalents);ReplacePassives(7f1de12a-c44a-44b9-9074-857edbe3a7ee,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="aee40b2c-7cb3-45f3-8d22-b047f644c871"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(7f1de12a-c44a-44b9-9074-857edbe3a7ee,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="7823ee7e-0250-40a0-b64f-012ea370c401"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="ElementalMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(7f1de12a-c44a-44b9-9074-857edbe3a7ee,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="90540977-2dda-4a82-ac6c-d45b9908499f"/>
+                    <attribute id="UUID" type="guid" value="22498403-bac3-423a-8748-d6a515bdec06"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="PsionicPredator;Consumption;DarkLurker"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="9c401609-946a-4bc8-85be-910009d4bd7e"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="2"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(f40cddb8-c205-4ac2-ba0d-d4494b3c77ea,2,PsionicTalents)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="db43574f-a030-41bb-91aa-7ad36fc8ba53"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="RavenousPowers;PsionicTalents_MindDevourer"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(f40cddb8-c205-4ac2-ba0d-d4494b3c77ea,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="a6da94b5-1497-4f29-9c93-f89a7faf685a"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(f40cddb8-c205-4ac2-ba0d-d4494b3c77ea,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="6eb73834-6b03-4a18-b53c-d0e54f7e22e5"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(6636bc51-3501-4d04-bfa6-a578ffffbed8,1,PsionicTalents);ReplacePassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="e6947381-7872-4870-80b6-e68fd38e6a1b"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EmpoweredPsionics;EmpoweredPsionics_Force;EmpoweredPsionics_Multi;EmpoweredPsionics_Bludgeoning;EmpoweredPsionics_Psychic;EmpoweredPsionics_EmpoweredStrike"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="b653935b-8672-456d-86c4-facb3b320766"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalents);ReplacePassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="f9e64973-306d-461c-8ede-35e88e1f6b78"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(96710f8c-2f08-4d0a-9e82-ab8abc2e18d2,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="f8007db1-b99e-4fc0-8cfc-309100c0c858"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(ec7d5228-34b7-4f27-b09a-bf84f3522e21,1,PsionicTalents);ReplacePassives(ec7d5228-34b7-4f27-b09a-bf84f3522e21,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="f87218b4-62db-4a15-8e88-c0f431e694b0"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="MindVampire"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(ec7d5228-34b7-4f27-b09a-bf84f3522e21,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="08e67d1d-e763-49b6-a942-81d7c19440a7"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="41ee88ae-4e4a-4d0c-b2dd-2aadac359846"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalents);ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="6cec8615-010b-4832-8be7-b05aaff936e6"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="dd42260e-1f2d-451e-8c25-0bff4c5f01cc"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="PassivesAdded" type="LSString" value="ShatteredHusks"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="0c98e1de-8071-4993-a3a4-96f028b2e68d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalents);ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="c384283d-bb88-4d3f-a225-ed356e806512"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="9f09201c-de3d-4c0f-8266-8209d3693439"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="f2f0be9b-adba-485f-90a0-bb71c268e27b"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalents);ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="490da14d-cc02-43a7-82f2-66bd9d9aa1b8"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="3624657a-40f5-40f5-8d0f-a49f2b4b48c9"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="ConsumingMind"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="ReplacePassives(860a998e-3166-4583-bb53-d0a23b4133ef,1,PsionicTalentReplace)"/>
+                    <attribute id="TableUUID" type="guid" value="17425dc2-c51a-4070-80b2-ec2df4818235"/>
+                    <attribute id="UUID" type="guid" value="1c0b4b80-40e6-473e-a4b0-71f8aba1e47f"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="false"/>
+                    <attribute id="Boosts" type="LSString" value="Tag(SAGE)"/>
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="Origin_Celes"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Background_Sage"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="bc800da0-38bc-460a-b19d-825778a1568b"/>
+                    <attribute id="UUID" type="guid" value="42d3f2ad-3014-4cc6-b770-e7fbc1a44a95"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,7);ProficiencyBonusOverride(5);ActionResource(ArcaneRecoveryPoint,1,0)"/>
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="Wizard"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                   <attribute id="Selectors" type="LSString" value="SelectSpells(3cae2e56-9871-4cef-bba6-96845ea765fa,0,1,CantripFormulas,,,AlwaysPrepared)"/>
+                    <attribute id="TableUUID" type="guid" value="d18eda7e-4b7d-490d-9952-cd33a3c60479"/>
+                    <attribute id="UUID" type="guid" value="61b7860c-1f92-419d-8443-1b410793e131"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="Wizard"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                   <attribute id="Selectors" type="LSString" value="SelectSpells(3cae2e56-9871-4cef-bba6-96845ea765fa,0,1,CantripFormulas,,,AlwaysPrepared)"/>
+                    <attribute id="TableUUID" type="guid" value="d18eda7e-4b7d-490d-9952-cd33a3c60479"/>
+                    <attribute id="UUID" type="guid" value="1bbccd99-577d-4a50-9f8a-00a7445f58fe"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,8);ActionResource(ArcaneRecoveryPoint,1,0)"/>
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="Wizard"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                   <attribute id="Selectors" type="LSString" value="SelectSpells(3cae2e56-9871-4cef-bba6-96845ea765fa,0,1,CantripFormulas,,,AlwaysPrepared)"/>
+                    <attribute id="TableUUID" type="guid" value="d18eda7e-4b7d-490d-9952-cd33a3c60479"/>
+                    <attribute id="UUID" type="guid" value="53fab3dd-a71b-44ef-a565-e179efa81404"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="Wizard"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                   <attribute id="Selectors" type="LSString" value="SelectSpells(3cae2e56-9871-4cef-bba6-96845ea765fa,0,1,CantripFormulas,,,AlwaysPrepared)"/>
+                    <attribute id="TableUUID" type="guid" value="d18eda7e-4b7d-490d-9952-cd33a3c60479"/>
+                    <attribute id="UUID" type="guid" value="c1d8ced7-5bf6-4ac3-901b-135287db3669"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,9);ProficiencyBonusOverride(6);ActionResource(ArcaneRecoveryPoint,1,0)"/>
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="Wizard"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                   <attribute id="Selectors" type="LSString" value="SelectSpells(3cae2e56-9871-4cef-bba6-96845ea765fa,0,1,CantripFormulas,,,AlwaysPrepared)"/>
+                    <attribute id="TableUUID" type="guid" value="d18eda7e-4b7d-490d-9952-cd33a3c60479"/>
+                    <attribute id="UUID" type="guid" value="f639c85b-4219-4d5f-8678-81c26f76c926"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,5);ActionResource(SpellMastery,2,0)"/>
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="Wizard"/>
+                    <attribute id="PassivesAdded" type="LSString" value="SpellMastery"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                   <attribute id="Selectors" type="LSString" value="SelectSpells(3cae2e56-9871-4cef-bba6-96845ea765fa,0,1,CantripFormulas,,,AlwaysPrepared)"/>
+                    <attribute id="TableUUID" type="guid" value="d18eda7e-4b7d-490d-9952-cd33a3c60479"/>
+                    <attribute id="UUID" type="guid" value="6ff6eacd-7005-4c6c-b782-2ee29e161239"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="AllowImprovement" type="bool" value="true"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,6);ActionResource(ArcaneRecoveryPoint,1,0);"/>
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="Wizard"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                   <attribute id="Selectors" type="LSString" value="SelectSpells(3cae2e56-9871-4cef-bba6-96845ea765fa,0,1,CantripFormulas,,,AlwaysPrepared)"/>
+                    <attribute id="TableUUID" type="guid" value="d18eda7e-4b7d-490d-9952-cd33a3c60479"/>
+                    <attribute id="UUID" type="guid" value="fb692fb1-2eb7-4622-892c-64a3d6acb6d6"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,7)"/>
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="Wizard"/>
+                    <attribute id="PassivesAdded" type="LSString" value=""/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                   <attribute id="Selectors" type="LSString" value="SelectPassives(12ffe752-c644-4106-99df-da3ba20d50df,2,SignatureSpells);SelectSpells(3cae2e56-9871-4cef-bba6-96845ea765fa,0,1,CantripFormulas,,,AlwaysPrepared)"/>
+                    <attribute id="TableUUID" type="guid" value="d18eda7e-4b7d-490d-9952-cd33a3c60479"/>
+                    <attribute id="UUID" type="guid" value="5847e7fe-7090-4667-96c0-30edcd885688"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

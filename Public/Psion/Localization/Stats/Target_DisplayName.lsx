@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="0" revision="6" build="5" />
+	<region id="TranslatedStringKeys">
+		<node id="TranslatedStringKeys">
+			<children>
+				<node id="TranslatedStringKey">
+					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="UUID" type="FixedString" value="Psion_Target_TelekineticForce_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="b16683eb-24e9-44e3-81ba-b1a3b5797a8b" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="UUID" type="FixedString" value="Psion_Target_TelekineticForce_KineticSlam_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="5dd3aa9b-eaee-4274-8f9a-8fdab7dcf1ad" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="UUID" type="FixedString" value="Psion_Target_TelekineticHands_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="191ffc56-377b-44c3-9dfa-71a663e65c82" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+				</node>
+				<node id="TranslatedStringKey">
+					<attribute id="Stub" type="bool" value="True" />
+					<attribute id="UUID" type="FixedString" value="Psion_Target_TelekineticBarrier_DisplayName" />
+					<attribute id="Content" type="TranslatedString" handle="25e6a0a7-9fbd-4eb9-96e2-a78f4fc0b213" version="1" />
+					<attribute id="ExtraData" type="LSString" value="" />
+					<attribute id="Speaker" type="FixedString" value="" />
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

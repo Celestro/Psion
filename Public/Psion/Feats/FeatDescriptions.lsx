@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="9" build="328"/>
+    <region id="FeatDescriptions">
+        <node id="root">
+            <children>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="hc7e3ebdcg30fag4dadg8bc0g3be3980d27ec" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h5d72fe9fgdbe6g4694g9e99gf4f0cb879d42" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="InnerPower"/>
+                    <attribute id="FeatId" type="guid" value="62c3dbc5-f614-4cf9-ac08-8395459677db"/>
+                    <attribute id="UUID" type="guid" value="fb9cdaef-95bc-4086-b32b-c36376d8449d"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h3f93d98dg1415g44fdgaf3fg96eb53419daa" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h2bb94b15g660bg4d0aga6eeg6e1250747bdf" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="PsionicMind"/>
+                    <attribute id="FeatId" type="guid" value="957f6401-c381-4bd2-84c1-24d84c65f2c8"/>
+                    <attribute id="UUID" type="guid" value="0d6121c5-00fc-4dc4-a543-3ec4868a155a"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h0fcdaf5cg27d5g44b8g8d39g18594043d8db" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="ha40a8c98g2e7fg4798gb1a2g20c2d71aef61" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="PsionicAdept_Telekinesis"/>
+                    <attribute id="FeatId" type="guid" value="0724dc7d-e424-4d85-9975-b0674a5ca9cf"/>
+                    <attribute id="Type" type="FixedString" value="ActionResource"/>
+                    <attribute id="UUID" type="guid" value="7deafc02-e29d-4c53-80f6-896cd90f8ed1"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="hd253a262g1c61g48edg990bg5cf00d954eee" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h91183cfegf371g4f41ga2c2g7860715291c2" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="PsionicAdept_Telepathy"/>
+                    <attribute id="FeatId" type="guid" value="92f7c182-ff42-4be9-954d-584959ac75f1"/>
+                    <attribute id="Type" type="FixedString" value="ActionResource"/>
+                    <attribute id="UUID" type="guid" value="09477527-bb8a-4b49-bfed-25577dbd8ed4"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="hc1dc08a9g52eag4051ga004gac4522b63c1d" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h418e72eeg6d81g4331g9140ga901869fb81c" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="PsionicAdept_Enhancement"/>
+                    <attribute id="FeatId" type="guid" value="a79fd108-21c3-41dd-89ec-2b162df59bd4"/>
+                    <attribute id="Type" type="FixedString" value="ActionResource"/>
+                    <attribute id="UUID" type="guid" value="abcca016-9e8f-47b9-a7a5-3112d76439b0"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="hd45d65b5g70a7g43a9gba93gc4daae98f5e5" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h400b45d6g48efg4000g9d3bg0f347e78e191" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="PsionicAdept_Psychokinetic"/>
+                    <attribute id="FeatId" type="guid" value="3f6c05ea-339a-42a4-9b56-33195b81aae8"/>
+                    <attribute id="Type" type="FixedString" value="ActionResource"/>
+                    <attribute id="UUID" type="guid" value="bc3a7409-779e-4694-94b5-dcc39e40b127"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h64df4b16g19e7g491dga818gfac4e07cb653" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h3437e403ge452g4816g9817ga588c583cc14" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="PsionicAdept_Transposition"/>
+                    <attribute id="FeatId" type="guid" value="c6ef44a4-3e4f-45ad-82d1-bf47edd68a4f"/>
+                    <attribute id="Type" type="FixedString" value="ActionResource"/>
+                    <attribute id="UUID" type="guid" value="9c9154e6-b240-4af5-878d-7099e73706d9"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h878061bcg0e7dg4463gac22g208d1a429e01" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hfa0df750g52eag40d6gbab6gc11540cd9c82" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="PsionicAdept_Projection"/>
+                    <attribute id="FeatId" type="guid" value="b8297bb6-8066-462b-976b-c2dd9744aa9e"/>
+                    <attribute id="Type" type="FixedString" value="ActionResource"/>
+                    <attribute id="UUID" type="guid" value="b71fdb31-2677-4fed-a612-82fe8b1f1a2b"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h52b6faa0g22e5g4cf7g8278g8d8d276aa9e1" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h16ad20dfg12bdg4572g9d22g7dfae6141cb4" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="PsionicAdept_Consumption"/>
+                    <attribute id="FeatId" type="guid" value="756d9876-aa2e-4e79-b180-5267d4cbdf3d"/>
+                    <attribute id="Type" type="FixedString" value="ActionResource"/>
+                    <attribute id="UUID" type="guid" value="c5034dcd-dc2b-4462-a22b-12a66d3c9bdd"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="hba25da74g20f7g44ddgaea8g215d205d0c89" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h70993fe4gfe90g46f2gba88g61cf5075ef0f" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="PsionicAdept_Precognition"/>
+                    <attribute id="FeatId" type="guid" value="75439614-cdb4-4d82-937a-bc61f51364f4"/>
+                    <attribute id="Type" type="FixedString" value="ActionResource"/>
+                    <attribute id="UUID" type="guid" value="fbf7558a-f76e-476c-a55c-4c4272282fff"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h9b72b3c2ga8edg4eedg8356g7f3503a59bd0" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hf3ae9aaegac22g4a72gb2f9g6a6beda40026" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="WarPsion"/>
+                    <attribute id="FeatId" type="guid" value="2bd7fb06-07ac-41dc-8fe4-86de111a1f47"/>
+                    <attribute id="UUID" type="guid" value="324edae5-dd6c-40cb-9538-7ba88f137917"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h1d5af09ag1f95g4e4dgbfcfgd4cfbfbc2790" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h3ea3726bg99a7g4561g8811g7b8854acf375" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="WarpedMind"/>
+                    <attribute id="FeatId" type="guid" value="6efb8f3a-3a26-4ab8-8336-6180c34ac613"/>
+                    <attribute id="Type" type="FixedString" value="Advantage"/>
+                    <attribute id="UUID" type="guid" value="2eda170d-9762-498d-9352-027c0c249c0b"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h03b04d7bg8304g4ae5g9385g57edf9e5792e" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hbb651880g0a6bg4126ga4d1g84cef9838233" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="PsionicSynthesis"/>
+                    <attribute id="FeatId" type="guid" value="85577f0c-2986-48b8-bca2-93a638b3f1d7"/>
+                    <attribute id="UUID" type="guid" value="fb4f6cf3-bb28-447d-80c8-8e4e4816e2e3"/>
+                </node>
+                <node id="FeatDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h9db35da4g15dag4171g8ba2ge60768a60d45" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="h74a43ff5g882fg44a1gaec2g9ffd4582d2a9" version="1"/>
+                    <attribute id="ExactMatch" type="FixedString" value="PsionicReach"/>
+                    <attribute id="FeatId" type="guid" value="d48c1926-5db6-4c96-8eb1-e7652bc957bc"/>
+                    <attribute id="UUID" type="guid" value="e14b44e5-c65f-44ea-a687-ed8c4ce2e93b"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

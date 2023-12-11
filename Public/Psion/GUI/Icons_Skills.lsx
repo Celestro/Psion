@@ -1,0 +1,1596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="0" build="49"/>
+    <region id="IconUVList"> 
+        <node id="root">
+            <children>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Power_Telekinesis_TelekineticForce"/> 
+                    <attribute id="U1" type="float" value="0.0"/> 
+                    <attribute id="U2" type="float" value="0.03125"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Telekinesis_TelekineticHands"/> 
+                    <attribute id="U1" type="float" value="0.03125"/> 
+                    <attribute id="U2" type="float" value="0.0625"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Power_Telepathy_TelepathicIntrusion"/> 
+                    <attribute id="U1" type="float" value="0.0625"/> 
+                    <attribute id="U2" type="float" value="0.09375"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Telepathy_MindReader"/>
+                    <attribute id="U1" type="float" value="0.09375"/> 
+                    <attribute id="U2" type="float" value="0.125"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Psion_PowerModifiers"/> 
+                    <attribute id="U1" type="float" value="0.125"/> 
+                    <attribute id="U2" type="float" value="0.15625"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Power_Psychokinetics_ElementalBlast"/>
+                    <attribute id="U1" type="float" value="0.15625"/>
+                    <attribute id="U2" type="float" value="0.1875"/>
+                    <attribute id="V1" type="float" value="0.0"/>
+                    <attribute id="V2" type="float" value="0.03125"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Power_Psychokinetics_ElementalBlast_Force"/> 
+                    <attribute id="U1" type="float" value="0.1875"/> 
+                    <attribute id="U2" type="float" value="0.21875"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>				
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Power_Enhancement_EnhancingSurge"/> 
+                    <attribute id="U1" type="float" value="0.21875"/> 
+                    <attribute id="U2" type="float" value="0.25"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Power_Projection_AstralConstruct"/> 
+                    <attribute id="U1" type="float" value="0.25"/> 
+                    <attribute id="U2" type="float" value="0.28125"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>								
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Telekinesis_TelekineticWeapons"/> 
+                    <attribute id="U1" type="float" value="0.28125"/> 
+                    <attribute id="U2" type="float" value="0.3125"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>				
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Transposition_FlickerStep"/> 
+                    <attribute id="U1" type="float" value="0.3125"/> 
+                    <attribute id="U2" type="float" value="0.34375"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>				
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Power_Transposition_PhaseRift"/> 
+                    <attribute id="U1" type="float" value="0.34375"/> 
+                    <attribute id="U2" type="float" value="0.375"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>				
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Consumption_MindVampire"/> 
+                    <attribute id="U1" type="float" value="0.375"/> 
+                    <attribute id="U2" type="float" value="0.40625"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>				
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Telepathy_AttunedArgument"/> 
+                    <attribute id="U1" type="float" value="0.40625"/> 
+                    <attribute id="U2" type="float" value="0.4375"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>				
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Telekinesis_MentalMight"/> 
+                    <attribute id="U1" type="float" value="0.4375"/> 
+                    <attribute id="U2" type="float" value="0.46875"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Enhancement_PhysicalSurge"/> 
+                    <attribute id="U1" type="float" value="0.46875"/> 
+                    <attribute id="U2" type="float" value="0.5"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>				
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Enhancement_SurgingPower"/> 
+                    <attribute id="U1" type="float" value="0.5"/> 
+                    <attribute id="U2" type="float" value="0.53125"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>				
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Telekinesis_KineticSlam"/> 
+                    <attribute id="U1" type="float" value="0.53125"/> 
+                    <attribute id="U2" type="float" value="0.5625"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>	
+				<node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Enhancement_EnhancedRegrowth"/> 
+                    <attribute id="U1" type="float" value="0.5625"/> 
+                    <attribute id="U2" type="float" value="0.59375"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>	
+				<node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Telekinesis_TelekineticBarrier"/> 
+                    <attribute id="U1" type="float" value="0.59375"/> 
+                    <attribute id="U2" type="float" value="0.625"/> 
+                    <attribute id="V1" type="float" value="0.0"/> 
+                    <attribute id="V2" type="float" value="0.03125"/> 
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Telekinesis_TelekineticMovement"/>
+                    <attribute id="U1" type="float" value="0.625"/>
+                    <attribute id="U2" type="float" value="0.65625"/>
+                    <attribute id="V1" type="float" value="0.0"/>
+                    <attribute id="V2" type="float" value="0.03125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Enhancement_BodyControl"/>
+                    <attribute id="U1" type="float" value="0.65625"/>
+                    <attribute id="U2" type="float" value="0.6875"/>
+                    <attribute id="V1" type="float" value="0.0"/>
+                    <attribute id="V2" type="float" value="0.03125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Transmutation_LaunchObject"/>
+                    <attribute id="U1" type="float" value="0.6875"/>
+                    <attribute id="U2" type="float" value="0.71875"/>
+                    <attribute id="V1" type="float" value="0.0"/>
+                    <attribute id="V2" type="float" value="0.03125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psion_AstralArms"/>
+                    <attribute id="U1" type="float" value="0.71875"/>
+                    <attribute id="U2" type="float" value="0.75"/>
+                    <attribute id="V1" type="float" value="0.0"/>
+                    <attribute id="V2" type="float" value="0.03125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_UnarmedAttack_AstralArms"/>
+                    <attribute id="U1" type="float" value="0.75"/>
+                    <attribute id="U2" type="float" value="0.78125"/>
+                    <attribute id="V1" type="float" value="0.0"/>
+                    <attribute id="V2" type="float" value="0.03125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_UnarmedAttack_AstralArmsBonus"/>
+                    <attribute id="U1" type="float" value="0.78125"/>
+                    <attribute id="U2" type="float" value="0.8125"/>
+                    <attribute id="V1" type="float" value="0.0"/>
+                    <attribute id="V2" type="float" value="0.03125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Psionic_UnlockedPotential"/>
+                    <attribute id="U1" type="float" value="0.8125"/>
+                    <attribute id="U2" type="float" value="0.84375"/>
+                    <attribute id="V1" type="float" value="0.0"/>
+                    <attribute id="V2" type="float" value="0.03125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psion_EmpoweredStrike"/>
+                    <attribute id="U1" type="float" value="0.84375"/>
+                    <attribute id="U2" type="float" value="0.875"/>
+                    <attribute id="V1" type="float" value="0.0"/>
+                    <attribute id="V2" type="float" value="0.03125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psion_PsionicWeapon"/>
+                    <attribute id="U1" type="float" value="0.875"/>
+                    <attribute id="U2" type="float" value="0.90625"/>
+                    <attribute id="V1" type="float" value="0.0"/>
+                    <attribute id="V2" type="float" value="0.03125"/>
+                </node>					
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psychokinetics_ElementalPenetration"/>
+                    <attribute id="U1" type="float" value="0.90625"/>
+                    <attribute id="U2" type="float" value="0.9375"/>
+                    <attribute id="V1" type="float" value="0.0"/>
+                    <attribute id="V2" type="float" value="0.03125"/>
+                </node>							
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Telepathy_Empathy"/>
+                    <attribute id="U1" type="float" value="0.9375"/>
+                    <attribute id="U2" type="float" value="0.96875"/>
+                    <attribute id="V1" type="float" value="0.0"/>
+                    <attribute id="V2" type="float" value="0.03125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psion_InvestLife"/>
+                    <attribute id="U1" type="float" value="0.96875"/>
+                    <attribute id="U2" type="float" value="1.0"/>
+                    <attribute id="V1" type="float" value="0.0"/>
+                    <attribute id="V2" type="float" value="0.03125"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psion_Schism"/>
+                    <attribute id="U1" type="float" value="0.0"/>
+                    <attribute id="U2" type="float" value="0.03125"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psion_MindRider"/>
+                    <attribute id="U1" type="float" value="0.03125"/>
+                    <attribute id="U2" type="float" value="0.0625"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psion_PsiCrystal"/>
+                    <attribute id="U1" type="float" value="0.0625"/>
+                    <attribute id="U2" type="float" value="0.09375"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Projection_UnlimitedImagination"/>
+                    <attribute id="U1" type="float" value="0.09375"/>
+                    <attribute id="U2" type="float" value="0.125"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psychokinetics_ManifestedEmotions"/>
+                    <attribute id="U1" type="float" value="0.125"/>
+                    <attribute id="U2" type="float" value="0.15625"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psion_Schism"/>
+                    <attribute id="U1" type="float" value="0.15625"/>
+                    <attribute id="U2" type="float" value="0.1875"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psion_InvestLife"/>
+                    <attribute id="U1" type="float" value="0.1875"/>
+                    <attribute id="U2" type="float" value="0.21875"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>
+                </node>					
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Psionic_PsychicDrain"/>
+                    <attribute id="U1" type="float" value="0.21875"/>
+                    <attribute id="U2" type="float" value="0.25"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Power_Precognition_Seeing"/>
+                    <attribute id="U1" type="float" value="0.25"/>
+                    <attribute id="U2" type="float" value="0.28125"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Power_Consumption_MindLeech"/>
+                    <attribute id="U1" type="float" value="0.28125"/>
+                    <attribute id="U2" type="float" value="0.3125"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psion_MindRider"/>
+                    <attribute id="U1" type="float" value="0.3125"/>
+                    <attribute id="U2" type="float" value="0.34375"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psion_PsiCrystal"/>
+                    <attribute id="U1" type="float" value="0.34375"/>
+                    <attribute id="U2" type="float" value="0.375"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>					
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psion_PsiCrystal_Deactivate"/>
+                    <attribute id="U1" type="float" value="0.375"/>
+                    <attribute id="U2" type="float" value="0.40625"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>					
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Projection_BoundlessImagination"/>
+                    <attribute id="U1" type="float" value="0.40625"/>
+                    <attribute id="U2" type="float" value="0.4375"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Projection_DevastatingWeapons"/>
+                    <attribute id="U1" type="float" value="0.4375"/>
+                    <attribute id="U2" type="float" value="0.46875"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Projection_PsionicConduit"/>
+                    <attribute id="U1" type="float" value="0.46875"/>
+                    <attribute id="U2" type="float" value="0.5"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Projection_VividExistence"/>
+                    <attribute id="U1" type="float" value="0.5"/>
+                    <attribute id="U2" type="float" value="0.53125"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Projection_ProjectedNightmares"/>
+                    <attribute id="U1" type="float" value="0.53125"/>
+                    <attribute id="U2" type="float" value="0.5625"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Projection_UnlimitedImagination"/>
+                    <attribute id="U1" type="float" value="0.5625"/>
+                    <attribute id="U2" type="float" value="0.59375"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psion_PropelledBound"/>
+                    <attribute id="U1" type="float" value="0.59375"/>
+                    <attribute id="U2" type="float" value="0.625"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Telepathy_TelepathicCommunication"/>
+                    <attribute id="U1" type="float" value="0.625"/>
+                    <attribute id="U2" type="float" value="0.65625"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Telepathy_MentalAwareness"/>
+                    <attribute id="U1" type="float" value="0.65625"/>
+                    <attribute id="U2" type="float" value="0.6875"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Transposition_CuriousMind"/>
+                    <attribute id="U1" type="float" value="0.6875"/>
+                    <attribute id="U2" type="float" value="0.71875"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psychokinetics_PrimordialAspect_Resistance_Fire"/>
+                    <attribute id="U1" type="float" value="0.71875"/>
+                    <attribute id="U2" type="float" value="0.75"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Power_Psychokinetics_ElementalBlast_Lightning"/>
+                    <attribute id="U1" type="float" value="0.75"/>
+                    <attribute id="U2" type="float" value="0.78125"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Power_Psychokinetics_ElementalBlast_Cold"/>
+                    <attribute id="U1" type="float" value="0.78125"/>
+                    <attribute id="U2" type="float" value="0.8125"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>			
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Power_Psychokinetics_ElementalBlast_Fire"/>
+                    <attribute id="U1" type="float" value="0.8125"/>
+                    <attribute id="U2" type="float" value="0.84375"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>			
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psychokinetics_PrimordialAspect"/>
+                    <attribute id="U1" type="float" value="0.84375"/>
+                    <attribute id="U2" type="float" value="0.875"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>			
+                </node>		
+               <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Psychokinetics_LivingPower"/>
+                    <attribute id="U1" type="float" value="0.875"/>
+                    <attribute id="U2" type="float" value="0.90625"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>	
+                </node>					
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Psionic_FutureInsight"/>
+                    <attribute id="U1" type="float" value="0.90625"/>
+                    <attribute id="U2" type="float" value="0.9375"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>	
+                </node>							
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Precognition_Prescience"/>
+                    <attribute id="U1" type="float" value="0.9375"/>
+                    <attribute id="U2" type="float" value="0.96875"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>	
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Psionic_GlimpseTheFuture"/>
+                    <attribute id="U1" type="float" value="0.96875"/>
+                    <attribute id="U2" type="float" value="1.0"/>
+                    <attribute id="V1" type="float" value="0.03125"/>
+                    <attribute id="V2" type="float" value="0.0625"/>	
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Consumption_ConsumedStrength"/>
+                    <attribute id="U1" type="float" value="0.0"/>
+                    <attribute id="U2" type="float" value="0.03125"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Nullification_DisruptiveTouch"/>
+                    <attribute id="U1" type="float" value="0.03125"/>
+                    <attribute id="U2" type="float" value="0.0625"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Power_Nullification_Denial"/>
+                    <attribute id="U1" type="float" value="0.0625"/>
+                    <attribute id="U2" type="float" value="0.09375"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Psychokinetics_Specialization"/>
+                    <attribute id="U1" type="float" value="0.09375"/>
+                    <attribute id="U2" type="float" value="0.125"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Psychokinetics_EnergyManipulation"/>
+                    <attribute id="U1" type="float" value="0.125"/>
+                    <attribute id="U2" type="float" value="0.15625"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Psychokinetics_EnergyManipulation_Fire"/>
+                    <attribute id="U1" type="float" value="0.15625"/>
+                    <attribute id="U2" type="float" value="0.1875"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Psychokinetics_EnergyManipulation_Cold"/>
+                    <attribute id="U1" type="float" value="0.1875"/>
+                    <attribute id="U2" type="float" value="0.21875"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Psychokinetics_EnergyManipulation_Lightning"/>
+                    <attribute id="U1" type="float" value="0.21875"/>
+                    <attribute id="U2" type="float" value="0.25"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>			
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Psychokinetics_EnergyManipulation_Light"/>
+                    <attribute id="U1" type="float" value="0.25"/>
+                    <attribute id="U2" type="float" value="0.28125"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psychokinetics_ManifestedEmotions_Fire"/>
+                    <attribute id="U1" type="float" value="0.28125"/>
+                    <attribute id="U2" type="float" value="0.3125"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psychokinetics_ManifestedEmotions_Cold"/>
+                    <attribute id="U1" type="float" value="0.3125"/>
+                    <attribute id="U2" type="float" value="0.34375"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psychokinetics_ManifestedEmotions_Lightning"/>
+                    <attribute id="U1" type="float" value="0.34375"/>
+                    <attribute id="U2" type="float" value="0.375"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.375"/>
+                    <attribute id="U2" type="float" value="0.40625"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.40625"/>
+                    <attribute id="U2" type="float" value="0.4375"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.4375"/>
+                    <attribute id="U2" type="float" value="0.46875"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>	
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Projection_ProjectItem"/>
+                    <attribute id="U1" type="float" value="0.46875"/>
+                    <attribute id="U2" type="float" value="0.5"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>	
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Projection_Command"/>
+                    <attribute id="U1" type="float" value="0.5"/>
+                    <attribute id="U2" type="float" value="0.53125"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>		
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Psion_EmpoweredPsionics"/>
+                    <attribute id="U1" type="float" value="0.53125"/>
+                    <attribute id="U2" type="float" value="0.5625"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>	
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Telekinesis_OverwhelmingPower"/>
+                    <attribute id="U1" type="float" value="0.5625"/>
+                    <attribute id="U2" type="float" value="0.59375"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>		
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Telekinesis_RampagingPower"/>
+                    <attribute id="U1" type="float" value="0.59375"/>
+                    <attribute id="U2" type="float" value="0.625"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>			
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Enhancement_PerfectedEnhancement"/>
+                    <attribute id="U1" type="float" value="0.625"/>
+                    <attribute id="U2" type="float" value="0.65625"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>	
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Psychokinetics_ControlledPower"/>
+                    <attribute id="U1" type="float" value="0.65625"/>
+                    <attribute id="U2" type="float" value="0.6875"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>	
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Enhancement_StateOfMind"/>
+                    <attribute id="U1" type="float" value="0.6875"/>
+                    <attribute id="U2" type="float" value="0.71875"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>		
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Enhancement_BalanceOfPower"/>
+                    <attribute id="U1" type="float" value="0.71875"/>
+                    <attribute id="U2" type="float" value="0.75"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>	
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Transposition_PhaseShot"/>
+                    <attribute id="U1" type="float" value="0.75"/>
+                    <attribute id="U2" type="float" value="0.78125"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>		
+                </node>				
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Transposition_SpatialManipulation"/>
+                    <attribute id="U1" type="float" value="0.78125"/>
+                    <attribute id="U2" type="float" value="0.8125"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>		
+                </node>			
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Transposition_CunningStrikes"/>
+                    <attribute id="U1" type="float" value="0.8125"/>
+                    <attribute id="U2" type="float" value="0.84375"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>	
+                </node>			
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Transposition_PhaseShroud"/>
+                    <attribute id="U1" type="float" value="0.84375"/>
+                    <attribute id="U2" type="float" value="0.875"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>		
+                </node>		
+               <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Transposition_PhaseSlash"/>
+                    <attribute id="U1" type="float" value="0.875"/>
+                    <attribute id="U2" type="float" value="0.90625"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>					
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Transposition_PhaseDancer"/>
+                    <attribute id="U1" type="float" value="0.90625"/>
+                    <attribute id="U2" type="float" value="0.9375"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>							
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Psychokinetics_RagingPower"/>
+                    <attribute id="U1" type="float" value="0.9375"/>
+                    <attribute id="U2" type="float" value="0.96875"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Psychokinetics_ShapedPower"/>
+                    <attribute id="U1" type="float" value="0.96875"/>
+                    <attribute id="U2" type="float" value="1.0"/>
+                    <attribute id="V1" type="float" value="0.0625"/>
+                    <attribute id="V2" type="float" value="0.09375"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Projection_ChangingImagination"/>
+                    <attribute id="U1" type="float" value="0.0"/>
+                    <attribute id="U2" type="float" value="0.03125"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Projection_EmpoweredConstruct"/>
+                    <attribute id="U1" type="float" value="0.03125"/>
+                    <attribute id="U2" type="float" value="0.0625"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Consumption_DarkLurker"/>
+                    <attribute id="U1" type="float" value="0.0625"/>
+                    <attribute id="U2" type="float" value="0.09375"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Consumption_RavenousPowers"/>
+                    <attribute id="U1" type="float" value="0.09375"/>
+                    <attribute id="U2" type="float" value="0.125"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Telepathy_TelepathicLink"/>
+                    <attribute id="U1" type="float" value="0.125"/>
+                    <attribute id="U2" type="float" value="0.15625"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Transposition_PhaseShot"/>
+                    <attribute id="U1" type="float" value="0.15625"/>
+                    <attribute id="U2" type="float" value="0.1875"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psychokinetics_ElementalAegis"/>
+                    <attribute id="U1" type="float" value="0.1875"/>
+                    <attribute id="U2" type="float" value="0.21875"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psychokinetics_ManifestedEmotions"/>
+                    <attribute id="U1" type="float" value="0.21875"/>
+                    <attribute id="U2" type="float" value="0.25"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>			
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Projection_AstralSwap"/>
+                    <attribute id="U1" type="float" value="0.25"/>
+                    <attribute id="U2" type="float" value="0.28125"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Projection_LifeLink"/>
+                    <attribute id="U1" type="float" value="0.28125"/>
+                    <attribute id="U2" type="float" value="0.3125"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>			
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Projection_ProjectedWeaponry"/>
+                    <attribute id="U1" type="float" value="0.3125"/>
+                    <attribute id="U2" type="float" value="0.34375"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Precognition_GlimpsedFuture"/>
+                    <attribute id="U1" type="float" value="0.34375"/>
+                    <attribute id="U2" type="float" value="0.375"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Precognition_OneStepAhead"/>
+                    <attribute id="U1" type="float" value="0.375"/>
+                    <attribute id="U2" type="float" value="0.40625"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Consumption_ConsumingLink"/>
+                    <attribute id="U1" type="float" value="0.40625"/>
+                    <attribute id="U2" type="float" value="0.4375"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Consumption_UnlifeWielder"/>
+                    <attribute id="U1" type="float" value="0.4375"/>
+                    <attribute id="U2" type="float" value="0.46875"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Telekinesis_Tantrum"/>
+                    <attribute id="U1" type="float" value="0.46875"/>
+                    <attribute id="U2" type="float" value="0.5"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Psionic_Flicker"/>
+                    <attribute id="U1" type="float" value="0.5"/>
+                    <attribute id="U2" type="float" value="0.53125"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_InnerPower"/>
+                    <attribute id="U1" type="float" value="0.53125"/>
+                    <attribute id="U2" type="float" value="0.5625"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Consumption_AdaptiveHunter"/>
+                    <attribute id="U1" type="float" value="0.5625"/>
+                    <attribute id="U2" type="float" value="0.59375"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.59375"/>
+                    <attribute id="U2" type="float" value="0.625"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>	
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.625"/>
+                    <attribute id="U2" type="float" value="0.65625"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.65625"/>
+                    <attribute id="U2" type="float" value="0.6875"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Telekinesis_UncontrollableMind"/>
+                    <attribute id="U1" type="float" value="0.6875"/>
+                    <attribute id="U2" type="float" value="0.71875"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_TelekineticForceOptions"/>
+                    <attribute id="U1" type="float" value="0.71875"/>
+                    <attribute id="U2" type="float" value="0.75"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Telekinesis_UnstoppableRampage"/>
+                    <attribute id="U1" type="float" value="0.75"/>
+                    <attribute id="U2" type="float" value="0.78125"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Telekinesis_UnstoppableRampage"/>
+                    <attribute id="U1" type="float" value="0.78125"/>
+                    <attribute id="U2" type="float" value="0.8125"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Enhancement_SurgingPower"/>
+                    <attribute id="U1" type="float" value="0.8125"/>
+                    <attribute id="U2" type="float" value="0.84375"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>		
+               <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Telekinesis_MentalMight"/>
+                    <attribute id="U1" type="float" value="0.84375"/>
+                    <attribute id="U2" type="float" value="0.875"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>			
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Telekinesis_UnshackledPower"/>
+                    <attribute id="U1" type="float" value="0.875"/>
+                    <attribute id="U2" type="float" value="0.90625"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>							
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Telekinesis_TelekineticWeapons"/>
+                    <attribute id="U1" type="float" value="0.90625"/>
+                    <attribute id="U2" type="float" value="0.9375"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_InnatePsionics_Regenerate"/>
+                    <attribute id="U1" type="float" value="0.9375"/>
+                    <attribute id="U2" type="float" value="0.96875"/>					
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_InnatePsionics_Disintegrate"/>
+                    <attribute id="U1" type="float" value="0.96875"/>
+                    <attribute id="U2" type="float" value="1.0"/>
+                    <attribute id="V1" type="float" value="0.09375"/>
+                    <attribute id="V2" type="float" value="0.125"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_InnatePsionics_Eyebite"/>
+                    <attribute id="U1" type="float" value="0.0"/>
+                    <attribute id="U2" type="float" value="0.03125"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_InnatePsionics_DominateMonster"/>
+                    <attribute id="U1" type="float" value="0.03125"/>
+                    <attribute id="U2" type="float" value="0.0625"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_InnatePsionics_Feeblemind"/>
+                    <attribute id="U1" type="float" value="0.0625"/>
+                    <attribute id="U2" type="float" value="0.09375"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_InnatePsionics_MindBlank"/>
+                    <attribute id="U1" type="float" value="0.09375"/>
+                    <attribute id="U2" type="float" value="0.125"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_InnatePsionics_PowerWordStun"/>
+                    <attribute id="U1" type="float" value="0.125"/>
+                    <attribute id="U2" type="float" value="0.15625"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_InnatePsionics_Foresight"/>
+                    <attribute id="U1" type="float" value="0.15625"/>
+                    <attribute id="U2" type="float" value="0.1875"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_InnatePsionics_PowerWordKill"/>
+                    <attribute id="U1" type="float" value="0.1875"/>
+                    <attribute id="U2" type="float" value="0.21875"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_InnatePsionics_TimeStop"/>
+                    <attribute id="U1" type="float" value="0.21875"/>
+                    <attribute id="U2" type="float" value="0.25"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>			
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Telepathy_OpenedMind"/>
+                    <attribute id="U1" type="float" value="0.25"/>
+                    <attribute id="U2" type="float" value="0.28125"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Telepathy_MentalInfluence"/>
+                    <attribute id="U1" type="float" value="0.28125"/>
+                    <attribute id="U2" type="float" value="0.3125"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>			
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Telepathy_AllSeeingEye"/>
+                    <attribute id="U1" type="float" value="0.3125"/>
+                    <attribute id="U2" type="float" value="0.34375"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Telepathy_FullAwakening"/>
+                    <attribute id="U1" type="float" value="0.34375"/>
+                    <attribute id="U2" type="float" value="0.375"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Telepathy_FullAwakening"/>
+                    <attribute id="U1" type="float" value="0.375"/>
+                    <attribute id="U2" type="float" value="0.40625"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Telepathy_TelepathicLink"/>
+                    <attribute id="U1" type="float" value="0.40625"/>
+                    <attribute id="U2" type="float" value="0.4375"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psion_PsionicDefenses"/>
+                    <attribute id="U1" type="float" value="0.4375"/>
+                    <attribute id="U2" type="float" value="0.46875"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Psionic_Shockwave"/>
+                    <attribute id="U1" type="float" value="0.46875"/>
+                    <attribute id="U2" type="float" value="0.5"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Consumption_PsionicCharge"/>
+                    <attribute id="U1" type="float" value="0.5"/>
+                    <attribute id="U2" type="float" value="0.53125"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Consumption_SkillThief"/>
+                    <attribute id="U1" type="float" value="0.53125"/>
+                    <attribute id="U2" type="float" value="0.5625"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Consumption_UnlifeWielder"/>
+                    <attribute id="U1" type="float" value="0.5625"/>
+                    <attribute id="U2" type="float" value="0.59375"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Consumption_ShatteredHusks"/>
+                    <attribute id="U1" type="float" value="0.59375"/>
+                    <attribute id="U2" type="float" value="0.625"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psion_MindDevourer"/>
+                    <attribute id="U1" type="float" value="0.625"/>
+                    <attribute id="U2" type="float" value="0.65625"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Psion_PsionicMastery"/>
+                    <attribute id="U1" type="float" value="0.65625"/>
+                    <attribute id="U2" type="float" value="0.6875"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Enhancement_MentalControl"/>
+                    <attribute id="U1" type="float" value="0.6875"/>
+                    <attribute id="U2" type="float" value="0.71875"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Enhancement_MindOverMatter"/>
+                    <attribute id="U1" type="float" value="0.71875"/>
+                    <attribute id="U2" type="float" value="0.75"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Enhancement_MindOverMatter"/>
+                    <attribute id="U1" type="float" value="0.75"/>
+                    <attribute id="U2" type="float" value="0.78125"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Enhancement_Enlightened"/>
+                    <attribute id="U1" type="float" value="0.78125"/>
+                    <attribute id="U2" type="float" value="0.8125"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Transposition_CuriousMind"/>
+                    <attribute id="U1" type="float" value="0.8125"/>
+                    <attribute id="U2" type="float" value="0.84375"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Transposition_Planeswalker"/>
+                    <attribute id="U1" type="float" value="0.84375"/>
+                    <attribute id="U2" type="float" value="0.875"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Transposition_FlickeringPresence"/>
+                    <attribute id="U1" type="float" value="0.875"/>
+                    <attribute id="U2" type="float" value="0.90625"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Transposition_FlickeringPresence"/>
+                    <attribute id="U1" type="float" value="0.90625"/>
+                    <attribute id="U2" type="float" value="0.9375"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>			
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Transposition_RiftStrike"/>
+                    <attribute id="U1" type="float" value="0.9375"/>
+                    <attribute id="U2" type="float" value="0.96875"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_InnatePsionics_Teleport"/>
+                    <attribute id="U1" type="float" value="0.96875"/>
+                    <attribute id="U2" type="float" value="1.0"/>
+                    <attribute id="V1" type="float" value="0.125"/>
+                    <attribute id="V2" type="float" value="0.15625"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Transposition_PhaseSlash"/>
+                    <attribute id="U1" type="float" value="0.0"/>
+                    <attribute id="U2" type="float" value="0.03125"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Transposition_FlickeringEscape"/>
+                    <attribute id="U1" type="float" value="0.03125"/>
+                    <attribute id="U2" type="float" value="0.0625"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Transposition_FlickeringEscape"/>
+                    <attribute id="U1" type="float" value="0.0625"/>
+                    <attribute id="U2" type="float" value="0.09375"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Precognition_PrecognitiveDreams"/>
+                    <attribute id="U1" type="float" value="0.09375"/>
+                    <attribute id="U2" type="float" value="0.125"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Transposition_RiftStrike_Melee"/>
+                    <attribute id="U1" type="float" value="0.125"/>
+                    <attribute id="U2" type="float" value="0.15625"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Transposition_RiftStrike_Ranged"/>
+                    <attribute id="U1" type="float" value="0.15625"/>
+                    <attribute id="U2" type="float" value="0.1875"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Precognition_GlimpsedFuture"/>
+                    <attribute id="U1" type="float" value="0.1875"/>
+                    <attribute id="U2" type="float" value="0.21875"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Precognition_Positioning"/>
+                    <attribute id="U1" type="float" value="0.21875"/>
+                    <attribute id="U2" type="float" value="0.25"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Projection_ImaginaryArmy"/>
+                    <attribute id="U1" type="float" value="0.25"/>
+                    <attribute id="U2" type="float" value="0.28125"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Projection_ImaginaryArmy"/>
+                    <attribute id="U1" type="float" value="0.28125"/>
+                    <attribute id="U2" type="float" value="0.3125"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Projection_Grab"/>
+                    <attribute id="U1" type="float" value="0.3125"/>
+                    <attribute id="U2" type="float" value="0.34375"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.34375"/>
+                    <attribute id="U2" type="float" value="0.375"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Projection_AstralSwap"/>
+                    <attribute id="U1" type="float" value="0.375"/>
+                    <attribute id="U2" type="float" value="0.40625"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Projection_AstralGuardian"/>
+                    <attribute id="U1" type="float" value="0.40625"/>
+                    <attribute id="U2" type="float" value="0.4375"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psychokinetics_ElementalShield"/>
+                    <attribute id="U1" type="float" value="0.4375"/>
+                    <attribute id="U2" type="float" value="0.46875"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Telepathy_ReflectedAgony"/>
+                    <attribute id="U1" type="float" value="0.46875"/>
+                    <attribute id="U2" type="float" value="0.5"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Telepathy_ReflectedAgony"/>
+                    <attribute id="U1" type="float" value="0.5"/>
+                    <attribute id="U2" type="float" value="0.53125"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Telepathy_MindReader"/>
+                    <attribute id="U1" type="float" value="0.53125"/>
+                    <attribute id="U2" type="float" value="0.5625"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Telekinesis_KineticSlam"/>
+                    <attribute id="U1" type="float" value="0.5625"/>
+                    <attribute id="U2" type="float" value="0.59375"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Telekinesis_TelekineticBarrier"/>
+                    <attribute id="U1" type="float" value="0.59375"/>
+                    <attribute id="U2" type="float" value="0.625"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>		
+               <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Telekinesis_TelekineticMovement"/>
+                    <attribute id="U1" type="float" value="0.625"/>
+                    <attribute id="U2" type="float" value="0.65625"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>	
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psion_PropelledBound"/>
+                    <attribute id="U1" type="float" value="0.65625"/>
+                    <attribute id="U2" type="float" value="0.6875"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>	
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psychokinetics_PrimordialAspect_Resistance_Cold"/>
+                    <attribute id="U1" type="float" value="0.6875"/>
+                    <attribute id="U2" type="float" value="0.71875"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>	
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psychokinetics_PrimordialAspect_Resistance_Lightning"/>
+                    <attribute id="U1" type="float" value="0.71875"/>
+                    <attribute id="U2" type="float" value="0.75"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>	
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Psychokinetics_ElementalForm"/>
+                    <attribute id="U1" type="float" value="0.75"/>
+                    <attribute id="U2" type="float" value="0.78125"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>	
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psychokinetics_ElementalForm"/>
+                    <attribute id="U1" type="float" value="0.78125"/>
+                    <attribute id="U2" type="float" value="0.8125"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>	
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psychokinetics_ElementalForm_Fire"/>
+                    <attribute id="U1" type="float" value="0.8125"/>
+                    <attribute id="U2" type="float" value="0.84375"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>	
+                </node>		
+               <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psychokinetics_ElementalForm_Cold"/>
+                    <attribute id="U1" type="float" value="0.84375"/>
+                    <attribute id="U2" type="float" value="0.875"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>			
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psychokinetics_ElementalForm_Lightning"/>
+                    <attribute id="U1" type="float" value="0.875"/>
+                    <attribute id="U2" type="float" value="0.90625"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>			
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Psychokinetics_FullManifestation"/>
+                    <attribute id="U1" type="float" value="0.90625"/>
+                    <attribute id="U2" type="float" value="0.9375"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psychokinetics_FullManifestation"/>
+                    <attribute id="U1" type="float" value="0.9375"/>
+                    <attribute id="U2" type="float" value="0.96875"/>					
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_Psychokinetics_FullManifestation_Lightning"/>
+                    <attribute id="U1" type="float" value="0.96875"/>
+                    <attribute id="U2" type="float" value="1.0"/>
+                    <attribute id="V1" type="float" value="0.15625"/>
+                    <attribute id="V2" type="float" value="0.1875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_Psychokinetics_PrimordialAspect"/>
+                    <attribute id="U1" type="float" value="0.0"/>
+                    <attribute id="U2" type="float" value="0.03125"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psion_EmpoweredStrike"/>
+                    <attribute id="U1" type="float" value="0.03125"/>
+                    <attribute id="U2" type="float" value="0.0625"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psychokinetics_ElementalAegis"/>
+                    <attribute id="U1" type="float" value="0.0625"/>
+                    <attribute id="U2" type="float" value="0.09375"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_ElementalBlastOptions"/>
+                    <attribute id="U1" type="float" value="0.09375"/>
+                    <attribute id="U2" type="float" value="0.125"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psion_PotentPsionics"/>
+                    <attribute id="U1" type="float" value="0.125"/>
+                    <attribute id="U2" type="float" value="0.15625"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Psionic_SpatialManipulation"/>
+                    <attribute id="U1" type="float" value="0.15625"/>
+                    <attribute id="U2" type="float" value="0.1875"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_InnatePsionics_Harm"/>
+                    <attribute id="U1" type="float" value="0.1875"/>
+                    <attribute id="U2" type="float" value="0.21875"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_InnatePsionics_ChainLightning"/>
+                    <attribute id="U1" type="float" value="0.21875"/>
+                    <attribute id="U2" type="float" value="0.25"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>			
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_InnatePsionics_BladeBarrier"/>
+                    <attribute id="U1" type="float" value="0.25"/>
+                    <attribute id="U2" type="float" value="0.28125"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Spell_Psionic_MindBlast"/>
+                    <attribute id="U1" type="float" value="0.28125"/>
+                    <attribute id="U2" type="float" value="0.3125"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>			
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_InnatePsionics_MindBlast"/>
+                    <attribute id="U1" type="float" value="0.3125"/>
+                    <attribute id="U2" type="float" value="0.34375"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Item_ARM_Boots_Leather_Black"/>
+                    <attribute id="U1" type="float" value="0.34375"/>
+                    <attribute id="U2" type="float" value="0.375"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_TelekineticForce_Modifiers"/>
+                    <attribute id="U1" type="float" value="0.375"/>
+                    <attribute id="U2" type="float" value="0.40625"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Action_ElementalBlast_Modifiers"/>
+                    <attribute id="U1" type="float" value="0.40625"/>
+                    <attribute id="U2" type="float" value="0.4375"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PsionicTalent_Psychokinetics_ElementalEmotions"/>
+                    <attribute id="U1" type="float" value="0.4375"/>
+                    <attribute id="U2" type="float" value="0.46875"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Item_ARM_Padded_Psion"/>
+                    <attribute id="U1" type="float" value="0.46875"/>
+                    <attribute id="U2" type="float" value="0.5"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_WarPsion_OpportunitySpell"/>
+                    <attribute id="U1" type="float" value="0.5"/>
+                    <attribute id="U2" type="float" value="0.53125"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_WarPsion_Bonuses"/>
+                    <attribute id="U1" type="float" value="0.53125"/>
+                    <attribute id="U2" type="float" value="0.5625"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="PassiveFeature_PsionicAdept"/>
+                    <attribute id="U1" type="float" value="0.5625"/>
+                    <attribute id="U2" type="float" value="0.59375"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Item_WPN_Dagger_PsionicallyAttuned"/>
+                    <attribute id="U1" type="float" value="0.59375"/>
+                    <attribute id="U2" type="float" value="0.625"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value="Item_WPN_Quarterstaff_PsionicallyAttuned"/>
+                    <attribute id="U1" type="float" value="0.625"/>
+                    <attribute id="U2" type="float" value="0.65625"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.65625"/>
+                    <attribute id="U2" type="float" value="0.6875"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.6875"/>
+                    <attribute id="U2" type="float" value="0.71875"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.71875"/>
+                    <attribute id="U2" type="float" value="0.75"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.75"/>
+                    <attribute id="U2" type="float" value="0.78125"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.78125"/>
+                    <attribute id="U2" type="float" value="0.8125"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.8125"/>
+                    <attribute id="U2" type="float" value="0.84375"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.84375"/>
+                    <attribute id="U2" type="float" value="0.875"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.875"/>
+                    <attribute id="U2" type="float" value="0.90625"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>	
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.90625"/>
+                    <attribute id="U2" type="float" value="0.9375"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>			
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.9375"/>
+                    <attribute id="U2" type="float" value="0.96875"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>		
+                <node id="IconUV">
+                    <attribute id="MapKey" type="FixedString" value=""/>
+                    <attribute id="U1" type="float" value="0.96875"/>
+                    <attribute id="U2" type="float" value="1.0"/>
+                    <attribute id="V1" type="float" value="0.1875"/>
+                    <attribute id="V2" type="float" value="0.21875"/>
+                </node>
+			</children>
+        </node>
+    </region>
+	<region id="TextureAtlasInfo">
+		<node id="root">
+			<children>
+                <node id="TextureAtlasIconSize">
+                    <attribute id="Height" type="int32" value="64"/>
+                    <attribute id="Width" type="int32" value="64"/>
+                </node>
+                <node id="TextureAtlasPath">
+                    <attribute id="Path" type="string" value="Assets/Textures/Icons/Icons_5e_Spells.dds"/>
+                    <attribute id="UUID" type="FixedString" value="1a25ceff-2960-4e54-a8b8-9344a16a0d05"/>
+                </node>
+                <node id="TextureAtlasTextureSize">
+                    <attribute id="Height" type="int32" value="2048"/>
+                    <attribute id="Width" type="int32" value="2048"/>
+                </node>
+            </children>
+        </node>
+    </region>				  				
+</save>

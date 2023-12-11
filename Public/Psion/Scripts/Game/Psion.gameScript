@@ -1,0 +1,4943 @@
+INIT
+    EXTERN CHARACTERTEMPLATE:%charSpawn=e8736501-6544-4fe4-83d6-d716c3d7f743
+    CHARACTER:%char2
+    CHARACTER:%owner2
+    FLOAT:%EmpathyHP = 1.0
+    FLOAT:%ReflectedAgonyHP = 1.0
+    FLOAT:%PsiCrystalSympathyHP = 1.0
+    FLOAT:%LifeLinkHP = 1.0
+    FLOAT:%DeathFutureHP = 1.0
+    FLOAT:%AstralGuardianHP = 1.0
+
+EVENTS
+
+EVENT PartyReset
+VARS
+CHARACTER:_Character
+
+ON
+	OnSpellCast(_Character,Target_TelekineticForce)
+ACTIONS
+	ClearGlobalFlag("GEN_MaxPlayerCountReached")
+
+EVENT DZY_TelekineticHand
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+	CHARACTERTEMPLATE:_Template
+	LIST<STATUS>:_RemoveList
+	STATUS:_Result
+	FLOAT3:_pos
+ON
+	FetchCharacterApplyStatusData(_Character, TELEKINETIC_HAND_TECHNICAL)
+ACTIONS
+    IF "c1&c2"
+		GetPosition(_Character,_pos)
+		CharacterGetTemplate(_Character, _Template)
+	THEN
+	    CharacterRemoveStatus(%owner2, TELEKINETIC_HAND_TECHNICAL)
+	    Set(%owner2, _Character)
+		DisplayText(%char2,"Works")
+	    CharacterEvent(%char2, "ForceStopDialog")
+	    CharacterDestroy(%char2)
+	    SpawnCharacter(%char2,%charSpawn,_pos,1)
+		CharacterCharacterEvent(%char2, %owner2, "MageHand")
+	ENDIF
+	Set(_Result,TELEKINETIC_HAND_TECHNICAL)
+	RETURN(_RemoveList,_Result,null)
+
+EVENT DZY_TelekineticHandStatus
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+	CHARACTERTEMPLATE:_Template
+ON
+	OnCharacterStatusApplied(_Character, TELEKINETIC_HAND)
+ACTIONS
+    IF "c1&c2"
+		CharacterGetStatusSourceCharacter(_Character,TELEKINETIC_HAND,_Source)
+		CharacterGetTemplate(_Source, _Template)	
+	THEN
+		Transform(_Character,_Template)
+		DisplayText(_Character,"Works")
+	ENDIF
+
+EVENT DZY_TelekineticHandExpired
+VARS
+	CHARACTER:_Character
+	LIST<STATUS>:_RemoveList
+	STATUS:_Result
+	FLOAT3:_pos
+ON
+	FetchCharacterApplyStatusData(_Character, TELEKINETIC_HAND_TECHNICAL_REMOVED)
+ACTIONS
+    IF "c1"
+		GetPosition(_Character,_pos)
+	THEN
+	    CharacterEvent(%char2, "ForceStopDialog")
+	    IterateItemsInInventory(%char2, "SummonDied")
+		CharacterSetStoryNPC(%char2,0)
+	    Set(%char2,null)
+        Set(%owner2,null)
+	ENDIF
+	Set(_Result,TELEKINETIC_HAND_TECHNICAL_REMOVED)
+	RETURN(_RemoveList,_Result,null)
+
+EVENT GlimpseTheFuture
+VARS
+CHARACTER:_Character
+INT:_Result
+
+ON
+	OnCharacterStatusApplied(_Character,GLIMPSE_THE_FUTURE)
+ACTIONS
+	GetRandomBetween(_Result,1,4)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,DEATH_FUTURE,100)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,VICTORY_FUTURE,100)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SURPRISE_FUTURE,100)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,ADVANTAGE_FUTURE,100)
+		ENDIF
+
+EVENT DeathFutureSetHP
+VARS
+	CHARACTER:_Character
+	FLOAT:_HP
+ON
+	OnCharacterStatusApplied(_Character, "DEATH_FUTURE")
+ACTIONS
+	IF	"c1&c2"
+		CharacterGetStatusSourceCharacter(_Character, "DEATH_FUTURE", _Source)
+		CharacterGetStat(_HP, _Character, Vitality)
+	THEN
+		Set(%DeathFutureHP, _HP)
+	ENDIF
+
+EVENT DeathFutureChangeinHP
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+	FLOAT:_HP
+ON
+	OnCharacterVitalityChanged(_Character, _HP)
+ACTIONS
+	IF "c1&c2"
+		CharacterHasStatus(_Character, "DEATH_FUTURE")
+		IsGreaterThen(_HP, FLOAT:0.0)
+	THEN
+		Set(%DeathFutureHP, _HP)
+	ENDIF
+
+EVENT DeathFutureRevertHP
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+	FLOAT:_HP
+ON
+	OnCharacterStatusApplied(_Character, DEATH_FUTURE_TECHNICAL)
+ACTIONS
+	Set(_HP, %DeathFutureHP)
+	SetHealth(_Character,_HP)
+
+EVENT ElementalBlast_Massive
+VARS
+CHARACTER:_Character
+
+ON
+	OnSpellCast(_Character,Zone_ElementalBlast_Fire_Massive)
+	OnSpellCast(_Character,Zone_ElementalBlast_Cold_Massive)
+	OnSpellCast(_Character,Zone_ElementalBlast_Lightning_Massive)
+	OnSpellCast(_Character,Zone_ElementalBlast_Force_Massive)
+	OnSpellCast(_Character,Zone_ElementalBlast_Fire_Massive_2)
+	OnSpellCast(_Character,Zone_ElementalBlast_Cold_Massive_2)
+	OnSpellCast(_Character,Zone_ElementalBlast_Lightning_Massive_2)
+	OnSpellCast(_Character,Zone_ElementalBlast_Force_Massive)
+	OnSpellCast(_Character,Zone_ElementalBlast_Fire_Massive_3)
+	OnSpellCast(_Character,Zone_ElementalBlast_Cold_Massive_3)
+	OnSpellCast(_Character,Zone_ElementalBlast_Lightning_Massive_3)
+	OnSpellCast(_Character,Zone_ElementalBlast_Force_Massive_3)
+	OnSpellCast(_Character,Zone_ElementalBlast_Fire_Massive_Schism)
+	OnSpellCast(_Character,Zone_ElementalBlast_Cold_Massive_Schism)
+	OnSpellCast(_Character,Zone_ElementalBlast_Lightning_Massive_Schism)
+	OnSpellCast(_Character,Zone_ElementalBlast_Force_Massive_Schism)
+	OnSpellCast(_Character,Zone_ElementalBlast_Fire_Massive_2_Schism)
+	OnSpellCast(_Character,Zone_ElementalBlast_Cold_Massive_2_Schism)
+	OnSpellCast(_Character,Zone_ElementalBlast_Lightning_Massive_2_Schism)
+	OnSpellCast(_Character,Zone_ElementalBlast_Force_Massive_2_Schism)
+	OnSpellCast(_Character,Zone_ElementalBlast_Fire_Massive_3_Schism)
+	OnSpellCast(_Character,Zone_ElementalBlast_Cold_Massive_3_Schism)
+	OnSpellCast(_Character,Zone_ElementalBlast_Lightning_Massive_3_Schism)
+	OnSpellCast(_Character,Zone_ElementalBlast_Force_Massive_3_Schism)
+ACTIONS
+IF	"c1"
+	CharacterHasStatus(_Character,ELEMENTALBLAST_LASTING)
+THEN
+	CharacterRemoveStatus(_Character,ELEMENTALBLAST_LASTING)
+ENDIF
+
+EVENT EmpoweredStrike_Lasting
+VARS
+CHARACTER:_Character
+CHARACTER:_Source
+
+ON
+	OnCharacterStatusApplied(_Character,EMPOWEREDSTRIKE_WEAPONATTACK)
+ACTIONS
+IF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,EMPOWEREDSTRIKE_WEAPONATTACK,_Source)
+	CharacterHasStatus(_Source,ELEMENTALBLAST_LASTING)
+	CharacterHasStatus(_Source,FIRE)
+THEN
+	CreateSurfaceAt(_Character, SurfaceFire, FLOAT:1.5, -1, _Source)
+	CharacterRemoveStatus(_Character,ELEMENTALBLAST_LASTING)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,EMPOWEREDSTRIKE_WEAPONATTACK,_Source)
+	CharacterHasStatus(_Source,ELEMENTALBLAST_LASTING)
+	CharacterHasStatus(_Source,COLD)
+THEN
+	CreateSurfaceAt(_Character, SurfaceWaterFrozen, FLOAT:1.5, -1, _Source)
+	CharacterRemoveStatus(_Character,ELEMENTALBLAST_LASTING)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,EMPOWEREDSTRIKE_WEAPONATTACK,_Source)
+	CharacterHasStatus(_Source,ELEMENTALBLAST_LASTING)
+	CharacterHasStatus(_Source,LIGHTNING)
+THEN
+	CreateSurfaceAt(_Character, SurfaceWaterCloudElectrified, FLOAT:1.5, -1, _Source)
+	CharacterRemoveStatus(_Character,ELEMENTALBLAST_LASTING)
+ENDIF
+
+EVENT AdaptiveHunter
+VARS
+CHARACTER:_Character
+INT:_Result
+ON
+	OnCharacterStatusApplied(_Character,ADAPTIVE_HUNTER)
+ACTIONS
+	GetRandomBetween(_Result,1,18)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,ATHLETICS,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ACROBATICS,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SLEIGHTOFHAND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,STEALTH,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ARCANA,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,HISTORY,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,INVESTIGATION,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,NATURE,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,RELIGION,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,ANIMALHANDLING,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INSIGHT,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,MEDICINE,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,PERCEPTION,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,SURVIVAL,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,DECEPTION,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INTIMIDATION,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,PERFORMANCE,-1)
+		ELIF "c1"
+			IsEqual(_Result,18)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION,-1)
+		ENDIF
+
+EVENT Psion_CheckForDreamFlag
+VARS
+	CHARACTER:_Player
+ON
+	OnGlobalFlagSet("NIGHT_DaisyDream1")
+	OnCharacterStatusRemoved(_Player,LONG_REST)
+ACTIONS
+IF "(c1|c2|c3|c4|c5|c6|c7|c8|c9|c10|c11)"
+	CharacterHasSpell(_Player,Rush_ForceTunnel)
+	CharacterHasSpell(_Player,Shout_AberrantShape)
+	CharacterHasSpell(_Player,Rush_ForceTunnel)
+	CharacterHasSpell(_Player,Shout_EndlessRage)
+	CharacterHasSpell(_Player,Shout_Inkblot)
+	CharacterHasSpell(_Player,Shout_ReflectiveShell)
+	CharacterHasSpell(_Player,Shout_Repulsor)
+	CharacterHasSpell(_Player,Target_HorrificVisage)
+	CharacterHasSpell(_Player,Target_PsionicPull)
+	CharacterHasSpell(_Player,Target_SurvivalInstinct)
+	CharacterHasSpell(_Player,Target_SupernaturalAttraction)
+THEN
+	CharacterApplyStatus(_Player,PSION_POWER_AURA, 0)
+ENDIF
+
+EVENT EnhancingSurge_PhysicalSurge
+VARS
+	CHARACTER:_Character
+	FLOAT:_Int
+	FLOAT:_Str
+	FLOAT:_Dex
+ON
+	OnCharacterStatusApplied(_Character,ENHANCING_SURGE_DAMAGE)
+	OnCharacterStatusApplied(_Character,BONUS_ENHANCING_SURGE_DAMAGE)
+ACTIONS
+IF	"c1&c2&c3&(((c4|c5)&(c6|c7))|((c8|c9)&(c10|c11))|((c12|c13)&(c14|c15))|((c16|c17)&(c18|c19))|((c20|c21)&(c22|c23)))"
+	CharacterHasStatus(_Character,PHYSICALSURGE_STRENGTH)
+	CharacterGetStat(_Str,_Character,Strength)
+	CharacterGetStat(_Int,_Character,Intelligence)
+	IsEqual(_Str,8)
+	IsEqual(_Str,9)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Str,10)
+	IsEqual(_Str,11)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Str,12)
+	IsEqual(_Str,13)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Str,14)
+	IsEqual(_Str,15)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Str,16)
+	IsEqual(_Str,17)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+THEN
+	CharacterApplyStatus(_Character,STR_STAT_4,1)
+ELIF	"c1&c2&c3&(((c4|c5)&(c6|c7))|((c8|c9)&(c10|c11))|((c12|c13)&(c14|c15))|((c16|c17)&(c18|c19)))"
+	CharacterHasStatus(_Character,PHYSICALSURGE_STRENGTH)
+	CharacterGetStat(_Str,_Character,Strength)
+	CharacterGetStat(_Int,_Character,Intelligence)
+	IsEqual(_Str,8)
+	IsEqual(_Str,9)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Str,10)
+	IsEqual(_Str,11)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Str,12)
+	IsEqual(_Str,13)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Str,14)
+	IsEqual(_Str,15)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+THEN
+	CharacterApplyStatus(_Character,STR_STAT_6,1)
+ELIF	"c1&c2&c3&(((c4|c5)&(c6|c7))|((c8|c9)&(c10|c11))|((c12|c13)&(c14|c15)))"
+	CharacterHasStatus(_Character,PHYSICALSURGE_STRENGTH)
+	CharacterGetStat(_Str,_Character,Strength)
+	CharacterGetStat(_Int,_Character,Intelligence)
+	IsEqual(_Str,8)
+	IsEqual(_Str,9)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Str,10)
+	IsEqual(_Str,11)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Str,12)
+	IsEqual(_Str,13)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+THEN
+	CharacterApplyStatus(_Character,STR_STAT_8,1)
+ELIF	"c1&c2&c3&(((c4|c5)&(c6|c7))|((c8|c9)&(c10|c11)))"
+	CharacterHasStatus(_Character,PHYSICALSURGE_STRENGTH)
+	CharacterGetStat(_Str,_Character,Strength)
+	CharacterGetStat(_Int,_Character,Intelligence)
+	IsEqual(_Str,8)
+	IsEqual(_Str,9)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Str,10)
+	IsEqual(_Str,11)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+THEN
+	CharacterApplyStatus(_Character,STR_STAT_10,1)
+ELIF	"c1&c2&c3&(c4|c5)&(c6|c7)"
+	CharacterHasStatus(_Character,PHYSICALSURGE_STRENGTH)
+	CharacterGetStat(_Str,_Character,Strength)
+	CharacterGetStat(_Int,_Character,Intelligence)
+	IsEqual(_Str,8)
+	IsEqual(_Str,9)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+THEN
+	CharacterApplyStatus(_Character,STR_STAT_12,1)
+ELIF	"c1&c2&c3&(((c4|c5)&(c6|c7))|((c8|c9)&(c10|c11))|((c12|c13)&(c14|c15))|((c16|c17)&(c18|c19))|((c20|c21)&(c22|c23)))"
+	CharacterHasStatus(_Character,PHYSICALSURGE_STRENGTH)
+	CharacterGetStat(_Str,_Character,Strength)
+	CharacterGetStat(_Int,_Character,Intelligence)
+	IsEqual(_Str,10)
+	IsEqual(_Str,11)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Str,12)
+	IsEqual(_Str,13)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Str,14)
+	IsEqual(_Str,15)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Str,16)
+	IsEqual(_Str,17)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Str,18)
+	IsEqual(_Str,19)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+THEN
+	CharacterApplyStatus(_Character,STR_STAT_2,1)
+ELIF	"c1&c2&c3&(((c4|c5)&(c6|c7))|((c8|c9)&(c10|c11))|((c12|c13)&(c14|c15))|((c16|c17)&(c18|c19))|((c20|c21)&(c22|c23)))"
+	CharacterHasStatus(_Character,PHYSICALSURGE_DEXTERITY)
+	CharacterGetStat(_Dex,_Character,Dexterity)
+	CharacterGetStat(_Int,_Character,Intelligence)
+	IsEqual(_Dex,8)
+	IsEqual(_Dex,9)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Dex,10)
+	IsEqual(_Dex,11)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Dex,12)
+	IsEqual(_Dex,13)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Dex,14)
+	IsEqual(_Dex,15)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Dex,16)
+	IsEqual(_Dex,17)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+THEN
+	CharacterApplyStatus(_Character,DEX_STAT_4,1)
+ELIF	"c1&c2&c3&(((c4|c5)&(c6|c7))|((c8|c9)&(c10|c11))|((c12|c13)&(c14|c15))|((c16|c17)&(c18|c19)))"
+	CharacterHasStatus(_Character,PHYSICALSURGE_DEXTERITY)
+	CharacterGetStat(_Dex,_Character,Dexterity)
+	CharacterGetStat(_Int,_Character,Intelligence)
+	IsEqual(_Dex,8)
+	IsEqual(_Dex,9)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Dex,10)
+	IsEqual(_Dex,11)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Dex,12)
+	IsEqual(_Dex,13)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Dex,14)
+	IsEqual(_Dex,15)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+THEN
+	CharacterApplyStatus(_Character,DEX_STAT_6,1)
+ELIF	"c1&c2&c3&(((c4|c5)&(c6|c7))|((c8|c9)&(c10|c11))|((c12|c13)&(c14|c15)))"
+	CharacterHasStatus(_Character,PHYSICALSURGE_DEXTERITY)
+	CharacterGetStat(_Dex,_Character,Dexterity)
+	CharacterGetStat(_Int,_Character,Intelligence)
+	IsEqual(_Dex,8)
+	IsEqual(_Dex,9)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Dex,10)
+	IsEqual(_Dex,11)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Dex,12)
+	IsEqual(_Dex,13)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+THEN
+	CharacterApplyStatus(_Character,DEX_STAT_8,1)
+ELIF	"c1&c2&c3&(((c4|c5)&(c6|c7))|((c8|c9)&(c10|c11)))"
+	CharacterHasStatus(_Character,PHYSICALSURGE_DEXTERITY)
+	CharacterGetStat(_Dex,_Character,Dexterity)
+	CharacterGetStat(_Int,_Character,Intelligence)
+	IsEqual(_Dex,8)
+	IsEqual(_Dex,9)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Dex,10)
+	IsEqual(_Dex,11)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+THEN
+	CharacterApplyStatus(_Character,DEX_STAT_10,1)
+ELIF	"c1&c2&c3&(c4|c5)&(c6|c7)"
+	CharacterHasStatus(_Character,PHYSICALSURGE_DEXTERITY)
+	CharacterGetStat(_Dex,_Character,Dexterity)
+	CharacterGetStat(_Int,_Character,Intelligence)
+	IsEqual(_Dex,8)
+	IsEqual(_Dex,9)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+THEN
+	CharacterApplyStatus(_Character,DEX_STAT_12,1)
+ELIF	"c1&c2&c3&(((c4|c5)&(c6|c7))|((c8|c9)&(c10|c11))|((c12|c13)&(c14|c15))|((c16|c17)&(c18|c19))|((c20|c21)&(c22|c23)))"
+	CharacterHasStatus(_Character,PHYSICALSURGE_DEXTERITY)
+	CharacterGetStat(_Dex,_Character,Dexterity)
+	CharacterGetStat(_Int,_Character,Intelligence)
+	IsEqual(_Dex,10)
+	IsEqual(_Dex,11)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Dex,12)
+	IsEqual(_Dex,13)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Dex,14)
+	IsEqual(_Dex,15)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Dex,16)
+	IsEqual(_Dex,17)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Dex,18)
+	IsEqual(_Dex,19)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+THEN
+	CharacterApplyStatus(_Character,DEX_STAT_2,1)
+ENDIF
+
+EVENT DZPSY_RampageDieInitiative
+VARS
+CHARACTER:_Character
+
+ON
+	OnLeftCombat(_Character,_)
+ACTIONS
+IF "(c1|c2|c3|c4|c5)&c6"
+	CharacterHasStatus(_Character,RAMPAGE_DIE_4)
+	CharacterHasStatus(_Character,RAMPAGE_DIE_6)
+	CharacterHasStatus(_Character,RAMPAGE_DIE_8)
+	CharacterHasStatus(_Character,RAMPAGE_DIE_10)
+	CharacterHasStatus(_Character,RAMPAGE_DIE_12)
+	CharacterHasStatus(_Character,RAMPAGE_DIE_INITIATIVE)
+THEN
+	CharacterRemoveStatus(_Character,RAMPAGE_DIE_INITIATIVE)
+ENDIF
+
+EVENT DZPSY_RampageDieInitiativeStopRemoval
+VARS
+CHARACTER:_Character
+
+ON
+	OnLeftCombat(_Character,_)
+ACTIONS
+	CharacterRemoveStatus(_Character,RAMPAGE_DIE_INITIATIVE_STOP)
+
+EVENT SetExhaustiononRampageDie
+VARS
+CHARACTER:_Character
+INT:_Num
+INT:_Stored
+
+ON
+	OnCharacterStatusApplied(_Character, RAMPAGE_DIE_12)
+ACTIONS
+IF "c1&c2"
+	GetVar(_Stored,_Character,"ExhaustionCheck")
+	IsEqual(_Stored,10)
+THEN
+	CharacterApplyStatus(_Character,EXHAUSTED,-1,1)
+	Add(_Stored,1)
+	SetVar(_Character,"ExhaustionCheck",_Stored)
+ELIF "c1&!c2"
+	GetVar(_Stored,_Character,"ExhaustionCheck")
+	IsEqual(_Stored,10)
+THEN
+	Add(_Stored,1)
+	SetVar(_Character,"ExhaustionCheck",_Stored)
+ENDIF
+
+EVENT RampageDieEnhancingSurge_AstralConstruct
+VARS
+CHARACTER:_Character
+CHARACTER:_Source
+
+ON
+	OnCharacterStatusApplied(_Character,RAMPAGE_DIE_4)
+	OnCharacterStatusApplied(_Character,RAMPAGE_DIE_6)
+	OnCharacterStatusApplied(_Character,RAMPAGE_DIE_8)
+	OnCharacterStatusApplied(_Character,RAMPAGE_DIE_10)
+	OnCharacterStatusApplied(_Character,RAMPAGE_DIE_12)
+	OnCharacterStatusApplied(_Character,ENHANCING_SURGE_DAMAGE)
+	OnCharacterStatusApplied(_Character,ENHANCING_SURGE_SURGINGPOWER_DAMAGE)
+ACTIONS
+IF "c1&c2"
+	CharacterHasStatus(_Character,RAMPAGE_DIE_4)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_ABILITIES,_Source)
+THEN
+	CharacterApplyStatus(_Source,RAMPAGE_DIE_4,-1)
+ELIF "c1&c2"
+	CharacterHasStatus(_Character,RAMPAGE_DIE_6)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_ABILITIES,_Source)
+THEN
+	CharacterApplyStatus(_Source,RAMPAGE_DIE_6,2)
+ELIF "c1&c2"
+	CharacterHasStatus(_Character,RAMPAGE_DIE_8)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_ABILITIES,_Source)
+THEN
+	CharacterApplyStatus(_Source,RAMPAGE_DIE_8,2)
+ELIF "c1&c2"
+	CharacterHasStatus(_Character,RAMPAGE_DIE_10)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_ABILITIES,_Source)
+THEN
+	CharacterApplyStatus(_Source,RAMPAGE_DIE_10,2)
+ELIF "c1&c2"
+	CharacterHasStatus(_Character,RAMPAGE_DIE_12)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_ABILITIES,_Source)
+THEN
+	CharacterApplyStatus(_Source,RAMPAGE_DIE_12,2)
+ELIF "c1&c2"
+	CharacterHasStatus(_Character,ENHANCING_SURGE_DAMAGE)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_ABILITIES,_Source)
+THEN
+	CharacterApplyStatus(_Source,ENHANCING_SURGE_DAMAGE,1)
+ELIF "c1&c2"
+	CharacterHasStatus(_Character,ENHANCING_SURGE_SURGINGPOWER_DAMAGE)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_ABILITIES,_Source)
+THEN
+	CharacterApplyStatus(_Source,ENHANCING_SURGE_SURGINGPOWER_DAMAGE,1)
+ENDIF
+
+EVENT RampageDieSharing_AstralConstruct
+VARS
+CHARACTER:_Character
+CHARACTER:_Source
+
+ON
+	OnCharacterStatusApplied(_Character,RAMPAGE_DIE_4)
+	OnCharacterStatusApplied(_Character,RAMPAGE_DIE_6)
+	OnCharacterStatusApplied(_Character,RAMPAGE_DIE_8)
+	OnCharacterStatusApplied(_Character,RAMPAGE_DIE_10)
+	OnCharacterStatusApplied(_Character,RAMPAGE_DIE_12)
+	OnCharacterStatusApplied(_Character,ENHANCING_SURGE_DAMAGE)
+	OnCharacterStatusApplied(_Character,ENHANCING_SURGE_SURGINGPOWER_DAMAGE)
+ACTIONS
+IF "c1&c2"
+	CharacterHasStatus(_Character,RAMPAGE_DIE_4)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+THEN
+	CharacterApplyStatus(_Source,RAMPAGE_DIE_4,-1)
+ELIF "c1&c2"
+	CharacterHasStatus(_Character,RAMPAGE_DIE_6)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+THEN
+	CharacterApplyStatus(_Source,RAMPAGE_DIE_6,2)
+ELIF "c1&c2"
+	CharacterHasStatus(_Character,RAMPAGE_DIE_8)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+THEN
+	CharacterApplyStatus(_Source,RAMPAGE_DIE_8,2)
+ELIF "c1&c2"
+	CharacterHasStatus(_Character,RAMPAGE_DIE_10)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+THEN
+	CharacterApplyStatus(_Source,RAMPAGE_DIE_10,2)
+ELIF "c1&c2"
+	CharacterHasStatus(_Character,RAMPAGE_DIE_12)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+THEN
+	CharacterApplyStatus(_Source,RAMPAGE_DIE_12,2)
+ENDIF
+
+EVENT EnhancingSurgeRemoval_AstralConstruct
+VARS
+CHARACTER:_Character
+CHARACTER:_Owner
+
+ON
+	OnCharacterStatusRemoved(_Character,ENHANCING_SURGE_DAMAGE)
+	OnCharacterStatusRemoved(_Character,ENHANCING_SURGE_SURGINGPOWER_DAMAGE)
+	OnCharacterStatusRemoved(_Construct,ENHANCING_SURGE_DAMAGE)
+	OnCharacterStatusRemoved(_Construct,ENHANCING_SURGE_SURGINGPOWER_DAMAGE)
+ACTIONS
+IF "c1"
+	CharacterGetStatusSourceCharacter(_Owner,ASTRAL_CONSTRUCT_ABILITIES,_Source)
+THEN
+	CharacterRemoveStatus(_Source,ENHANCING_SURGE_DAMAGE)
+	CharacterRemoveStatus(_Source,ENHANCING_SURGE_SURGINGPOWER_DAMAGE)
+ELIF "c1"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+THEN
+	CharacterRemoveStatus(_Source,ENHANCING_SURGE_DAMAGE)
+	CharacterRemoveStatus(_Source,ENHANCING_SURGE_SURGINGPOWER_DAMAGE)
+ENDIF
+
+EVENT ElementalBlast_Lightning_Arc
+VARS
+CHARACTER:_Character
+
+ON
+	OnTurnEnded(_Character)
+ACTIONS
+IF	"c1"
+	CharacterHasStatus(_Character,ELEMENTALBLAST_LIGHTNING_ARC)
+THEN
+	ExplodeAt(_Character,Projectile_ElementalBlast_Lightning_Arc_Lasting)
+ENDIF
+
+EVENT ElementalBlast_Lightning2_Arc
+VARS
+CHARACTER:_Character
+
+ON
+	OnTurnEnded(_Character)
+ACTIONS
+IF	"c1"
+	CharacterHasStatus(_Character,ELEMENTALBLAST_LIGHTNING2_ARC)
+THEN
+	ExplodeAt(_Character,Projectile_ElementalBlast_Lightning2_Arc)
+ENDIF
+
+EVENT ElementalBlast_Lightning_Massive
+VARS
+CHARACTER:_Character
+CHARACTER:_Source
+
+ON
+	OnCharacterStatusApplied(_Character,ELEMENTALBLAST_LIGHTNING_MASSIVE)
+ACTIONS
+IF	"c1&c2"
+	CharacterHasStatus(_Character,ELEMENTALBLAST_PROC)
+	CharacterGetStatusSourceCharacter(_Character,ELEMENTALBLAST_PROC,_Source)
+THEN
+	CharacterApplyStatus(_Source,ELEMENTALBLAST_LIGHTNING_MASSIVE_SELF,1)
+ENDIF
+
+EVENT ElementalBlast_Lightning_SelfRemoval
+VARS
+CHARACTER:_Character
+CHARACTER:_Source
+
+ON
+	OnCharacterStatusRemoved(_Character,ELEMENTALBLAST_LIGHTNING)
+ACTIONS
+IF	"c1"
+	CharacterGetStatusSourceCharacter(_Character,ELEMENTALBLAST_LIGHTNING,_Source)
+THEN
+	CharacterRemoveStatus(_Source,ELEMENTALBLAST_LIGHTNING_SELF)
+ENDIF
+
+EVENT PsionicConduit_Psychokinetic
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+ON
+	OnCharacterStatusApplied(_Character,PSIONIC_CONDUIT)
+ACTIONS
+IF	"c1&c2&c3"
+	CharacterHasStatus(_Character,ASTRAL_CONSTRUCT_TECHNICAL)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterHasSpell(_Source,Projectile_ElementalBlast)
+THEN
+	CharacterApplyStatus(_Character,PSIONIC_CONDUIT_ELEMENTALBLAST,-1)
+ENDIF
+
+EVENT PsionicConduit_Telekinesis
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+ON
+	OnCharacterStatusApplied(_Character,PSIONIC_CONDUIT)
+ACTIONS
+IF	"c1&c2&c3"
+	CharacterHasStatus(_Character,ASTRAL_CONSTRUCT_TECHNICAL)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterHasSpell(_Source,Target_TelekineticForce)
+THEN
+	CharacterApplyStatus(_Character,PSIONIC_CONDUIT_TELEKINETICFORCE,-1)
+ENDIF
+
+EVENT PsionicConduit_Telepathy
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+ON
+	OnCharacterStatusApplied(_Character,PSIONIC_CONDUIT)
+ACTIONS
+IF	"c1&c2&c3"
+	CharacterHasStatus(_Character,ASTRAL_CONSTRUCT_TECHNICAL)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterHasSpell(_Source,Target_TelepathicIntrusion)
+THEN
+	CharacterApplyStatus(_Character,PSIONIC_CONDUIT_TELEPATHICINTRUSION,-1)
+ENDIF
+
+EVENT PsionicConduit_Enhancement
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+ON
+	OnCharacterStatusApplied(_Character,PSIONIC_CONDUIT)
+	OnCharacterStatusApplied(_Character,PSIONIC_CONDUIT_2)
+ACTIONS
+IF	"c1&c2"
+	CharacterGetStatusSourceCharacter(_Character,PSIONIC_CONDUIT,_Source)
+	CharacterHasSpell(_Source,Target_EnhancingSurge)
+THEN
+	CharacterApplyStatus(_Character,PSIONIC_CONDUIT_ENHANCINGSURGE,-1)
+ELIF	"c1&c2"
+	CharacterGetStatusSourceCharacter(_Character,PSIONIC_CONDUIT_2,_Source)
+	CharacterHasSpell(_Source,Target_EnhancingSurge)
+THEN
+	CharacterApplyStatus(_Character,PSIONIC_CONDUIT_ENHANCINGSURGE,-1)
+ENDIF
+
+EVENT PsionicConduit_Transposition
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+ON
+	OnCharacterStatusApplied(_Character,PSIONIC_CONDUIT)
+ACTIONS
+IF	"c1&c2&c3"
+	CharacterHasStatus(_Character,ASTRAL_CONSTRUCT_TECHNICAL)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterHasSpell(_Source,Rush_PhaseRift)
+THEN
+	CharacterApplyStatus(_Character,PSIONIC_CONDUIT_PHASERIFT,-1)
+ENDIF
+
+EVENT PsionicConduit_Consumption
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+ON
+	OnCharacterStatusApplied(_Character,PSIONIC_CONDUIT)
+ACTIONS
+IF	"c1&c2&c3"
+	CharacterHasStatus(_Character,ASTRAL_CONSTRUCT_TECHNICAL)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterHasSpell(_Source,Target_MindLeech)
+THEN
+	CharacterApplyStatus(_Character,PSIONIC_CONDUIT_MINDLEECH,-1)
+ENDIF
+
+EVENT PsionicConduit_Precognition
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+ON
+	OnCharacterStatusApplied(_Character,PSIONIC_CONDUIT)
+ACTIONS
+IF	"c1&c2&c3"
+	CharacterHasStatus(_Character,ASTRAL_CONSTRUCT_TECHNICAL)
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterHasSpell(_Source,Target_Seeing)
+THEN
+	CharacterApplyStatus(_Character,PSIONIC_CONDUIT_SEEING,-1)
+ENDIF
+
+EVENT TranquilMeditation_HitDie1
+VARS
+CHARACTER:_Character
+
+ON
+	OnCharacterStatusApplied(_Character,DND_HIT_DICE_1)
+ACTIONS
+IF	"c1"
+	CharacterHasStatus(_Character,DND_HIT_DICE_1)
+THEN
+	CharacterApplyStatus(_Character,TRANQUIL_MEDITATION_HIT_DIE_1,-1)
+ENDIF
+
+EVENT TranquilMeditation_HitDie2
+VARS
+CHARACTER:_Character
+
+ON
+	OnCharacterStatusApplied(_Character,DND_HIT_DICE_2)
+ACTIONS
+IF	"c1"
+	CharacterHasStatus(_Character,DND_HIT_DICE_2)
+THEN
+	CharacterApplyStatus(_Character,TRANQUIL_MEDITATION_HIT_DIE_2,-1)
+ENDIF
+
+EVENT TranquilMeditation_HitDie3
+VARS
+CHARACTER:_Character
+
+ON
+	OnCharacterStatusApplied(_Character,DND_HIT_DICE_3)
+ACTIONS
+IF	"c1"
+	CharacterHasStatus(_Character,DND_HIT_DICE_3)
+THEN
+	CharacterApplyStatus(_Character,TRANQUIL_MEDITATION_HIT_DIE_3,-1)
+ENDIF
+
+EVENT TranquilMeditation_HitDie4
+VARS
+CHARACTER:_Character
+
+ON
+	OnCharacterStatusApplied(_Character,DND_HIT_DICE_4)
+ACTIONS
+IF	"c1"
+	CharacterHasStatus(_Character,DND_HIT_DICE_4)
+THEN
+	CharacterApplyStatus(_Character,TRANQUIL_MEDITATION_HIT_DIE_4,-1)
+ENDIF
+
+EVENT CrushingSingularity
+VARS
+	CHARACTER:_Character
+	ITEM:_Item
+ON
+    OnCharacterStatusApplied(_Character,CRUSHING)
+ACTIONS
+IF	"c1&!c2&c3"
+	CharacterHasStatus(_Character,CRUSH)
+	CharacterHasStatus(_Character,CRUSH_BLOCK)
+	CharacterGetStatusSourceItem(_Character,CRUSHING,_Item)
+THEN
+	TeleportTo(_Character,_Item)
+	CharacterApplyStatus(_Character,CRUSH_BLOCK,1)
+ENDIF
+
+EVENT CrushingSingularity_FollowUp
+VARS
+	CHARACTER:_Character
+	ITEM:_Item
+ON
+    OnTurnEnded(_Character,_)
+ACTIONS
+IF	"c1&c2"
+	CharacterHasStatus(_Character,CRUSHING)
+	CharacterGetStatusSourceItem(_Character,CRUSHING,_Item)
+THEN
+	TeleportTo(_Character,_Item)
+ENDIF
+
+EVENT CrushingSingularity_Damage
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+ON
+    OnTurnEnded(_Character,_)
+ACTIONS
+IF	"c1&c2&c3"
+	CharacterHasStatus(_Character,CRUSHING)
+	CharacterHasStatus(_Character,PRECRUSH)
+	CharacterGetStatusSourceCharacter(_Character,PRECRUSH,_Source)
+THEN
+	ShootLocalProjectileAt(Projectile_CrushingSingularity_Explosion,_Source,FLOAT3:{0;3.0;0},_Character)
+ENDIF
+
+EVENT DivideSelf
+VARS
+	CHARACTER:_Character
+	CHARACTERTEMPLATE:_Template
+	STRING:_String
+	FIXEDSTRING:_Fixedstring
+ON
+    OnCharacterStartAttackObject(_,_,_,_)
+ACTIONS
+IF	"c1"
+	CharacterGetTemplate(_Character,_Template)
+THEN
+	Cast(_Fixedstring,_Template)
+	DisplayText(_Character,_Fixedstring)
+	DisplayCombatInfoText(_Character,_Fixedstring)
+	StatusText(_Character,_Fixedstring)
+	DebugText(_Character,_Fixedstring)
+	CombatLogText(_Character,_Fixedstring,0,2)
+ENDIF
+	
+EVENT TelekineticHand_IntScaling
+VARS
+CHARACTER:_Character
+CHARACTER:_Source
+FLOAT:_Int
+
+ON
+	OnCharacterStatusApplied(_Character,TELEKINETIC_HAND)
+ACTIONS
+IF	"c1&c2&(c3|c4)&!c5"
+	CharacterGetStatusSourceCharacter(_Character,TELEKINETIC_HAND,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	CharacterHasStatus(_Character,INT2)
+THEN
+	CharacterApplyStatus(_Character,INT2,-1)
+ELIF	"c1&c2&(c3|c4)&!c5"
+	CharacterGetStatusSourceCharacter(_Character,TELEKINETIC_HAND,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	CharacterHasStatus(_Character,INT4)
+THEN
+	CharacterApplyStatus(_Character,INT4,-1)
+ELIF	"c1&c2&(c3|c4)&!c5"
+	CharacterGetStatusSourceCharacter(_Character,TELEKINETIC_HAND,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	CharacterHasStatus(_Character,INT6)
+THEN
+	CharacterApplyStatus(_Character,INT6,-1)
+ELIF	"c1&c2&(c3|c4)&!c5"
+	CharacterGetStatusSourceCharacter(_Character,TELEKINETIC_HAND,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	CharacterHasStatus(_Character,INT8)
+THEN
+	CharacterApplyStatus(_Character,INT8,-1)
+ELIF	"c1&c2&(c3|c4)&!c5"
+	CharacterGetStatusSourceCharacter(_Character,TELEKINETIC_HAND,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	CharacterHasStatus(_Character,INT10)
+THEN
+	CharacterApplyStatus(_Character,INT10,-1)
+ENDIF
+
+EVENT BalanceOfPower
+VARS
+	CHARACTER:_Character
+	FLOAT:_Level
+ON
+	OnCharacterStatusApplied(_Character, BALANCE_OF_POWER)
+ACTIONS
+IF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,1)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_1,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,2)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_2,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,3)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_3,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,4)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_4,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,5)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_5,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,6)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_6,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,7)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_7,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,8)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_8,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,9)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_9,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,10)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_10,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,11)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_11,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,12)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_12,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,13)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_13,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,14)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_14,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,15)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_15,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,16)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_16,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,17)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_17,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,18)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_18,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,19)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_19,10)
+ELIF	"c1&c2"
+	CharacterGetStat(_Level,_Character,Level)
+	IsEqual(_Level,20)
+THEN
+	CharacterApplyStatus(_Character,BALANCE_OF_POWER_20,10)
+ENDIF
+
+EVENT TurbulentWarp
+VARS
+CHARACTER:_Character
+CHARACTER:_Target
+FLOAT3:_OldPos
+FLOAT3:_NewPos
+ON
+	OnCharacterTeleported(_Target, _Character, _OldPos, _NewPos, Target_TurbulentWarp_3)
+ACTIONS
+	ExplodeAt(_OldPos, Projectile_TurbulentWarp_Explosion, -1, _Character)
+
+EVENT TurbulentWarp_4
+VARS
+CHARACTER:_Character
+CHARACTER:_Target
+FLOAT3:_OldPos
+FLOAT3:_NewPos
+ON
+	OnCharacterTeleported(_Target, _Character, _OldPos, _NewPos, Target_TurbulentWarp_4)
+ACTIONS
+	ExplodeAt(_OldPos, Projectile_TurbulentWarp_Explosion_4, -1, _Character)
+
+EVENT TurbulentWarp_5
+VARS
+CHARACTER:_Character
+CHARACTER:_Target
+FLOAT3:_OldPos
+FLOAT3:_NewPos
+ON
+	OnCharacterTeleported(_Target, _Character, _OldPos, _NewPos, Target_TurbulentWarp_5)
+ACTIONS
+	ExplodeAt(_OldPos, Projectile_TurbulentWarp_Explosion_5, -1, _Character)
+	
+EVENT TurbulentWarp_6
+VARS
+CHARACTER:_Character
+CHARACTER:_Target
+FLOAT3:_OldPos
+FLOAT3:_NewPos
+ON
+	OnCharacterTeleported(_Target, _Character, _OldPos, _NewPos, Target_TurbulentWarp_6)
+ACTIONS
+	ExplodeAt(_OldPos, Projectile_TurbulentWarp_Explosion_6, -1, _Character)
+
+EVENT TurbulentWarp_7
+VARS
+CHARACTER:_Character
+CHARACTER:_Target
+FLOAT3:_OldPos
+FLOAT3:_NewPos
+ON
+	OnCharacterTeleported(_Target, _Character, _OldPos, _NewPos, Target_TurbulentWarp_7)
+ACTIONS
+	ExplodeAt(_OldPos, Projectile_TurbulentWarp_Explosion_7, -1, _Character)
+
+EVENT TurbulentWarp_8
+VARS
+CHARACTER:_Character
+CHARACTER:_Target
+FLOAT3:_OldPos
+FLOAT3:_NewPos
+ON
+	OnCharacterTeleported(_Target, _Character, _OldPos, _NewPos, Target_TurbulentWarp_8)
+ACTIONS
+	ExplodeAt(_OldPos, Projectile_TurbulentWarp_Explosion_8, -1, _Character)
+
+EVENT TurbulentWarp_9
+VARS
+CHARACTER:_Character
+CHARACTER:_Target
+FLOAT3:_OldPos
+FLOAT3:_NewPos
+ON
+	OnCharacterTeleported(_Target, _Character, _OldPos, _NewPos, Target_TurbulentWarp_9)
+ACTIONS
+	ExplodeAt(_OldPos, Projectile_TurbulentWarp_Explosion_9, -1, _Character)
+
+EVENT TurbulentWarp_SpatialManipulation
+VARS
+CHARACTER:_Character
+CHARACTER:_Target
+FLOAT3:_OldPos
+FLOAT3:_NewPos
+ON
+	OnCharacterTeleported(_Target, _Character, _OldPos, _NewPos, Target_TurbulentWarp_SpatialManipulation)
+ACTIONS
+	ExplodeAt(_OldPos, Projectile_TurbulentWarp_SpatialManipulation_Explosion, -1, _Character)
+
+EVENT TurbulentWarp_SpatialManipulation_4
+VARS
+CHARACTER:_Character
+CHARACTER:_Target
+FLOAT3:_OldPos
+FLOAT3:_NewPos
+ON
+	OnCharacterTeleported(_Target, _Character, _OldPos, _NewPos, Target_TurbulentWarp_4_SpatialManipulation)
+ACTIONS
+	ExplodeAt(_OldPos, Projectile_TurbulentWarp_SpatialManipulation_Explosion_4, -1, _Character)
+
+EVENT TurbulentWarp_SpatialManipulation_5
+VARS
+CHARACTER:_Character
+CHARACTER:_Target
+FLOAT3:_OldPos
+FLOAT3:_NewPos
+ON
+	OnCharacterTeleported(_Target, _Character, _OldPos, _NewPos, Target_TurbulentWarp_5_SpatialManipulation)
+ACTIONS
+	ExplodeAt(_OldPos, Projectile_TurbulentWarp_SpatialManipulation_Explosion_5, -1, _Character)
+	
+EVENT TurbulentWarp_SpatialManipulation_6
+VARS
+CHARACTER:_Character
+CHARACTER:_Target
+FLOAT3:_OldPos
+FLOAT3:_NewPos
+ON
+	OnCharacterTeleported(_Target, _Character, _OldPos, _NewPos, Target_TurbulentWarp_6_SpatialManipulation)
+ACTIONS
+	ExplodeAt(_OldPos, Projectile_TurbulentWarp_SpatialManipulation_Explosion_6, -1, _Character)
+
+EVENT TurbulentWarp_SpatialManipulation_7
+VARS
+CHARACTER:_Character
+CHARACTER:_Target
+FLOAT3:_OldPos
+FLOAT3:_NewPos
+ON
+	OnCharacterTeleported(_Target, _Character, _OldPos, _NewPos, Target_TurbulentWarp_7_SpatialManipulation)
+ACTIONS
+	ExplodeAt(_OldPos, Projectile_TurbulentWarp_SpatialManipulation_Explosion_7, -1, _Character)
+
+EVENT TurbulentWarp_SpatialManipulation_8
+VARS
+CHARACTER:_Character
+CHARACTER:_Target
+FLOAT3:_OldPos
+FLOAT3:_NewPos
+ON
+	OnCharacterTeleported(_Target, _Character, _OldPos, _NewPos, Target_TurbulentWarp_8_SpatialManipulation)
+ACTIONS
+	ExplodeAt(_OldPos, Projectile_TurbulentWarp_SpatialManipulation_Explosion_8, -1, _Character)
+
+EVENT TurbulentWarp_SpatialManipulation_9
+VARS
+CHARACTER:_Character
+CHARACTER:_Target
+FLOAT3:_OldPos
+FLOAT3:_NewPos
+ON
+	OnCharacterTeleported(_Target, _Character, _OldPos, _NewPos, Target_TurbulentWarp_9_SpatialManipulation)
+ACTIONS
+	ExplodeAt(_OldPos, Projectile_TurbulentWarp_SpatialManipulation_Explosion_9, -1, _Character)
+	
+EVENT Flicker
+VARS
+CHARACTER:_Character
+INT:_Result
+
+ON
+	OnCharacterStatusApplied(_Character,FLICKER_TECHNICAL)
+ACTIONS
+	GetRandomBetween(_Result,1,4)
+		IF	"c1"
+			IsEqual(_Result,1)
+		THEN
+			DisplayText(_Character,"Rolled a 1", FLOAT:1.0)
+			CharacterApplyStatus(_Character,FLICKER_NONE,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,FLICKER_RESISTANCE,-1)
+			DisplayText(_Character,"Rolled a 2", FLOAT:1.0)
+		ELIF	"c1"
+			IsEqual(_Result,3)
+		THEN
+			DisplayText(_Character,"Rolled a 3", FLOAT:1.0)
+			CharacterApplyStatus(_Character,FLICKER_NONE,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,FLICKER_IMMUNITY,-1)
+			DisplayText(_Character,"Rolled a 4", FLOAT:1.0)
+		ENDIF
+
+EVENT Flicker_FlickeringPresence
+VARS
+CHARACTER:_Character
+INT:_Result
+
+ON
+	OnCharacterStatusApplied(_Character,FLICKER_FLICKERING_PRESENCE_TECHNICAL)
+ACTIONS
+	GetRandomBetween(_Result,1,4)
+		IF	"c1"
+			IsEqual(_Result,1)
+		THEN
+			DisplayText(_Character,"Rolled a 1", FLOAT:1.0)
+			CharacterApplyStatus(_Character,FLICKER_NONE,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,FLICKER_RESISTANCE,-1)
+			DisplayText(_Character,"Rolled a 2", FLOAT:1.0)
+		ELIF	"c1"
+			IsEqual(_Result,3)
+		THEN
+			DisplayText(_Character,"Rolled a 3", FLOAT:1.0)
+			CharacterApplyStatus(_Character,FLICKER_WEAPON_RESISTANCE,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,FLICKER_IMMUNITY,-1)
+			DisplayText(_Character,"Rolled a 4", FLOAT:1.0)
+		ENDIF
+
+EVENT LifeLinkSetHP
+VARS
+	CHARACTER:_Character
+	FLOAT:_HP
+ON
+	OnCharacterStatusApplied(_Character, "LIFE_LINK")
+ACTIONS
+	IF	"c1"
+		CharacterGetStat(_HP, _Character, VitalityPoints)
+	THEN
+		Set(%LifeLinkHP, _HP)
+	ENDIF
+
+EVENT LifeLinkChangeinHP
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+	FLOAT:_HP
+	FLOAT:_CalculatedHP
+	FLOAT:_SourceHP
+	FLOAT:_SourceMaxHP
+ON
+	OnCharacterStatusRemoved(_Character,"LIFE_LINK_RESISTANCE")
+ACTIONS
+	IF "c1&c2"
+		CharacterHasStatus(_Character, "LIFE_LINK")
+		CharacterGetStat(_HP, _Character, VitalityPoints)
+	THEN
+		IF "c1|c2"
+			IsGreaterThen(_HP, %LifeLinkHP)
+			IsEqual(_HP, %LifeLinkHP)
+		THEN
+			Set(%LifeLinkHP, _HP)
+		ELIF "c1&c2"
+			IsLessThen(_HP, %LifeLinkHP)
+			CharacterGetStatusSourceCharacter(_Character, "LIFE_LINK", _Source)
+		THEN
+			IF "c1&c2"
+				CharacterGetStat(_SourceHP, _Source, VitalityPoints)
+				CharacterGetStat(_SourceMaxHP, _Source, VitalityMax)
+			THEN
+				Set(_CalculatedHP, %LifeLinkHP)
+				Subtract(_CalculatedHP, _HP)
+				Subtract(_SourceHP,_CalculatedHP)
+				Divide(_SourceHP,_SourceMaxHP)
+				//Cast(_Text, _SourceHP)
+				//Cast(_Disp, _Text)
+				//StatusText(_Character, _Disp)
+				SetHealth(_Source, _SourceHP)
+				CharacterRemoveStatus(_Character,LIFE_LINK)
+			ENDIF
+		ENDIF
+	ENDIF
+	
+EVENT AdaptiveHunterSecond
+VARS
+CHARACTER:_Character
+INT:_Result
+ON
+	OnCharacterStatusApplied(_Character,ADAPTIVE_HUNTER_SECOND)
+ACTIONS
+IF	"c1"
+	CharacterHasStatus(_Character,ATHLETICS)
+THEN
+
+	GetRandomBetween(_Result,1,17)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ACROBATICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SLEIGHTOFHAND_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,STEALTH_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ARCANA_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,HISTORY_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,INVESTIGATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,NATURE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,RELIGION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,ANIMALHANDLING_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INSIGHT_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,MEDICINE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,PERCEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,SURVIVAL_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,DECEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INTIMIDATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,PERFORMANCE_SECOND,-1)
+		ENDIF
+ELIF	"c1"
+	CharacterHasStatus(_Character,ACROBATICS)
+THEN
+	GetRandomBetween(_Result,1,17)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ATHLETICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SLEIGHTOFHAND_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,STEALTH_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ARCANA_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,HISTORY_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,INVESTIGATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,NATURE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,RELIGION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,ANIMALHANDLING_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INSIGHT_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,MEDICINE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,PERCEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,SURVIVAL_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,DECEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INTIMIDATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,PERFORMANCE_SECOND,-1)
+		ENDIF
+ELIF	"c1"
+	CharacterHasStatus(_Character,SLEIGHTOFHAND)
+THEN
+	GetRandomBetween(_Result,1,17)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ATHLETICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,ACROBATICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,STEALTH_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ARCANA_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,HISTORY_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,INVESTIGATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,NATURE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,RELIGION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,ANIMALHANDLING_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INSIGHT_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,MEDICINE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,PERCEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,SURVIVAL_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,DECEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INTIMIDATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,PERFORMANCE_SECOND,-1)
+		ENDIF
+ELIF	"c1"
+	CharacterHasStatus(_Character,STEALTH)
+THEN
+	GetRandomBetween(_Result,1,17)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ATHLETICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SLEIGHTOFHAND_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,ACROBATICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ARCANA_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,HISTORY_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,INVESTIGATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,NATURE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,RELIGION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,ANIMALHANDLING_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INSIGHT_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,MEDICINE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,PERCEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,SURVIVAL_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,DECEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INTIMIDATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,PERFORMANCE_SECOND,-1)
+		ENDIF
+ELIF	"c1"
+	CharacterHasStatus(_Character,ARCANA)
+THEN
+	GetRandomBetween(_Result,1,17)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ATHLETICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SLEIGHTOFHAND_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,STEALTH_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ACROBATICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,HISTORY_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,INVESTIGATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,NATURE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,RELIGION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,ANIMALHANDLING_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INSIGHT_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,MEDICINE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,PERCEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,SURVIVAL_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,DECEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INTIMIDATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,PERFORMANCE_SECOND,-1)
+		ENDIF
+ELIF	"c1"
+	CharacterHasStatus(_Character,HISTORY)
+THEN
+	GetRandomBetween(_Result,1,17)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ATHLETICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SLEIGHTOFHAND_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,STEALTH_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ARCANA_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,ACROBATICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,INVESTIGATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,NATURE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,RELIGION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,ANIMALHANDLING_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INSIGHT_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,MEDICINE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,PERCEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,SURVIVAL_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,DECEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INTIMIDATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,PERFORMANCE_SECOND,-1)
+		ENDIF
+ELIF	"c1"
+	CharacterHasStatus(_Character,INVESTIGATION)
+THEN
+	GetRandomBetween(_Result,1,17)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ATHLETICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SLEIGHTOFHAND_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,STEALTH_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ARCANA_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,HISTORY_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,ACROBATICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,NATURE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,RELIGION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,ANIMALHANDLING_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INSIGHT_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,MEDICINE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,PERCEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,SURVIVAL_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,DECEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INTIMIDATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,PERFORMANCE_SECOND,-1)
+		ENDIF
+ELIF	"c1"
+	CharacterHasStatus(_Character,NATURE)
+THEN
+	GetRandomBetween(_Result,1,17)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ATHLETICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SLEIGHTOFHAND_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,STEALTH_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ARCANA_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,HISTORY_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,ACROBATICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,INVESTIGATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,RELIGION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,ANIMALHANDLING_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INSIGHT_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,MEDICINE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,PERCEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,SURVIVAL_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,DECEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INTIMIDATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,PERFORMANCE_SECOND,-1)
+		ENDIF
+ELIF	"c1"
+	CharacterHasStatus(_Character,RELIGION)
+THEN
+	GetRandomBetween(_Result,1,17)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ATHLETICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SLEIGHTOFHAND_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,STEALTH_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ARCANA_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,HISTORY_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,ACROBATICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,NATURE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,INVESTIGATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,ANIMALHANDLING_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INSIGHT_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,MEDICINE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,PERCEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,SURVIVAL_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,DECEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INTIMIDATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,PERFORMANCE_SECOND,-1)
+		ENDIF
+ELIF	"c1"
+	CharacterHasStatus(_Character,ANIMALHANDLING)
+THEN
+	GetRandomBetween(_Result,1,17)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ATHLETICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SLEIGHTOFHAND_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,STEALTH_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ARCANA_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,HISTORY_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,ACROBATICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,NATURE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,RELIGION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,INVESTIGATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INSIGHT_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,MEDICINE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,PERCEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,SURVIVAL_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,DECEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INTIMIDATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,PERFORMANCE_SECOND,-1)
+		ENDIF
+ELIF	"c1"
+	CharacterHasStatus(_Character,INSIGHT)
+THEN
+	GetRandomBetween(_Result,1,17)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ATHLETICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SLEIGHTOFHAND_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,STEALTH_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ARCANA_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,HISTORY_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,ACROBATICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,NATURE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,RELIGION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,ANIMALHANDLING_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INVESTIGATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,MEDICINE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,PERCEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,SURVIVAL_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,DECEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INTIMIDATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,PERFORMANCE_SECOND,-1)
+		ENDIF
+ELIF	"c1"
+	CharacterHasStatus(_Character,MEDICINE)
+THEN
+	GetRandomBetween(_Result,1,17)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ATHLETICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SLEIGHTOFHAND_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,STEALTH_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ARCANA_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,HISTORY_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,ACROBATICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,NATURE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,RELIGION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,ANIMALHANDLING_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INSIGHT_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,INVESTIGATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,PERCEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,SURVIVAL_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,DECEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INTIMIDATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,PERFORMANCE_SECOND,-1)
+		ENDIF
+ELIF	"c1"
+	CharacterHasStatus(_Character,PERCEPTION)
+THEN
+	GetRandomBetween(_Result,1,17)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ATHLETICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SLEIGHTOFHAND_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,STEALTH_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ARCANA_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,HISTORY_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,ACROBATICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,NATURE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,RELIGION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,ANIMALHANDLING_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INSIGHT_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,MEDICINE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,INVESTIGATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,SURVIVAL_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,DECEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INTIMIDATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,PERFORMANCE_SECOND,-1)
+		ENDIF
+ELIF	"c1"
+	CharacterHasStatus(_Character,SURVIVAL)
+THEN
+	GetRandomBetween(_Result,1,17)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ATHLETICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SLEIGHTOFHAND_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,STEALTH_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ARCANA_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,HISTORY_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,ACROBATICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,NATURE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,RELIGION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,ANIMALHANDLING_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INSIGHT_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,MEDICINE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,PERCEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,INVESTIGATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,DECEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INTIMIDATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,PERFORMANCE_SECOND,-1)
+		ENDIF
+ELIF	"c1"
+	CharacterHasStatus(_Character,DECEPTION)
+THEN
+	GetRandomBetween(_Result,1,17)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ATHLETICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SLEIGHTOFHAND_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,STEALTH_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ARCANA_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,HISTORY_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,ACROBATICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,NATURE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,RELIGION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,ANIMALHANDLING_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INSIGHT_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,MEDICINE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,PERCEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,SURVIVAL_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,INVESTIGATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INTIMIDATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,PERFORMANCE_SECOND,-1)
+		ENDIF
+ELIF	"c1"
+	CharacterHasStatus(_Character,INTIMIDATION)
+THEN
+	GetRandomBetween(_Result,1,17)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ATHLETICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SLEIGHTOFHAND_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,STEALTH_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ARCANA_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,HISTORY_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,ACROBATICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,NATURE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,RELIGION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,ANIMALHANDLING_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INSIGHT_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,MEDICINE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,PERCEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,SURVIVAL_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,DECEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INVESTIGATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,PERFORMANCE_SECOND,-1)
+		ENDIF
+ELIF	"c1"
+	CharacterHasStatus(_Character,PERFORMANCE)
+THEN
+	GetRandomBetween(_Result,1,17)
+		IF "c1"
+			IsEqual(_Result,1)
+		THEN
+			CharacterApplyStatus(_Character,PERSUASION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,2)
+		THEN
+			CharacterApplyStatus(_Character,ATHLETICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,3)
+		THEN
+			CharacterApplyStatus(_Character,SLEIGHTOFHAND_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,4)
+		THEN
+			CharacterApplyStatus(_Character,STEALTH_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,5)
+		THEN
+			CharacterApplyStatus(_Character,ARCANA_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,6)
+		THEN
+			CharacterApplyStatus(_Character,HISTORY_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,7)
+		THEN
+			CharacterApplyStatus(_Character,ACROBATICS_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,8)
+		THEN
+			CharacterApplyStatus(_Character,NATURE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,9)
+		THEN
+			CharacterApplyStatus(_Character,RELIGION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,10)
+		THEN
+			CharacterApplyStatus(_Character,ANIMALHANDLING_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,11)
+		THEN
+			CharacterApplyStatus(_Character,INSIGHT_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,12)
+		THEN
+			CharacterApplyStatus(_Character,MEDICINE_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,13)
+		THEN
+			CharacterApplyStatus(_Character,PERCEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,14)
+		THEN
+			CharacterApplyStatus(_Character,SURVIVAL_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,15)
+		THEN
+			CharacterApplyStatus(_Character,DECEPTION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,16)
+		THEN
+			CharacterApplyStatus(_Character,INTIMIDATION_SECOND,-1)
+		ELIF "c1"
+			IsEqual(_Result,17)
+		THEN
+			CharacterApplyStatus(_Character,INVESTIGATION_SECOND,-1)
+		ENDIF
+ENDIF
+
+EVENT EmpathySetHP
+VARS
+	CHARACTER:_Character
+	FLOAT:_HP
+ON
+	OnCharacterStatusApplied(_Character, "EMPATHY")
+ACTIONS
+	IF	"c1"
+		CharacterGetStat(_HP, _Character, VitalityPoints)
+	THEN
+		Set(%EmpathyHP, _HP)
+	ENDIF
+
+EVENT EmpathyChangeinHP
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+	FLOAT:_HP
+	FLOAT:_CalculatedHP
+	FLOAT:_SourceHP
+	FLOAT:_SourceMaxHP
+ON
+	OnCharacterStatusRemoved(_Character,"EMPATHY_RESISTANCE")
+ACTIONS
+	IF "c1&c2"
+		CharacterHasStatus(_Character, "EMPATHY")
+		CharacterGetStat(_HP, _Character, VitalityPoints)
+	THEN
+		IF "c1|c2"
+			IsGreaterThen(_HP, %EmpathyHP)
+			IsEqual(_HP, %EmpathyHP)
+		THEN
+			Set(%EmpathyHP, _HP)
+		ELIF "c1&c2"
+			IsLessThen(_HP, %EmpathyHP)
+			CharacterGetStatusSourceCharacter(_Character, "EMPATHY", _Source)
+		THEN
+			IF "c1&c2"
+				CharacterGetStat(_SourceHP, _Source, VitalityPoints)
+				CharacterGetStat(_SourceMaxHP, _Source, VitalityMax)
+			THEN
+				Set(_CalculatedHP, %EmpathyHP)
+				Subtract(_CalculatedHP, _HP)
+				Subtract(_SourceHP,_CalculatedHP)
+				Divide(_SourceHP,_SourceMaxHP)
+				//Cast(_Text, _SourceHP)
+				//Cast(_Disp, _Text)
+				//StatusText(_Character, _Disp)
+				SetHealth(_Source, _SourceHP)
+				CharacterRemoveStatus(_Source,EMPATHY_AURA)
+				CharacterRemoveStatus(_Source,EMPATHY_UNLIMITED_AURA)
+			ENDIF
+		ENDIF
+	ENDIF
+
+EVENT PsiCrystalSympathySetHP
+VARS
+	CHARACTER:_Character
+	FLOAT:_HP
+ON
+	OnCharacterStatusApplied(_Character, "PSI_CRYSTAL_RESISTANCE")
+ACTIONS
+	IF	"c1&c2"
+		CharacterGetStatusSourceCharacter(_Character, "PSI_CRYSTAL_RESISTANCE", _Source)
+		CharacterGetStat(_HP, _Character, Vitality)
+	THEN
+		Set(%PsiCrystalSympathyHP, _HP)
+	ENDIF
+
+EVENT PsiCrystalSympathyChangeinHP
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+	FLOAT:_HP
+	FLOAT:_MaxHP
+	FLOAT:_CalculatedHP
+	INT:_IntofCalculatedHP
+	FLOAT:_SourceHP
+	FLOAT:_SourceMaxHP
+	FLOAT:_CalculatedSourceHP
+ON
+	OnCharacterVitalityChanged(_Character, _HP)
+ACTIONS
+	IF "c1"
+		CharacterHasStatus(_Character, "PSI_CRYSTAL_RESISTANCE")
+	THEN
+		IF "c1"
+			IsGreaterThen(_HP, %PsiCrystalSympathyHP)
+		THEN
+			Set(%PsiCrystalSympathyHP, _HP)
+		ELIF "c1&c2"
+			IsLessThen(_HP, %PsiCrystalSympathyHP)
+			CharacterGetStatusSourceCharacter(_Character, "PSI_CRYSTAL_RESISTANCE", _Source)
+		THEN
+			IF "c1&c2&c3"
+				CharacterGetStat(_MaxHP, _Character, VitalityMax)
+				CharacterGetStat(_SourceHP, _Source, Vitality)
+				CharacterGetStat(_SourceMaxHP, _Source, VitalityMax)
+			THEN
+				Set(_CalculatedHP, %PsiCrystalSympathyHP)
+				Subtract(_CalculatedHP, _HP)
+				Multiply(_CalculatedHP, _MaxHP)
+				Add(_CalculatedHP, 0.5)
+				Set(_IntofCalculatedHP, INT: 0)
+				Add(_IntofCalculatedHP, _CalculatedHP)
+				Set(_CalculatedSourceHP, _SourceHP)
+				Multiply(_CalculatedSourceHP, _SourceMaxHP)
+				Subtract(_CalculatedSourceHP, _IntofCalculatedHP)
+				Add(_CalculatedSourceHP, 0.5)
+				Set(_IntofCalculatedHP, INT: 0)
+				Add(_IntofCalculatedHP, _CalculatedSourceHP)
+				Set(_CalculatedSourceHP, FLOAT: 0)
+				Add(_CalculatedSourceHP, _IntofCalculatedHP)
+				Divide(_CalculatedSourceHP, _SourceMaxHP)
+				SetHealth(_Source, _CalculatedSourceHP)
+				Set(%PsiCrystalSympathyHP, _HP)
+			ENDIF
+		ENDIF
+	ENDIF
+
+EVENT DestroyPsiCrystal
+VARS
+	CHARACTER:_Character
+ON
+	OnCharacterStatusApplied(_Character, PSI_CRYSTAL_DESTRUCTION)
+ACTIONS
+	CharacterDie(_Character)
+	
+EVENT PsiCrystalDamage
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+	FLOAT:_Level
+ON
+	OnCharacterStatusApplied(_Character, PSI_CRYSTAL_LEVEL)
+ACTIONS
+IF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_LEVEL,_Source)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Level,1)
+THEN
+	CharacterApplyStatus(_Character,PSI_CRYSTAL_LEVEL_1,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_LEVEL,_Source)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Level,2)
+THEN
+	CharacterApplyStatus(_Character,PSI_CRYSTAL_LEVEL_2,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_LEVEL,_Source)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Level,3)
+THEN
+	CharacterApplyStatus(_Character,PSI_CRYSTAL_LEVEL_3,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_LEVEL,_Source)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Level,4)
+THEN
+	CharacterApplyStatus(_Character,PSI_CRYSTAL_LEVEL_4,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_LEVEL,_Source)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Level,5)
+THEN
+	CharacterApplyStatus(_Character,PSI_CRYSTAL_LEVEL_5,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_LEVEL,_Source)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Level,6)
+THEN
+	CharacterApplyStatus(_Character,PSI_CRYSTAL_LEVEL_6,-1)
+ENDIF
+
+EVENT RemovePsiCrystalStatuses
+VARS
+	CHARACTER:_Character
+ON
+	OnCharacterStatusRemoved(_Character, PSI_CRYSTAL_OWNER)
+ACTIONS
+	CharacterRemoveStatus(_Character,PSI_CRYSTAL_TECHNICAL)
+	CharacterRemoveStatus(_Character,PSI_CRYSTAL_TOGGLE)
+	
+EVENT PsiCrystalIntelligence
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+	FLOAT:_Int
+ON
+	OnCharacterStatusApplied(_Character, PSI_CRYSTAL_STATS)
+ACTIONS
+IF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	IsEqual(_Int,8)
+THEN
+	CharacterApplyStatus(_Character,INT2MINUS,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	IsEqual(_Int,9)
+THEN
+	CharacterApplyStatus(_Character,INT1MINUS,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	IsEqual(_Int,11)
+THEN
+	CharacterApplyStatus(_Character,INT1,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	IsEqual(_Int,12)
+THEN
+	CharacterApplyStatus(_Character,INT2,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	IsEqual(_Int,13)
+THEN
+	CharacterApplyStatus(_Character,INT3,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	IsEqual(_Int,14)
+THEN
+	CharacterApplyStatus(_Character,INT4,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	IsEqual(_Int,15)
+THEN
+	CharacterApplyStatus(_Character,INT5,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	IsEqual(_Int,16)
+THEN
+	CharacterApplyStatus(_Character,INT6,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	IsEqual(_Int,17)
+THEN
+	CharacterApplyStatus(_Character,INT7,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	IsEqual(_Int,18)
+THEN
+	CharacterApplyStatus(_Character,INT8,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	IsEqual(_Int,19)
+THEN
+	CharacterApplyStatus(_Character,INT9,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	IsEqual(_Int,20)
+THEN
+	CharacterApplyStatus(_Character,INT10,-1)
+ENDIF
+
+EVENT PsiCrystalWisdom
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+	FLOAT:_Wis
+ON
+	OnCharacterStatusApplied(_Character, PSI_CRYSTAL_STATS)
+ACTIONS
+IF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Wis,_Source,Wisdom)
+	IsEqual(_Wis,8)
+THEN
+	CharacterApplyStatus(_Character,WIS2MINUS,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Wis,_Source,Wisdom)
+	IsEqual(_Wis,9)
+THEN
+	CharacterApplyStatus(_Character,WIS1MINUS,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Wis,_Source,Wisdom)
+	IsEqual(_Wis,11)
+THEN
+	CharacterApplyStatus(_Character,WIS1,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Wis,_Source,Wisdom)
+	IsEqual(_Wis,12)
+THEN
+	CharacterApplyStatus(_Character,WIS2,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Wis,_Source,Wisdom)
+	IsEqual(_Wis,13)
+THEN
+	CharacterApplyStatus(_Character,WIS3,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Wis,_Source,Wisdom)
+	IsEqual(_Wis,14)
+THEN
+	CharacterApplyStatus(_Character,WIS4,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Wis,_Source,Wisdom)
+	IsEqual(_Wis,15)
+THEN
+	CharacterApplyStatus(_Character,WIS5,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Wis,_Source,Wisdom)
+	IsEqual(_Wis,16)
+THEN
+	CharacterApplyStatus(_Character,WIS6,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Wis,_Source,Wisdom)
+	IsEqual(_Wis,17)
+THEN
+	CharacterApplyStatus(_Character,WIS7,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Wis,_Source,Wisdom)
+	IsEqual(_Wis,18)
+THEN
+	CharacterApplyStatus(_Character,WIS8,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Wis,_Source,Wisdom)
+	IsEqual(_Wis,19)
+THEN
+	CharacterApplyStatus(_Character,WIS9,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Wis,_Source,Wisdom)
+	IsEqual(_Wis,20)
+THEN
+	CharacterApplyStatus(_Character,WIS10,-1)
+ENDIF
+
+EVENT PsiCrystalCharisma
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+	FLOAT:_Cha
+ON
+	OnCharacterStatusApplied(_Character, PSI_CRYSTAL_STATS)
+ACTIONS
+IF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Cha,_Source,Charisma)
+	IsEqual(_Cha,8)
+THEN
+	CharacterApplyStatus(_Character,CHA2MINUS,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Cha,_Source,Charisma)
+	IsEqual(_Cha,9)
+THEN
+	CharacterApplyStatus(_Character,CHA1MINUS,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Cha,_Source,Charisma)
+	IsEqual(_Cha,11)
+THEN
+	CharacterApplyStatus(_Character,CHA1,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Cha,_Source,Charisma)
+	IsEqual(_Cha,12)
+THEN
+	CharacterApplyStatus(_Character,CHA2,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Cha,_Source,Charisma)
+	IsEqual(_Cha,13)
+THEN
+	CharacterApplyStatus(_Character,CHA3,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Cha,_Source,Charisma)
+	IsEqual(_Cha,14)
+THEN
+	CharacterApplyStatus(_Character,CHA4,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Cha,_Source,Charisma)
+	IsEqual(_Cha,15)
+THEN
+	CharacterApplyStatus(_Character,CHA5,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Cha,_Source,Charisma)
+	IsEqual(_Cha,16)
+THEN
+	CharacterApplyStatus(_Character,CHA6,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Cha,_Source,Charisma)
+	IsEqual(_Cha,17)
+THEN
+	CharacterApplyStatus(_Character,CHA7,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Cha,_Source,Charisma)
+	IsEqual(_Cha,18)
+THEN
+	CharacterApplyStatus(_Character,CHA8,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Cha,_Source,Charisma)
+	IsEqual(_Cha,19)
+THEN
+	CharacterApplyStatus(_Character,CHA9,-1)
+ELIF	"c1&c2&c3"
+	CharacterGetStatusSourceCharacter(_Character,PSI_CRYSTAL_STATS,_Source)
+	CharacterGetStat(_Cha,_Source,Charisma)
+	IsEqual(_Cha,20)
+THEN
+	CharacterApplyStatus(_Character,CHA10,-1)
+ENDIF
+	
+EVENT ElementalBlast_Lightning
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+ON
+	OnCharacterStatusApplied(_Character,ELEMENTALBLAST_LIGHTNING)
+ACTIONS
+IF	"c1"
+	CharacterGetStatusSourceCharacter(_Character,ELEMENTALBLAST_LIGHTNING,_Source)
+THEN
+	ShootLocalProjectileAt(Projectile_ElementalBlast_Lightning_Arc,_Source,FLOAT3:{0;3.0;0},_Character)
+ENDIF
+
+EVENT ElementalBlast_Lightning2
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+ON
+	OnCharacterStatusApplied(_Character,ELEMENTALBLAST_LIGHTNING2)
+ACTIONS
+IF	"c1"
+	CharacterGetStatusSourceCharacter(_Character,ELEMENTALBLAST_LIGHTNING2,_Source)
+THEN
+	ShootLocalProjectileAt(Projectile_ElementalBlast_Lightning_Arc_2,_Source,FLOAT3:{0;3.0;0},_Character)
+ENDIF
+
+EVENT ElementalBlast_Lightning3
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+ON
+	OnCharacterStatusApplied(_Character,ELEMENTALBLAST_LIGHTNING3)
+ACTIONS
+IF	"c1"
+	CharacterGetStatusSourceCharacter(_Character,ELEMENTALBLAST_LIGHTNING3,_Source)
+THEN
+	ShootLocalProjectileAt(Projectile_ElementalBlast_Lightning_Arc_3,_Source,FLOAT3:{0;3.0;0},_Character)
+ENDIF
+
+EVENT ElementalBlast_Lightning4
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+ON
+	OnCharacterStatusApplied(_Character,ELEMENTALBLAST_LIGHTNING4)
+ACTIONS
+IF	"c1"
+	CharacterGetStatusSourceCharacter(_Character,ELEMENTALBLAST_LIGHTNING4,_Source)
+THEN
+	ShootLocalProjectileAt(Projectile_ElementalBlast_Lightning_Arc_4,_Source,FLOAT3:{0;3.0;0},_Character)
+ENDIF
+
+EVENT ElementalBlast_Lightning5
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+ON
+	OnCharacterStatusApplied(_Character,ELEMENTALBLAST_LIGHTNING5)
+ACTIONS
+IF	"c1"
+	CharacterGetStatusSourceCharacter(_Character,ELEMENTALBLAST_LIGHTNING5,_Source)
+THEN
+	ShootLocalProjectileAt(Projectile_ElementalBlast_Lightning_Arc_5,_Source,FLOAT3:{0;3.0;0},_Character)
+ENDIF
+
+EVENT AstralConstruct_SolidifyHP
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+	FLOAT:_Int
+	FLOAT:_Level
+ON
+	OnCharacterStatusApplied(_Character,ASTRALCONSTRUCT_SOLIDIFY)
+ACTIONS
+IF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,1)
+THEN
+	CharacterApplyStatus(_Character,HP2,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,1)
+THEN
+	CharacterApplyStatus(_Character,HP3,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,1)
+THEN
+	CharacterApplyStatus(_Character,HP4,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,1)
+THEN
+	CharacterApplyStatus(_Character,HP5,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,1)
+THEN
+	CharacterApplyStatus(_Character,HP6,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,2)
+THEN
+	CharacterApplyStatus(_Character,HP2,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,2)
+THEN
+	CharacterApplyStatus(_Character,HP3,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,2)
+THEN
+	CharacterApplyStatus(_Character,HP4,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,2)
+THEN
+	CharacterApplyStatus(_Character,HP5,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,2)
+THEN
+	CharacterApplyStatus(_Character,HP6,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,2)
+THEN
+	CharacterApplyStatus(_Character,HP7,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,3)
+THEN
+	CharacterApplyStatus(_Character,HP2,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,3)
+THEN
+	CharacterApplyStatus(_Character,HP3,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,3)
+THEN
+	CharacterApplyStatus(_Character,HP4,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,3)
+THEN
+	CharacterApplyStatus(_Character,HP5,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,3)
+THEN
+	CharacterApplyStatus(_Character,HP6,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,3)
+THEN
+	CharacterApplyStatus(_Character,HP7,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,3)
+THEN
+	CharacterApplyStatus(_Character,HP8,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,4)
+THEN
+	CharacterApplyStatus(_Character,HP3,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,4)
+THEN
+	CharacterApplyStatus(_Character,HP4,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,4)
+THEN
+	CharacterApplyStatus(_Character,HP5,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,4)
+THEN
+	CharacterApplyStatus(_Character,HP6,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,4)
+THEN
+	CharacterApplyStatus(_Character,HP7,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,4)
+THEN
+	CharacterApplyStatus(_Character,HP8,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,4)
+THEN
+	CharacterApplyStatus(_Character,HP9,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,5)
+THEN
+	CharacterApplyStatus(_Character,HP4,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,5)
+THEN
+	CharacterApplyStatus(_Character,HP5,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,5)
+THEN
+	CharacterApplyStatus(_Character,HP6,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,5)
+THEN
+	CharacterApplyStatus(_Character,HP7,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,5)
+THEN
+	CharacterApplyStatus(_Character,HP8,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,5)
+THEN
+	CharacterApplyStatus(_Character,HP9,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,5)
+THEN
+	CharacterApplyStatus(_Character,HP10,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,6)
+THEN
+	CharacterApplyStatus(_Character,HP5,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,6)
+THEN
+	CharacterApplyStatus(_Character,HP6,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,6)
+THEN
+	CharacterApplyStatus(_Character,HP7,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,6)
+THEN
+	CharacterApplyStatus(_Character,HP8,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,6)
+THEN
+	CharacterApplyStatus(_Character,HP9,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,6)
+THEN
+	CharacterApplyStatus(_Character,HP10,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,6)
+THEN
+	CharacterApplyStatus(_Character,HP11,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,7)
+THEN
+	CharacterApplyStatus(_Character,HP6,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,7)
+THEN
+	CharacterApplyStatus(_Character,HP7,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,7)
+THEN
+	CharacterApplyStatus(_Character,HP8,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,7)
+THEN
+	CharacterApplyStatus(_Character,HP9,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,7)
+THEN
+	CharacterApplyStatus(_Character,HP10,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,7)
+THEN
+	CharacterApplyStatus(_Character,HP11,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,7)
+THEN
+	CharacterApplyStatus(_Character,HP12,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,8)
+THEN
+	CharacterApplyStatus(_Character,HP7,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,8)
+THEN
+	CharacterApplyStatus(_Character,HP8,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,8)
+THEN
+	CharacterApplyStatus(_Character,HP9,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,8)
+THEN
+	CharacterApplyStatus(_Character,HP10,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,8)
+THEN
+	CharacterApplyStatus(_Character,HP11,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,8)
+THEN
+	CharacterApplyStatus(_Character,HP12,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,8)
+THEN
+	CharacterApplyStatus(_Character,HP13,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,9)
+THEN
+	CharacterApplyStatus(_Character,HP8,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,9)
+THEN
+	CharacterApplyStatus(_Character,HP9,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,9)
+THEN
+	CharacterApplyStatus(_Character,HP10,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,9)
+THEN
+	CharacterApplyStatus(_Character,HP11,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,9)
+THEN
+	CharacterApplyStatus(_Character,HP12,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,9)
+THEN
+	CharacterApplyStatus(_Character,HP13,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,9)
+THEN
+	CharacterApplyStatus(_Character,HP14,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,10)
+THEN
+	CharacterApplyStatus(_Character,HP9,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,10)
+THEN
+	CharacterApplyStatus(_Character,HP10,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,10)
+THEN
+	CharacterApplyStatus(_Character,HP11,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,10)
+THEN
+	CharacterApplyStatus(_Character,HP12,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,10)
+THEN
+	CharacterApplyStatus(_Character,HP13,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,10)
+THEN
+	CharacterApplyStatus(_Character,HP14,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,10)
+THEN
+	CharacterApplyStatus(_Character,HP15,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,11)
+THEN
+	CharacterApplyStatus(_Character,HP10,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,11)
+THEN
+	CharacterApplyStatus(_Character,HP11,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,11)
+THEN
+	CharacterApplyStatus(_Character,HP12,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,11)
+THEN
+	CharacterApplyStatus(_Character,HP13,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,11)
+THEN
+	CharacterApplyStatus(_Character,HP14,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,11)
+THEN
+	CharacterApplyStatus(_Character,HP15,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,11)
+THEN
+	CharacterApplyStatus(_Character,HP16,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,12)
+THEN
+	CharacterApplyStatus(_Character,HP11,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,12)
+THEN
+	CharacterApplyStatus(_Character,HP12,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,12)
+THEN
+	CharacterApplyStatus(_Character,HP13,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,12)
+THEN
+	CharacterApplyStatus(_Character,HP14,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,12)
+THEN
+	CharacterApplyStatus(_Character,HP15,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,12)
+THEN
+	CharacterApplyStatus(_Character,HP16,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,12)
+THEN
+	CharacterApplyStatus(_Character,HP17,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,13)
+THEN
+	CharacterApplyStatus(_Character,HP12,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,13)
+THEN
+	CharacterApplyStatus(_Character,HP13,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,13)
+THEN
+	CharacterApplyStatus(_Character,HP14,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,13)
+THEN
+	CharacterApplyStatus(_Character,HP15,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,13)
+THEN
+	CharacterApplyStatus(_Character,HP16,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,13)
+THEN
+	CharacterApplyStatus(_Character,HP17,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,13)
+THEN
+	CharacterApplyStatus(_Character,HP18,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,14)
+THEN
+	CharacterApplyStatus(_Character,HP13,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,14)
+THEN
+	CharacterApplyStatus(_Character,HP14,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,14)
+THEN
+	CharacterApplyStatus(_Character,HP15,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,14)
+THEN
+	CharacterApplyStatus(_Character,HP16,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,14)
+THEN
+	CharacterApplyStatus(_Character,HP17,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,14)
+THEN
+	CharacterApplyStatus(_Character,HP18,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,14)
+THEN
+	CharacterApplyStatus(_Character,HP19,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,15)
+THEN
+	CharacterApplyStatus(_Character,HP14,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,15)
+THEN
+	CharacterApplyStatus(_Character,HP15,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,15)
+THEN
+	CharacterApplyStatus(_Character,HP16,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,15)
+THEN
+	CharacterApplyStatus(_Character,HP17,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,15)
+THEN
+	CharacterApplyStatus(_Character,HP18,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,15)
+THEN
+	CharacterApplyStatus(_Character,HP19,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,15)
+THEN
+	CharacterApplyStatus(_Character,HP20,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,16)
+THEN
+	CharacterApplyStatus(_Character,HP15,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,16)
+THEN
+	CharacterApplyStatus(_Character,HP16,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,16)
+THEN
+	CharacterApplyStatus(_Character,HP17,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,16)
+THEN
+	CharacterApplyStatus(_Character,HP18,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,16)
+THEN
+	CharacterApplyStatus(_Character,HP19,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,16)
+THEN
+	CharacterApplyStatus(_Character,HP20,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,16)
+THEN
+	CharacterApplyStatus(_Character,HP21,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,17)
+THEN
+	CharacterApplyStatus(_Character,HP16,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,17)
+THEN
+	CharacterApplyStatus(_Character,HP17,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,17)
+THEN
+	CharacterApplyStatus(_Character,HP18,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,17)
+THEN
+	CharacterApplyStatus(_Character,HP19,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,17)
+THEN
+	CharacterApplyStatus(_Character,HP20,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,17)
+THEN
+	CharacterApplyStatus(_Character,HP21,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,17)
+THEN
+	CharacterApplyStatus(_Character,HP22,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,18)
+THEN
+	CharacterApplyStatus(_Character,HP17,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,18)
+THEN
+	CharacterApplyStatus(_Character,HP18,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,18)
+THEN
+	CharacterApplyStatus(_Character,HP19,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,18)
+THEN
+	CharacterApplyStatus(_Character,HP20,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,18)
+THEN
+	CharacterApplyStatus(_Character,HP21,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,18)
+THEN
+	CharacterApplyStatus(_Character,HP22,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,18)
+THEN
+	CharacterApplyStatus(_Character,HP23,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,19)
+THEN
+	CharacterApplyStatus(_Character,HP18,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,19)
+THEN
+	CharacterApplyStatus(_Character,HP19,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,19)
+THEN
+	CharacterApplyStatus(_Character,HP20,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,19)
+THEN
+	CharacterApplyStatus(_Character,HP21,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,19)
+THEN
+	CharacterApplyStatus(_Character,HP22,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,19)
+THEN
+	CharacterApplyStatus(_Character,HP23,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,19)
+THEN
+	CharacterApplyStatus(_Character,HP24,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,8)
+	IsEqual(_Int,9)
+	IsEqual(_Level,20)
+THEN
+	CharacterApplyStatus(_Character,HP19,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,10)
+	IsEqual(_Int,11)
+	IsEqual(_Level,20)
+THEN
+	CharacterApplyStatus(_Character,HP20,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,12)
+	IsEqual(_Int,13)
+	IsEqual(_Level,20)
+THEN
+	CharacterApplyStatus(_Character,HP21,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,14)
+	IsEqual(_Int,15)
+	IsEqual(_Level,20)
+THEN
+	CharacterApplyStatus(_Character,HP22,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,16)
+	IsEqual(_Int,17)
+	IsEqual(_Level,20)
+THEN
+	CharacterApplyStatus(_Character,HP23,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,18)
+	IsEqual(_Int,19)
+	IsEqual(_Level,20)
+THEN
+	CharacterApplyStatus(_Character,HP24,-1)
+ELIF	"c1&c2&c3&(c4|c5)&c6"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterGetStat(_Int,_Source,Intelligence)
+	CharacterGetStat(_Level,_Source,Level)
+	IsEqual(_Int,20)
+	IsEqual(_Int,21)
+	IsEqual(_Level,20)
+THEN
+	CharacterApplyStatus(_Character,HP25,-1)
+ENDIF
+
+EVENT AstralConstruct_ReplicateDeath
+VARS
+	CHARACTER:_Character
+ON
+	OnCharacterStatusApplied(_Character,ASTRAL_CONSTRUCT_DESTRUCTION)
+	OnCharacterStatusRemoved(_Character,ASTRAL_CONSTRUCT_DESTRUCTION)
+ACTIONS
+	CharacterDie(_Character, "DoT")
+
+EVENT AstralConstruct_DevastatingWeapons
+VARS
+	CHARACTER:_Character
+ON
+	OnCharacterStatusApplied(_Character,ASTRAL_CONSTRUCT_TECHNICAL)
+ACTIONS
+IF	"c1&c2"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterHasStatus(_Source,DEVASTATING_WEAPONS)
+THEN
+	CharacterApplyStatus(_Character,DEVASTATINGWEAPONS,-1)
+ELIF	"c1&c2"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterHasStatus(_Source,DEVASTATING_WEAPONS_2)
+THEN
+	CharacterApplyStatus(_Character,DEVASTATINGWEAPONS_2,-1)
+ENDIF
+
+EVENT AstralConstruct_PsionicConduit
+VARS
+	CHARACTER:_Character
+ON
+	OnCharacterStatusApplied(_Character,ASTRAL_CONSTRUCT_TECHNICAL)
+ACTIONS
+IF	"c1&c2"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterHasStatus(_Source,PSIONIC_CONDUIT)
+THEN
+	CharacterApplyStatus(_Character,PSIONICCONDUIT,-1)
+ELIF	"c1&c2"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterHasStatus(_Source,PSIONIC_CONDUIT_2)
+THEN
+	CharacterApplyStatus(_Character,PSIONICCONDUIT_2,-1)
+ENDIF
+
+EVENT AstralConstruct_6vidExistence
+VARS
+	CHARACTER:_Character
+ON
+	OnCharacterStatusApplied(_Character,ASTRAL_CONSTRUCT_TECHNICAL)
+ACTIONS
+IF	"c1&c2"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterHasStatus(_Source,VIVID_EXISTENCE)
+THEN
+	CharacterApplyStatus(_Character,VIVIDEXISTENCE,-1)
+ELIF	"c1&c2"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterHasStatus(_Source,VIVID_EXISTENCE_2)
+THEN
+	CharacterApplyStatus(_Character,VIVIDEXISTENCE_2,-1)
+ENDIF
+
+EVENT AstralConstruct_HorrifyingNightmares
+VARS
+	CHARACTER:_Character
+ON
+	OnCharacterStatusApplied(_Character,ASTRAL_CONSTRUCT_TECHNICAL)
+ACTIONS
+IF	"c1&c2"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterHasStatus(_Source,HORRIFYING_NIGHTMARES)
+THEN
+	CharacterApplyStatus(_Character,HORRIFYINGNIGHTMARES,-1)
+ELIF	"c1&c2"
+	CharacterGetStatusSourceCharacter(_Character,ASTRAL_CONSTRUCT_TECHNICAL,_Source)
+	CharacterHasStatus(_Source,HORRIFYING_NIGHTMARES_2)
+THEN
+	CharacterApplyStatus(_Character,HORRIFYINGNIGHTMARES_2,-1)
+ENDIF
+
+EVENT UnlifeWielder
+VARS
+	CHARACTER:_Character
+ON
+	OnCharacterStatusRemoved(_Character,UNLIFE_WIELDER_TECHNICAL_2)
+ACTIONS
+	CharacterDie(_Character)
+
+EVENT SteelWindStrike_SpatialManipulation
+VARS
+	CHARACTER:_Character
+	FLOAT:_Int
+	FLOAT:_Str
+	FLOAT:_Dex
+ON
+	OnTurn(_Character)
+	OnCharacterVitalityChanged(_Character, _)
+	OnSight(_Character)
+	OnItemEquipped(_Character,_)
+	OnItemUnequipped(_Character,_)
+ACTIONS
+IF	"c1&c2&c3&c4&c5"
+	IsTagged(_Character,"PSION")
+	CharacterHasSpell(_Character,"Target_SteelWindStrike_Psion")
+	CharacterGetStat(_Dex,_Character,Dexterity)
+	CharacterGetStat(_Int,_Character,Intelligence)
+	IsGreaterThen(_Dex,_Int)
+THEN
+	CharacterApplyStatus(_Character,STEELWINDSTRIKE_SPATIALMANIPULATION_PROC,-1)
+ENDIF
+
+EVENT Blink_Psion
+VARS
+CHARACTER:_Character
+INT:_Result
+ON
+	OnCharacterStatusApplied(_Character,BLINK_PSION_PROC)
+ACTIONS
+IF	"!c1"
+	CharacterHasStatus(_Character,BLINK_ACTIVATE)
+THEN
+	GetRandomBetween(_Result,1,20)
+	IF "c1"		
+		IsEqual(_Result,1)
+	THEN
+		DisplayText(_Character,"Rolled a 1", FLOAT:1.0)
+	ELIF "c1"		
+		IsEqual(_Result,2)
+	THEN
+		DisplayText(_Character,"Rolled a 2", FLOAT:1.0)
+	ELIF "c1"		
+		IsEqual(_Result,3)
+	THEN
+		DisplayText(_Character,"Rolled a 3", FLOAT:1.0)
+	ELIF "c1"		
+		IsEqual(_Result,4)
+	THEN
+		DisplayText(_Character,"Rolled a 4", FLOAT:1.0)
+	ELIF "c1"		
+		IsEqual(_Result,5)
+	THEN
+		DisplayText(_Character,"Rolled a 5", FLOAT:1.0)
+	ELIF "c1"		
+		IsEqual(_Result,6)
+	THEN
+		DisplayText(_Character,"Rolled a 6", FLOAT:1.0)
+	ELIF "c1"		
+		IsEqual(_Result,7)
+	THEN
+		DisplayText(_Character,"Rolled a 7", FLOAT:1.0)
+	ELIF "c1"		
+		IsEqual(_Result,8)
+	THEN
+		DisplayText(_Character,"Rolled an 8", FLOAT:1.0)
+	ELIF "c1"		
+		IsEqual(_Result,9)
+	THEN
+		DisplayText(_Character,"Rolled a 9", FLOAT:1.0)
+		CharacterApplyStatus(_Character,BLINK_ACTIVATE,-1)
+	ELIF "c1"		
+		IsEqual(_Result,10)
+	THEN
+		DisplayText(_Character,"Rolled a 10", FLOAT:1.0)
+		CharacterApplyStatus(_Character,BLINK_ACTIVATE,-1)
+	ELIF "c1"		
+		IsEqual(_Result,11)
+	THEN
+		DisplayText(_Character,"Rolled an 11", FLOAT:1.0)
+		CharacterApplyStatus(_Character,BLINK_ACTIVATE,-1)
+	ELIF "c1"		
+		IsEqual(_Result,12)
+	THEN
+		DisplayText(_Character,"Rolled a 12", FLOAT:1.0)
+		CharacterApplyStatus(_Character,BLINK_ACTIVATE,-1)
+	ELIF "c1"		
+		IsEqual(_Result,13)
+	THEN
+		DisplayText(_Character,"Rolled a 13", FLOAT:1.0)
+		CharacterApplyStatus(_Character,BLINK_ACTIVATE,-1)
+	ELIF "c1"		
+		IsEqual(_Result,14)
+	THEN
+		DisplayText(_Character,"Rolled a 14", FLOAT:1.0)
+		CharacterApplyStatus(_Character,BLINK_ACTIVATE,-1)
+	ELIF "c1"		
+		IsEqual(_Result,15)
+	THEN
+		DisplayText(_Character,"Rolled a 15", FLOAT:1.0)
+		CharacterApplyStatus(_Character,BLINK_ACTIVATE,-1)
+	ELIF "c1"		
+		IsEqual(_Result,16)
+	THEN
+		DisplayText(_Character,"Rolled a 16", FLOAT:1.0)
+		CharacterApplyStatus(_Character,BLINK_ACTIVATE,-1)
+	ELIF "c1"		
+		IsEqual(_Result,17)
+	THEN
+		DisplayText(_Character,"Rolled a 17", FLOAT:1.0)
+		CharacterApplyStatus(_Character,BLINK_ACTIVATE,-1)
+	ELIF "c1"		
+		IsEqual(_Result,18)
+	THEN
+		DisplayText(_Character,"Rolled an 18", FLOAT:1.0)
+		CharacterApplyStatus(_Character,BLINK_ACTIVATE,-1)
+	ELIF "c1"		
+		IsEqual(_Result,19)
+	THEN
+		DisplayText(_Character,"Rolled a 19", FLOAT:1.0)
+		CharacterApplyStatus(_Character,BLINK_ACTIVATE,-1)
+	ELIF "c1"		
+		IsEqual(_Result,20)
+	THEN
+		DisplayText(_Character,"Rolled a 20", FLOAT:1.0)
+		CharacterApplyStatus(_Character,BLINK_ACTIVATE,-1)
+	ENDIF
+ENDIF
+
+EVENT AstralGuardianSetHP
+VARS
+	CHARACTER:_Character
+	FLOAT:_HP
+	STRING: _Text
+	FIXEDSTRING: _Disp
+ON
+	OnCharacterStatusApplied(_Character, "ASTRAL_GUARDIAN_AURA")
+ACTIONS
+	IF	"c1"
+		CharacterGetStat(_HP, _Character, VitalityPoints)
+	THEN
+		Set(%AstralGuardianHP, _HP)
+	ENDIF
+
+EVENT AstralConstruct_AstralGuardian
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+	FLOAT:_HP
+	STRING: _Text
+	FIXEDSTRING: _Disp
+ON
+	OnCharacterStatusAttempt(_Character, ASTRAL_GUARDIAN_PROC)
+ACTIONS
+	IF	"c1&c2"
+		CharacterHasStatus(_Character, "ASTRAL_GUARDIAN_TECHNICAL")
+		CharacterGetStatusSourceCharacter(_Character, "ASTRAL_GUARDIAN_TECHNICAL", _Source)
+	THEN
+		CharacterApplyStatus(_Source,ASTRALCONSTRUCT_SOLIDIFY,1)
+	ENDIF
+
+EVENT AstralGuardianChangeinHP
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+	FLOAT:_HP
+	FLOAT:_MaxHP
+	FLOAT:_CalculatedHP
+	FLOAT:_SourceNewHP
+	FLOAT:_SourceHP
+	FLOAT:_SourceMaxHP
+	FLOAT:_CalculatedSourceHP
+	FLOAT3:_Pos
+	STRING: _Text
+	FIXEDSTRING: _Disp
+ON
+	OnCharacterStatusRemoved(_Character,ASTRAL_GUARDIAN_PROC)
+ACTIONS
+	IF "c1&c2&c3"
+		CharacterHasStatus(_Character, "ASTRAL_GUARDIAN_TECHNICAL")
+		CharacterHasStatus(_Character, "ASTRAL_GUARDIAN_AURA")
+		CharacterGetStatusSourceCharacter(_Character, "ASTRAL_GUARDIAN_TECHNICAL", _Source)
+	THEN
+		IF "c1&(c2|c3)"
+			CharacterGetStat(_HP, _Character, VitalityPoints)
+			IsGreaterThen(_HP, %AstralGuardianHP)
+			IsEqual(_HP, %AstralGuardianHP)
+		THEN
+			Set(%AstralGuardianHP, _HP)
+		ELIF "c1&c2&c3&c4&c5&c6"
+			IsLessThen(_HP, %AstralGuardianHP)
+			CharacterGetStat(_HP, _Character, VitalityPoints)
+			CharacterGetStat(_MaxHP, _Character, VitalityMax)
+			CharacterGetStat(_SourceHP, _Source, VitalityPoints)
+			CharacterGetStat(_SourceMaxHP, _Source, VitalityMax)
+			GetPosition(_Character,_Pos)
+		THEN
+			Set(_CalculatedHP, %AstralGuardianHP)
+			Subtract(_CalculatedHP, _HP)
+			IF	"c1"
+				IsLessThen(_CalculatedHP,_SourceHP)
+			THEN
+				TeleportTo(_Source,_Character)
+				Add(_CalculatedHP,_HP)
+				//Cast(_Text, _CalculatedHP)
+				//Cast(_Disp, _Text)
+				//StatusText(_Character, _Disp)
+				Divide(_CalculatedHP,_MaxHP)
+				SetHealth(_Character,_CalculatedHP)
+				Multiply(_CalculatedHP,_MaxHP)
+				Subtract(_CalculatedHP,_HP)
+				CharacterRemoveStatus(_Character,ASTRAL_GUARDIAN_AURA)
+				IF	"c1"
+					IsEqual(_CalculatedHP,1.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_1,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,2.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_2,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,3.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_3,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,4.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_4,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,5.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_5,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,6.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_6,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,7.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_7,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,8.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_8,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,9.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_9,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,10.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_10,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,11.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_11,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,12.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_12,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,13.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_13,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,14.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_14,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,15.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_15,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,16.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_16,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,17.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_17,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,18.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_18,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,19.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_19,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,20.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_20,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,21.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_21,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,22.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_22,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,23.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_23,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,24.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_24,0)
+				ELIF	"c1"
+					IsEqual(_CalculatedHP,25.0)
+				THEN
+					CharacterApplyStatus(_Source,ASTRAL_GUARDIAN_DAMAGE_25,0)
+				ENDIF
+			ELIF	"c1|c2"
+				IsGreaterThen(_CalculatedHP,_SourceHP)
+				IsEqual(_CalculatedHP,_SourceHP)
+			THEN
+				TeleportTo(_Source,_Character)
+				SetHealth(_Source,FLOAT: 0)
+				//Cast(_Text, _CalculatedHP)
+				//Cast(_Disp, _Text)
+				//StatusText(_Character, _Disp)
+				Add(_HP, _SourceHP)
+				Divide(_HP,_MaxHP)
+				SetHealth(_Character,_HP)
+				CharacterRemoveStatus(_Character,ASTRAL_GUARDIAN_AURA)
+			ENDIF
+		ENDIF
+	ENDIF
+
+EVENT AstralConstruct_Teleport
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+	FLOAT3:_Pos
+ON
+	OnCharacterStatusApplied(_Character, ASTRAL_CONSTRUCT_TELEPORT_PROC)
+ACTIONS
+	IF	"c1"
+		CharacterGetStatusSourceCharacter(_Character, ASTRAL_CONSTRUCT_TELEPORT, _Source)
+	THEN
+		TeleportTo(_Source,_Character)
+		CharacterApplyStatus(_Source,ASTRAL_CONSTRUCT_MOVEMENT,1)
+	ENDIF
+
+EVENT AstralConstructReplicate_Teleport
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+	FLOAT3:_Pos
+ON
+	OnCharacterStatusApplied(_Character, ASTRAL_CONSTRUCT_REPLICATE_TELEPORT_PROC)
+ACTIONS
+	IF	"c1"
+		CharacterGetStatusSourceCharacter(_Character, ASTRAL_CONSTRUCT_REPLICATE_TELEPORT, _Source)
+	THEN
+		TeleportTo(_Source,_Character)
+		CharacterApplyStatus(_Source,ASTRAL_CONSTRUCT_MOVEMENT,1)
+	ENDIF
+
+EVENT ReflectedAgony_Damage
+VARS
+	CHARACTER:_Character
+	CHARACTER:_Source
+ON
+	OnCharacterStatusApplied(_Character, "REFLECTED_AGONY_EFFECT")
+	OnCharacterStatusApplied(_Character, "REFLECTED_AGONY_EFFECT_2")
+	OnCharacterStatusApplied(_Character, "REFLECTED_AGONY_EFFECT_3")
+	OnCharacterStatusApplied(_Character, "REFLECTED_AGONY_EFFECT_4")
+	OnCharacterStatusApplied(_Character, "REFLECTED_AGONY_EFFECT_5")
+	OnCharacterStatusApplied(_Character, "REFLECTED_AGONY_EFFECT_6")
+	OnCharacterStatusApplied(_Character, "REFLECTED_AGONY_EFFECT_7")
+	OnCharacterStatusApplied(_Character, "REFLECTED_AGONY_EFFECT_8")
+	OnCharacterStatusApplied(_Character, "REFLECTED_AGONY_EFFECT_9")
+	OnCharacterStatusApplied(_Character, "REFLECTED_AGONY_EFFECT_10")
+ACTIONS
+	DisplayText(_Character,"Works")
+	IF	"c1"
+		CharacterGetStatusSourceCharacter(_Character,REFLECTED_AGONY_EFFECT,_Source)
+	THEN
+		DisplayText(_Source,"Also works")
+		ExplodeAt(_Source,Projectile_ReflectedAgony_1_Explosion,-1,_Character)
+	ELIF	"c1"
+		CharacterGetStatusSourceCharacter(_Character,REFLECTED_AGONY_EFFECT_2,_Source)
+	THEN
+		ExplodeAt(_Source,Projectile_ReflectedAgony_2_Explosion,-1,_Character)
+	ELIF	"c1"
+		CharacterGetStatusSourceCharacter(_Character,REFLECTED_AGONY_EFFECT_3,_Source)
+	THEN
+		ExplodeAt(_Source,Projectile_ReflectedAgony_3_Explosion,-1,_Character)
+	ELIF	"c1"
+		CharacterGetStatusSourceCharacter(_Character,REFLECTED_AGONY_EFFECT_4,_Source)
+	THEN
+		ExplodeAt(_Source,Projectile_ReflectedAgony_4_Explosion,-1,_Character)
+	ELIF	"c1"
+		CharacterGetStatusSourceCharacter(_Character,REFLECTED_AGONY_EFFECT_5,_Source)
+	THEN
+		ExplodeAt(_Source,Projectile_ReflectedAgony_5_Explosion,-1,_Character)
+	ELIF	"c1"
+		CharacterGetStatusSourceCharacter(_Character,REFLECTED_AGONY_EFFECT_6,_Source)
+	THEN
+		ExplodeAt(_Source,Projectile_ReflectedAgony_6_Explosion,-1,_Character)
+	ELIF	"c1"
+		CharacterGetStatusSourceCharacter(_Character,REFLECTED_AGONY_EFFECT_7,_Source)
+	THEN
+		ExplodeAt(_Source,Projectile_ReflectedAgony_7_Explosion,-1,_Character)
+	ELIF	"c1"
+		CharacterGetStatusSourceCharacter(_Character,REFLECTED_AGONY_EFFECT_8,_Source)
+	THEN
+		ExplodeAt(_Source,Projectile_ReflectedAgony_8_Explosion,-1,_Character)
+	ELIF	"c1"
+		CharacterGetStatusSourceCharacter(_Character,REFLECTED_AGONY_EFFECT_9,_Source)
+	THEN
+		ExplodeAt(_Source,Projectile_ReflectedAgony_9_Explosion,-1,_Character)
+	ELIF	"c1"
+		CharacterGetStatusSourceCharacter(_Character,REFLECTED_AGONY_EFFECT_10,_Source)
+	THEN
+		ExplodeAt(_Source,Projectile_ReflectedAgony_10_Explosion,-1,_Character)
+	ENDIF
