@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="0" build="19"/>
+    <region id="Tags">
+        <node id="root">
+            <attribute id="Description" type="LSString" value="Applied by the Telepathic Intrusion psionic power."/>
+            <attribute id="DisplayDescription" type="TranslatedString" value="You have been marked by the caster of the Telepathic Intrusion psionic power."/>
+            <attribute id="DisplayName" type="TranslatedString" value="Telepathic Intrusion"/>
+            <attribute id="Icon" type="FixedString" value=""/>
+            <attribute id="Name" type="FixedString" value="TELEPATHIC_INTRUSION"/>
+            <attribute id="UUID" type="guid" value="be049f28-b7ed-4a7d-a81b-632abd6f726f"/>
+            <children>
+                <node id="Categories">
+                    <children>
+                        <node id="Category">
+                            <attribute id="Name" type="LSString" value="Code"/>
+                        </node>
+                    </children>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

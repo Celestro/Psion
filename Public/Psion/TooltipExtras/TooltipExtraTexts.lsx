@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="8" build="612"/>
+    <region id="TooltipExtraTexts">
+        <node id="root">
+            <children>
+                <node id="TooltipExtraTexts"> Mind Blast On Save
+                    <attribute id="Text" type="TranslatedString" handle="h62c1d380gc7d3g4c95gbbb6g3ec64321ed23" version="1"/>
+                    <attribute id="UUID" type="guid" value="ca3f91ba-6351-499a-8cce-6c251ac45cb2"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

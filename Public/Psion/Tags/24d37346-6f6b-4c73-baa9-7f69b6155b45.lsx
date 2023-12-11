@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="0" build="19"/>
+    <region id="Tags">
+        <node id="root">
+            <attribute id="Description" type="LSString" value="A scholarly user of psionics capable of manipulating the structures of reality."/>
+            <attribute id="DisplayDescription" type="TranslatedString" value="An Elemental Mind Psion carries a psionic link to a primal power, some have a link to a particular element while others find all elements within their mind, raging an eternal war." handle="h03d0c474gb68cg43d0g97f4g784be26d9f90"/>
+            <attribute id="DisplayName" type="TranslatedString" value="ELEMENTALMIND"/>
+            <attribute id="Icon" type="FixedString" value=""/>
+            <attribute id="Name" type="FixedString" value="ElementalMind"/>
+            <attribute id="UUID" type="guid" value="24d37346-6f6b-4c73-baa9-7f69b6155b45"/>
+            <children>
+                <node id="Categories">
+                    <children>
+                        <node id="Category">
+                            <attribute id="Name" type="LSString" value="Code"/>
+                        </node>
+                        <node id="Category">
+                            <attribute id="Name" type="LSString" value="Dialog"/>
+                        </node>
+                        <node id="Category">
+                            <attribute id="Name" type="LSString" value="Class"/>
+                        </node>
+                    </children>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

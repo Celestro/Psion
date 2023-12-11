@@ -1,0 +1,9 @@
+new spellset "TelekineticHandSpellSet"
+add spell "Throw_Throw_TelekineticHand"
+
+new spellset "AstralConstructActions"
+add spell "Shout_Dash_AstralConstruct"
+
+new spellset "UnseenServantActions"
+add spell "Shout_Dash_AstralConstruct"
+add spell "Target_Prestidigitation_UnseenServant"

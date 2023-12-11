@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="0" build="19"/>
+    <region id="Tags">
+        <node id="root">
+            <attribute id="Description" type="LSString" value="A scholarly user of psionics capable of manipulating the structures of reality."/>
+            <attribute id="DisplayDescription" type="TranslatedString" value="An Awakened Mind is a psion whose first power that manifests is telepathy, one of the most feared and shunned abilities." handle="h03d0c474gb68cg43d0g97f4g784be26d9f90"/>
+            <attribute id="DisplayName" type="TranslatedString" value="AWAKENEDMIND"/>
+            <attribute id="Icon" type="FixedString" value=""/>
+            <attribute id="Name" type="FixedString" value="AwakenedMind"/>
+            <attribute id="UUID" type="guid" value="cca6347c-ed59-4437-886e-be210f0254da"/>
+            <children>
+                <node id="Categories">
+                    <children>
+                        <node id="Category">
+                            <attribute id="Name" type="LSString" value="Code"/>
+                        </node>
+                        <node id="Category">
+                            <attribute id="Name" type="LSString" value="Dialog"/>
+                        </node>
+                        <node id="Category">
+                            <attribute id="Name" type="LSString" value="Class"/>
+                        </node>
+                    </children>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

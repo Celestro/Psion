@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="0" revision="0" build="58" />
+	<region id="Tags">
+		<node id="Tags">
+            <attribute id="Description" type="LSString" value="A scholarly user of psionics capable of manipulating the structures of reality."/>
+			<attribute id="DisplayDescription" type="TranslatedString" handle="hecc6047fga472g4439ga212gaddd47791b20" version="1" />
+			<attribute id="DisplayName" type="TranslatedString" handle="hf83a1921gd27eg47aagb77dg20b6c79c8b52" version="2" />
+			<attribute id="Icon" type="FixedString" value="" />
+			<attribute id="Name" type="FixedString" value="PSION" />
+			<attribute id="UUID" type="guid" value="cc627f43-1667-4d68-a29d-efd3610f80ed" />
+			<children>
+				<node id="Categories">
+					<children>
+						<node id="Category">
+							<attribute id="Name" type="LSString" value="Code" />
+						</node>
+						<node id="Category">
+							<attribute id="Name" type="LSString" value="Dialog" />
+						</node>
+						<node id="Category">
+							<attribute id="Name" type="LSString" value="Class" />
+						</node>
+						<node id="Category">
+							<attribute id="Name" type="LSString" value="CharacterSheet" />
+						</node>
+					</children>
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

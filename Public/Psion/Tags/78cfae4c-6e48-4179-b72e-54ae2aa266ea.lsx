@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="0" build="19"/>
+    <region id="Tags">
+        <node id="root">
+            <attribute id="Description" type="LSString" value="Their patron is defined by its sheer incomprehensibility to the mortal mind. It need not be aware of their existence or invested in it for their power to have affected these beings, fundamentally warping their mind. Though most minds would have been shattered, these warlocks have managed to hang onto some semblance of sanity and wield the power grafted into their minds."/>
+            <attribute id="DisplayDescription" type="TranslatedString" value="Their patron is defined by its sheer incomprehensibility to the mortal mind. It need not be aware of their existence or invested in it for their power to have affected these beings, fundamentally warping their mind. Though most minds would have been shattered, these warlocks have managed to hang onto some semblance of sanity and wield the power grafted into their minds.." handle="h03d0c474gb68cg43d0g97f4g784be26d9f90"/>
+            <attribute id="DisplayName" type="TranslatedString" value="WARLOCK_THAT_WHICH_IS_BEYOND"/>
+            <attribute id="Icon" type="FixedString" value=""/>
+            <attribute id="Name" type="FixedString" value="ShapersMind"/>
+            <attribute id="UUID" type="guid" value="78cfae4c-6e48-4179-b72e-54ae2aa266ea"/>
+            <children>
+                <node id="Categories">
+                    <children>
+                        <node id="Category">
+                            <attribute id="Name" type="LSString" value="Code"/>
+                        </node>
+                        <node id="Category">
+                            <attribute id="Name" type="LSString" value="Dialog"/>
+                        </node>
+                        <node id="Category">
+                            <attribute id="Name" type="LSString" value="Class"/>
+                        </node>
+                    </children>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>
